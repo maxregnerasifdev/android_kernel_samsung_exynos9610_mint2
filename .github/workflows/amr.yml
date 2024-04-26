@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       branch_name:
-        description: 'Branch name to build'
+        description: 'Local branch name to build'
         required: true
         default: 'android-12'
       variant:
@@ -21,6 +21,10 @@ on:
       upstream_repo:
         description: 'URL of the upstream repository to fetch'
         required: true
+      upstream_branch:
+        description: 'Branch name of the upstream repository'
+        required: true
+        default: 'main'  # Default to 'main', can be changed by user
 
 jobs:
   build-kernel:
@@ -45,8 +49,8 @@ jobs:
     - name: Fetch Upstream Commits
       run: |
         git remote add upstream ${{ github.event.inputs.upstream_repo }}
-        git fetch upstream
-        git merge upstream/kernel.lnx.5.15.r1-rel
+        git fetch upstream ${{ github.event.inputs.upstream_branch }}
+        git merge upstream/${{ github.event.inputs.upstream_branch }} --no-edit
 
     - name: Update Debian/Ubuntu Repositories
       run: sudo apt-get update
