@@ -4,9 +4,16 @@ on:
   workflow_dispatch:
     inputs:
       branch_name:
-        description: 'Local branch name to build'
+        description: 'Branch name of the current repository to build'
         required: true
         default: 'android-12'
+      port_repo:
+        description: 'URL of the port repository to clone'
+        required: true
+      port_branch:
+        description: 'Branch name of the port repository to use'
+        required: true
+        default: 'master'
       variant:
         description: 'Build variant'
         required: true
@@ -18,13 +25,6 @@ on:
       additional_options:
         description: 'Additional build options'
         required: false
-      upstream_repo:
-        description: 'URL of the upstream repository to fetch'
-        required: true
-      upstream_branch:
-        description: 'Branch name of the upstream repository'
-        required: true
-        default: 'main'  # Default to 'main', can be changed by user
 
 jobs:
   build-kernel:
@@ -33,7 +33,7 @@ jobs:
 
     strategy:
       fail-fast: true
-      
+
     steps:
     - uses: actions/checkout@v2
       with:
@@ -46,11 +46,18 @@ jobs:
         timezoneMacos: "Asia/Manila"
         timezoneWindows: "Philippine Standard Time"
 
-    - name: Fetch Upstream Commits
+    - name: Clone Port Repository
       run: |
-        git remote add upstream ${{ github.event.inputs.upstream_repo }}
-        git fetch upstream ${{ github.event.inputs.upstream_branch }}
-        git merge upstream/${{ github.event.inputs.upstream_branch }} --no-edit
+        git clone ${{ github.event.inputs.port_repo }} ./port-repo
+        cd ./port-repo
+        git checkout ${{ github.event.inputs.port_branch }}
+
+    - name: Integrate Port Repository Changes
+      run: |
+        cd $GITHUB_WORKSPACE
+        git remote add port-repo ./port-repo
+        git fetch port-repo
+        git merge port-repo/${{ github.event.inputs.port_branch }} --allow-unrelated-histories -m "Merging changes from port repository"
 
     - name: Update Debian/Ubuntu Repositories
       run: sudo apt-get update
