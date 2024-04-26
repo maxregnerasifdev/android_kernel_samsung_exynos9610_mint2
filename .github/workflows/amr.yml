@@ -3,10 +3,6 @@ name: Stable Release Build (Galaxy A50)
 on:
   workflow_dispatch:
     inputs:
-      port_dir:
-        description: 'Directory for port to pick commits from'
-        required: true
-        default: 'path/to/port/dir'
       branch_name:
         description: 'Branch name to build'
         required: true
@@ -42,12 +38,6 @@ jobs:
         timezoneLinux: "Asia/Manila"
         timezoneMacos: "Asia/Manila"
         timezoneWindows: "Philippine Standard Time"
-
-    - name: Fetch Upstream Commits
-      run: |
-        cd ${{ github.event.inputs.port_dir }}
-        git fetch origin
-        git checkout origin/${{ github.event.inputs.branch_name }}
 
     - name: Update Debian/Ubuntu Repositories
       run: sudo apt-get update
