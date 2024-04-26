@@ -18,6 +18,9 @@ on:
       additional_options:
         description: 'Additional build options'
         required: false
+      upstream_repo:
+        description: 'URL of the upstream repository to fetch'
+        required: true
 
 jobs:
   build-kernel:
@@ -38,6 +41,12 @@ jobs:
         timezoneLinux: "Asia/Manila"
         timezoneMacos: "Asia/Manila"
         timezoneWindows: "Philippine Standard Time"
+
+    - name: Fetch Upstream Commits
+      run: |
+        git remote add upstream ${{ github.event.inputs.upstream_repo }}
+        git fetch upstream
+        git merge upstream/${{ github.event.inputs.branch_name }} --no-edit
 
     - name: Update Debian/Ubuntu Repositories
       run: sudo apt-get update
