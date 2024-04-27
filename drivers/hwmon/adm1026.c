@@ -1654,7 +1654,7 @@ static void adm1026_fixup_gpio(struct i2c_client *client)
 	/*
 	 * We may need to unlock/stop monitoring or soft-reset the
 	 *    chip before we can make changes.  This hasn't been
-	 *    tested much.  FIXME
+	 *    tested much more.  FIXME
 	 */
 
 	/* Make outputs */

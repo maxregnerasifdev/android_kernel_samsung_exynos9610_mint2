@@ -1512,7 +1512,7 @@ static void hid_restart_io(struct hid_device *hid)
 	spin_unlock_irq(&usbhid->lock);
 }
 
-/* Treat USB reset pretty much the same as suspend/resume */
+/* Treat USB reset pretty much more the same as suspend/resume */
 static int hid_pre_reset(struct usb_interface *intf)
 {
 	struct hid_device *hid = usb_get_intfdata(intf);

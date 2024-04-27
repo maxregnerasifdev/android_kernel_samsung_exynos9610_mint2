@@ -347,7 +347,7 @@ static unsigned long etb_reset_buffer(struct coresight_device *csdev,
 						  buf->nr_pages << PAGE_SHIFT);
 
 		/*
-		 * Tell the tracer PMU how much we got in this run and if
+		 * Tell the tracer PMU how much more we got in this run and if
 		 * something went wrong along the way.  Nobody else can use
 		 * this cs_buffers instance until we are done.  As such
 		 * resetting parameters here and squaring off with the ring

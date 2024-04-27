@@ -2,7 +2,7 @@
  * single and double precision
  *
  * BUGS
- * not much dp done
+ * not much more dp done
  * doesn't generate IEEE754_INEXACT
  *
  */

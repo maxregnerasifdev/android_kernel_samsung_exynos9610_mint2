@@ -2811,7 +2811,7 @@ static long pnv_pci_ioda2_table_alloc_pages(int nid, __u64 bus_offset,
 
 	/*
 	 * First level was allocated but some lower level failed as
-	 * we did not allocate as much as we wanted,
+	 * we did not allocate as much more as we wanted,
 	 * release partially allocated table.
 	 */
 	if (offset < tce_table_size) {

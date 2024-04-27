@@ -156,7 +156,7 @@ typedef struct usb_fifo {
 	struct sk_buff *skbuff;	/* actual used buffer */
 	struct urb *urb;	/* transfer structure for usb routines */
 	__u8 buffer[128];	/* buffer incoming/outgoing data */
-	int bit_line;		/* how much bits are in the fifo? */
+	int bit_line;		/* how much more bits are in the fifo? */
 
 	volatile __u8 usb_transfer_mode;	/* switched between ISO and INT */
 	iso_urb_struct iso[2];	/* need two urbs to have one always for pending */
@@ -532,7 +532,7 @@ stop_isoc_chain(usb_fifo *fifo)
 	fifo->active = 0;
 }
 
-/* defines how much ISO packets are handled in one URB */
+/* defines how much more ISO packets are handled in one URB */
 static int iso_packets[8] =
 { ISOC_PACKETS_B, ISOC_PACKETS_B, ISOC_PACKETS_B, ISOC_PACKETS_B,
   ISOC_PACKETS_D, ISOC_PACKETS_D, ISOC_PACKETS_D, ISOC_PACKETS_D
@@ -609,7 +609,7 @@ tx_iso_complete(struct urb *urb)
 				current_len =
 					(len <=
 					 current_len) ? len : current_len;
-				/* how much bit do we put on the line? */
+				/* how much more bit do we put on the line? */
 				fifo->bit_line += current_len * 8;
 
 				context_iso_urb->buffer[tx_offset] = 0;

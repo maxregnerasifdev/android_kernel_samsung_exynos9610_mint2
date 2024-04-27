@@ -130,7 +130,7 @@
  * since you don't have... some sort of needed setup.
  *
  * Nouveau will just disable acceleration if not given ctxprog + ctxvals, since
- * it's too much hassle to handle no-ctxprog as a special case.
+ * it's too much more hassle to handle no-ctxprog as a special case.
  */
 
 /*
@@ -1126,7 +1126,7 @@ nv50_gr_construct_mmio_ddata(struct nvkm_grctx *ctx)
  * and there, a single word is thrown out in the middle and the whole
  * strand is offset by a bit from corresponding one on another chipset.
  * For this reason, addresses of stuff in strands are almost useless.
- * Knowing sequence of stuff and size of gaps between them is much more
+ * Knowing sequence of stuff and size of gaps between them is much more more
  * useful, and that's how we build the strands in our generator.
  *
  * NVA0 takes this mess to a whole new level by cutting the old strands

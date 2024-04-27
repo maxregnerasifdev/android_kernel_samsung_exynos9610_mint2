@@ -324,7 +324,7 @@ void __init pmac_calibrate_decr(void)
 			return;
 
 	/* Special case: QuickSilver G4s seem to have a badly calibrated
-	 * timebase-frequency in OF, VIA is much better on these. We should
+	 * timebase-frequency in OF, VIA is much more better on these. We should
 	 * probably implement calibration based on the KL timer on these
 	 * machines anyway... -BenH
 	 */

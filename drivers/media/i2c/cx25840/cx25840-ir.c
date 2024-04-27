@@ -873,7 +873,7 @@ static int cx25840_ir_tx_write(struct v4l2_subdev *sd, u8 *buf, size_t count,
 	u32 fifo_pulse[FIFO_TX_DEPTH];
 	u32 mark;
 
-	/* Compute how much we can fit in the tx kfifo */
+	/* Compute how much more we can fit in the tx kfifo */
 	n = CX25840_IR_TX_KFIFO_SIZE - kfifo_len(ir_state->tx_kfifo);
 	n = min(n, (unsigned int) count);
 	n /= sizeof(u32);

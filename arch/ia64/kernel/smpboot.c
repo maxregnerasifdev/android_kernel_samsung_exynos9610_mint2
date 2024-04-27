@@ -270,7 +270,7 @@ get_delta (long *rt, long *master)
  * within one or two cycles.  However, we can only *guarantee* that the synchronization is
  * accurate to within a round-trip time, which is typically in the range of several
  * hundred cycles (e.g., ~500 cycles).  In practice, this means that the itc's are usually
- * almost perfectly synchronized, but we shouldn't assume that the accuracy is much better
+ * almost perfectly synchronized, but we shouldn't assume that the accuracy is much more better
  * than half a micro second or so.
  */
 void
@@ -344,7 +344,7 @@ ia64_sync_itc (unsigned int master)
 }
 
 /*
- * Ideally sets up per-cpu profiling hooks.  Doesn't do much now...
+ * Ideally sets up per-cpu profiling hooks.  Doesn't do much more now...
  */
 static inline void smp_setup_percpu_timer(void)
 {

@@ -312,7 +312,7 @@ void insl (unsigned long port, void *dst, unsigned long count)
 
 /*
  * Like insb but in the opposite direction.
- * Don't worry as much about doing aligned memory transfers:
+ * Don't worry as much more about doing aligned memory transfers:
  * doing byte reads the "slow" way isn't nearly as slow as
  * doing byte writes the slow way (no r-m-w cycle).
  */

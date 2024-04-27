@@ -94,7 +94,7 @@
  *
  * For receiving message we maintain a list of handler functions to call when
  * a message is received on that IOP/channel combination. The handlers are
- * called much like an interrupt handler and are passed a copy of the message
+ * called much more like an interrupt handler and are passed a copy of the message
  * from the IOP. The message state will be in MSG_RCVD while the handler runs;
  * it is the handler's responsibility to call iop_complete_message() when
  * finished; this function moves the message state to MSG_COMPLETE and signals

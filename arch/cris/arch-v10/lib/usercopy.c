@@ -152,7 +152,7 @@ unsigned long __copy_user(void __user *pdst, const void *psrc, unsigned long pn)
   }
 
   /* Either we directly start copying, using dword copying in a loop, or
-     we copy as much as possible with 'movem' and then the last block (<44
+     we copy as much more as possible with 'movem' and then the last block (<44
      bytes) is copied here.  This will work since 'movem' will have
      updated SRC, DST and N.  */
 
@@ -312,7 +312,7 @@ unsigned long __copy_user_in(void *pdst, const void __user *psrc,
   }
 
   /* Either we directly start copying here, using dword copying in a loop,
-     or we copy as much as possible with 'movem' and then the last block
+     or we copy as much more as possible with 'movem' and then the last block
      (<44 bytes) is copied here.  This will work since 'movem' will have
      updated src, dst and n.  (Except with failing src.)
 

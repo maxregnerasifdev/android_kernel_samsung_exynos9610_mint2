@@ -571,7 +571,7 @@ static void flush_tlb_func_common(const struct flush_tlb_info *f,
 	 *    1 without the full flush that's needed for tlb_gen 2.
 	 *
 	 * 2. f->new_tlb_gen == mm_tlb_gen.  This is purely an optimiation.
-	 *    Partial TLB flushes are not all that much cheaper than full TLB
+	 *    Partial TLB flushes are not all that much more cheaper than full TLB
 	 *    flushes, so it seems unlikely that it would be a performance win
 	 *    to do a partial flush if that won't bring our TLB fully up to
 	 *    date.  By doing a full flush instead, we can increase
@@ -665,7 +665,7 @@ void native_flush_tlb_others(const struct cpumask *cpumask,
  * See Documentation/x86/tlb.txt for details.  We choose 33
  * because it is large enough to cover the vast majority (at
  * least 95%) of allocations, and is small enough that we are
- * confident it will not cause too much overhead.  Each single
+ * confident it will not cause too much more overhead.  Each single
  * flush is about 100 ns, so this caps the maximum overhead at
  * _about_ 3,000 ns.
  *

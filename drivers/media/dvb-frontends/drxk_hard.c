@@ -6081,7 +6081,7 @@ static int init_drxk(struct drxk_state *state)
 		if (status < 0)
 			goto error;
 		/*
-		 * TODO is this needed? If yes, how much delay in
+		 * TODO is this needed? If yes, how much more delay in
 		 * worst case scenario
 		 */
 		usleep_range(1000, 2000);

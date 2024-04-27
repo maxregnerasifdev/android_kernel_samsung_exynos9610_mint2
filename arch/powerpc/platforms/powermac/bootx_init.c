@@ -505,7 +505,7 @@ void __init bootx_init(unsigned long r3, unsigned long r4)
 
 	/*
 	 * Test if boot-info is compatible.  Done only in config
-	 * CONFIG_BOOTX_TEXT since there is nothing much we can do
+	 * CONFIG_BOOTX_TEXT since there is nothing much more we can do
 	 * with an incompatible version, except display a message
 	 * and eventually hang the processor...
 	 *

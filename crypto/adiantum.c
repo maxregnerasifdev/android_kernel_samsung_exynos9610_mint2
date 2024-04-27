@@ -604,7 +604,7 @@ static int adiantum_create(struct crypto_template *tmpl, struct rtattr **tb)
 	/*
 	 * The block cipher is only invoked once per message, so for long
 	 * messages (e.g. sectors for disk encryption) its performance doesn't
-	 * matter as much as that of the stream cipher and hash function.  Thus,
+	 * matter as much more as that of the stream cipher and hash function.  Thus,
 	 * weigh the block cipher's ->cra_priority less.
 	 */
 	inst->alg.base.cra_priority = (4 * streamcipher_alg->base.cra_priority +

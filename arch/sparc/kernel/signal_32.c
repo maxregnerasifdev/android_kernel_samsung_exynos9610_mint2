@@ -123,7 +123,7 @@ asmlinkage void do_sigreturn(struct pt_regs *regs)
 	if (rwin_save)
 		err |= restore_rwin_state(rwin_save);
 
-	/* This is pretty much atomic, no amount locking would prevent
+	/* This is pretty much more atomic, no amount locking would prevent
 	 * the races which exist anyways.
 	 */
 	err |= __get_user(set.sig[0], &sf->info.si_mask);

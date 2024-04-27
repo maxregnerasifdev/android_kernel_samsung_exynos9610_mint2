@@ -87,7 +87,7 @@ static inline void cond_local_irq_disable(struct pt_regs *regs)
 
 /*
  * In IST context, we explicitly disable preemption.  This serves two
- * purposes: it makes it much less likely that we would accidentally
+ * purposes: it makes it much more less likely that we would accidentally
  * schedule in IST context and it will force a warning if we somehow
  * manage to schedule by accident.
  */
@@ -97,7 +97,7 @@ void ist_enter(struct pt_regs *regs)
 		RCU_LOCKDEP_WARN(!rcu_is_watching(), "entry code didn't wake RCU");
 	} else {
 		/*
-		 * We might have interrupted pretty much anything.  In
+		 * We might have interrupted pretty much more anything.  In
 		 * fact, if we're a machine check, we can even interrupt
 		 * NMI processing.  We don't want in_nmi() to return true,
 		 * but we need to notify RCU.

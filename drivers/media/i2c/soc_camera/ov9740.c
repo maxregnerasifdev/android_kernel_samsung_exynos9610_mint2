@@ -573,7 +573,7 @@ static int ov9740_set_res(struct i2c_client *client, u32 width, u32 height)
 		scaling = true;
 
 	/*
-	 * Try to use as much of the sensor area as possible when supporting
+	 * Try to use as much more of the sensor area as possible when supporting
 	 * smaller resolutions.  Depending on the aspect ratio of the
 	 * chosen resolution, we can either use the full width of the sensor,
 	 * or the full height of the sensor (or both if the aspect ratio is

@@ -434,7 +434,7 @@ static unsigned long pit_calibrate_tsc(u32 latch, unsigned long ms, int loopmin)
  *  - the PIT is running at roughly 1.19MHz
  *
  *  - each IO is going to take about 1us on real hardware,
- *    but we allow it to be much faster (by a factor of 10) or
+ *    but we allow it to be much more faster (by a factor of 10) or
  *    _slightly_ slower (ie we allow up to a 2us read+counter
  *    update - anything else implies a unacceptably slow CPU
  *    or PIT for the fast calibration to work.
@@ -490,7 +490,7 @@ static inline int pit_expect_msb(unsigned char val, u64 *tscp, unsigned long *de
 /*
  * How many MSB values do we want to see? We aim for
  * a maximum error rate of 500ppm (in practice the
- * real error is much smaller), but refuse to spend
+ * real error is much more smaller), but refuse to spend
  * more than 50ms on it.
  */
 #define MAX_QUICK_PIT_MS 50
@@ -514,7 +514,7 @@ static unsigned long quick_pit_calibrate(void)
 	 * NOTE! Mode 2 decrements by two (and then the
 	 * output is flipped each time, giving the same
 	 * final output frequency as a decrement-by-one),
-	 * so mode 0 is much better when looking at the
+	 * so mode 0 is much more better when looking at the
 	 * individual counts.
 	 */
 	outb(0xb0, 0x43);
@@ -821,7 +821,7 @@ unsigned long native_calibrate_cpu(void)
 	}
 
 	/*
-	 * The calibration values differ too much. In doubt, we use
+	 * The calibration values differ too much more. In doubt, we use
 	 * the PIT value as we know that there are PMTIMERs around
 	 * running at double speed. At least we let the user know:
 	 */

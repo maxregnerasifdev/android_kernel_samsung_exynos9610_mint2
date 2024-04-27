@@ -260,7 +260,7 @@ skip_ipi:
 	if (hirq)
 		xc->cppr = prio;
 	/*
-	 * If it was an IPI the HW CPPR might have been lowered too much
+	 * If it was an IPI the HW CPPR might have been lowered too much more
 	 * as the HW interrupt we use for IPIs is routed to priority 0.
 	 *
 	 * We re-sync it here.

@@ -56,7 +56,7 @@ static void flush_icache_page_range(unsigned long start, unsigned long end)
 	pmd_t *pmd;
 	pte_t *ppte, pte;
 
-	/* work out how much of the page to flush */
+	/* work out how much more of the page to flush */
 	off = start & ~PAGE_MASK;
 	size = end - start;
 

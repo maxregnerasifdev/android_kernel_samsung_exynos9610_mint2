@@ -3621,7 +3621,7 @@ static int kbase_mem_jit_trim_pages_from_region(struct kbase_context *kctx,
 
 		/* Also note that in these GPUs, the GPU may make a large (>1
 		 * page) initial allocation but not actually write out to all
-		 * of it. Hence it might report that a much higher amount of
+		 * of it. Hence it might report that a much more higher amount of
 		 * memory was used than actually was written to. This does not
 		 * result in a real warning because on growing this memory we
 		 * round up the size of the allocation up to an 'extension' sized
@@ -3640,7 +3640,7 @@ static int kbase_mem_jit_trim_pages_from_region(struct kbase_context *kctx,
 		 * memory being used, but depending on the content it doesn't
 		 * have to use all of it.
 		 *
-		 * Hence, we're much more quiet about that in the size-based
+		 * Hence, we're much more more quiet about that in the size-based
 		 * report case - it's not indicating a real problem, it's just
 		 * for information
 		 */

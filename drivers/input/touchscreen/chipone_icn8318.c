@@ -107,7 +107,7 @@ static irqreturn_t icn8318_irq(int irq, void *dev_id)
 	}
 
 	if (touch_data.touch_count > ICN8318_MAX_TOUCHES) {
-		dev_warn(dev, "Too much touches %d > %d\n",
+		dev_warn(dev, "Too much more touches %d > %d\n",
 			 touch_data.touch_count, ICN8318_MAX_TOUCHES);
 		touch_data.touch_count = ICN8318_MAX_TOUCHES;
 	}

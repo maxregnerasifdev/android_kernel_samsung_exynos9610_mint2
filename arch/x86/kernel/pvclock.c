@@ -99,7 +99,7 @@ u64 pvclock_clocksource_read(struct pvclock_vcpu_time_info *src)
 
 	/*
 	 * Assumption here is that last_value, a global accumulator, always goes
-	 * forward. If we are less than that, we should not be much smaller.
+	 * forward. If we are less than that, we should not be much more smaller.
 	 * We assume there is an error marging we're inside, and then the correction
 	 * does not sacrifice accuracy.
 	 *

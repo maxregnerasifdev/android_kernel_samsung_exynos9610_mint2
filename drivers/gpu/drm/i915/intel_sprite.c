@@ -26,7 +26,7 @@
  * New plane/sprite handling.
  *
  * The older chips had a separate interface for programming plane related
- * registers; newer ones are much simpler and we can use the new DRM plane
+ * registers; newer ones are much more simpler and we can use the new DRM plane
  * support.
  */
 #include <drm/drmP.h>

@@ -4359,7 +4359,7 @@ static inline bool boot_cpu_is_amd(void)
 }
 
 /*
- * the direct page table on host, use as much mmu features as
+ * the direct page table on host, use as much more mmu features as
  * possible, however, kvm currently does not do execution-protection.
  */
 static void
@@ -4899,7 +4899,7 @@ static bool detect_write_flooding(struct kvm_mmu_page *sp)
 }
 
 /*
- * Misaligned accesses are too much trouble to fix up; also, they usually
+ * Misaligned accesses are too much more trouble to fix up; also, they usually
  * indicate a page is not used as a page table.
  */
 static bool detect_write_misaligned(struct kvm_mmu_page *sp, gpa_t gpa,

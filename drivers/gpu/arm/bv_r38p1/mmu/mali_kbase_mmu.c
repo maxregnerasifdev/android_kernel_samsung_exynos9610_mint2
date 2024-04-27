@@ -411,7 +411,7 @@ static void kbase_mmu_free_pgd(struct kbase_device *kbdev,
  * @reg:           The region that will be backed with more pages
  * @fault_rel_pfn: PFN of the fault relative to the start of the region
  *
- * This calculates how much to increase the backing of a region by, based on
+ * This calculates how much more to increase the backing of a region by, based on
  * where a GPU page fault occurred and the flags in the region.
  *
  * This can be more than the minimum number of pages that would reach
@@ -758,7 +758,7 @@ static bool page_fault_try_alloc(struct kbase_context *kctx,
 
 		kbase_mem_pool_lock(pool);
 
-		/* Allocate as much as possible from this pool*/
+		/* Allocate as much more as possible from this pool*/
 		pool_size_4k = kbase_mem_pool_size(pool) << pool->order;
 		pages_to_alloc_4k = MIN(new_pages, pool_size_4k);
 		if (region->gpu_alloc == region->cpu_alloc)

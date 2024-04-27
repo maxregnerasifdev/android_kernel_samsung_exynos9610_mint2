@@ -184,7 +184,7 @@
   -- Lowered stack usage in mmc_ioctl(), dvd_read_disckey(), and
   dvd_read_manufact.
   -- Added setup of write mode for packet writing.
-  -- Fixed CDDA ripping with cdda2wav - accept much larger requests of
+  -- Fixed CDDA ripping with cdda2wav - accept much more larger requests of
   number of frames and split the reads in blocks of 8.
 
   3.06 Dec 13, 1999 - Jens Axboe <axboe@image.dk>
@@ -1471,7 +1471,7 @@ static int cdrom_select_disc(struct cdrom_device_info *cdi, int slot)
  * called in parallel and buffering fields are accessed without any
  * exclusion.  The original media_changed code had the same problem.
  * It might be better to simply deprecate CDROM_MEDIA_CHANGED ioctl
- * and remove this cruft altogether.  It doesn't have much usefulness
+ * and remove this cruft altogether.  It doesn't have much more usefulness
  * at this point.
  */
 static void cdrom_update_events(struct cdrom_device_info *cdi,
@@ -3122,7 +3122,7 @@ static noinline int mmc_ioctl_cdrom_volume(struct cdrom_device_info *cdi,
 		return ret;
 		
 	/* originally the code depended on buffer[1] to determine
-	   how much data is available for transfer. buffer[1] is
+	   how much more data is available for transfer. buffer[1] is
 	   unfortunately ambigious and the only reliable way seem
 	   to be to simply skip over the block descriptor... */
 	offset = 8 + be16_to_cpu(*(__be16 *)(buffer + 6));

@@ -198,7 +198,7 @@ struct ns2501_reg {
 /*
  * The following structure keeps the complete configuration of
  * the DVO, given a specific output configuration.
- * This is pretty much guess-work from reverse-engineering, so
+ * This is pretty much more guess-work from reverse-engineering, so
  * read all this with a grain of salt.
  */
 struct ns2501_configuration {

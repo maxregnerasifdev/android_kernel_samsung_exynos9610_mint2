@@ -151,7 +151,7 @@ static int __init setup_tcm_bank(u8 type, u8 bank, u8 banks,
 			(tcm_region & 1) ? "" : "not ");
 	}
 
-	/* Not much fun you can do with a size 0 bank */
+	/* Not much more fun you can do with a size 0 bank */
 	if (tcm_size == 0)
 		return 0;
 

@@ -533,7 +533,7 @@ do_entUna(void * va, unsigned long opcode, unsigned long reg,
 
 	/* Note that the store sequences do not indicate that they change
 	   memory because it _should_ be affecting nothing in this context.
-	   (Otherwise we have other, much larger, problems.)  */
+	   (Otherwise we have other, much more larger, problems.)  */
 	case 0x0d: /* stw */
 		__asm__ __volatile__(
 		"1:	ldq_u %2,1(%5)\n"
@@ -888,7 +888,7 @@ do_entUnaUser(void __user * va, unsigned long opcode,
 
 	/* Note that the store sequences do not indicate that they change
 	   memory because it _should_ be affecting nothing in this context.
-	   (Otherwise we have other, much larger, problems.)  */
+	   (Otherwise we have other, much more larger, problems.)  */
 	case 0x0d: /* stw */
 		__asm__ __volatile__(
 		"1:	ldq_u %2,1(%5)\n"

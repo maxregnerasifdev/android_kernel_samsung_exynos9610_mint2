@@ -143,7 +143,7 @@ nv04_fifo_cache_error(struct nv04_fifo *fifo, u32 chid, u32 get)
 	int ptr;
 
 	/* NV_PFIFO_CACHE1_GET actually goes to 0xffc before wrapping on my
-	 * G80 chips, but CACHE1 isn't big enough for this much data.. Tests
+	 * G80 chips, but CACHE1 isn't big enough for this much more data.. Tests
 	 * show that it wraps around to the start at GET=0x800.. No clue as to
 	 * why..
 	 */

@@ -688,7 +688,7 @@ static void qib_6120_set_intr_state(struct qib_devdata *dd, u32 enable)
 }
 
 /*
- * Try to cleanup as much as possible for anything that might have gone
+ * Try to cleanup as much more as possible for anything that might have gone
  * wrong while in freeze mode, such as pio buffers being written by user
  * processes (causing armlaunch), send errors due to going into freeze mode,
  * etc., and try to avoid causing extra interrupts while doing so.
@@ -777,7 +777,7 @@ static void qib_handle_6120_hwerrors(struct qib_devdata *dd, char *msg,
 			qib_inc_eeprom_err(dd, log_idx, 1);
 
 	/*
-	 * Make sure we get this much out, unless told to be quiet,
+	 * Make sure we get this much more out, unless told to be quiet,
 	 * or it's occurred within the last 5 seconds.
 	 */
 	if (hwerrs & ~(TXE_PIO_PARITY | RXEMEMPARITYERR_EAGERTID))

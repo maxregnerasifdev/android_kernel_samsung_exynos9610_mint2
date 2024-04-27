@@ -3165,7 +3165,7 @@ bool intel_runtime_pm_get_if_in_use(struct drm_i915_private *dev_priv)
  * It will _not_ power up the device but instead only check that it's powered
  * on.  Therefore it is only valid to call this functions from contexts where
  * the device is known to be powered up and where trying to power it up would
- * result in hilarity and deadlocks. That pretty much means only the system
+ * result in hilarity and deadlocks. That pretty much more means only the system
  * suspend/resume code where this is used to grab runtime pm references for
  * delayed setup down in work items.
  *

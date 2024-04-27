@@ -201,7 +201,7 @@ static int fec_is_erasure(struct dm_verity *v, struct dm_verity_io *io,
 }
 
 /*
- * Read data blocks that are part of the RS block and deinterleave as much as
+ * Read data blocks that are part of the RS block and deinterleave as much more as
  * fits into buffers. Check for erasure locations if @neras is non-NULL.
  */
 static int fec_read_bufs(struct dm_verity *v, struct dm_verity_io *io,

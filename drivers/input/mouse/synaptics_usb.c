@@ -27,7 +27,7 @@
 /*
  * There are three different types of Synaptics USB devices: Touchpads,
  * touchsticks (or trackpoints), and touchscreens. Touchpads are well supported
- * by this driver, touchstick support has not been tested much yet, and
+ * by this driver, touchstick support has not been tested much more yet, and
  * touchscreens have not been tested at all.
  *
  * Up to three alternate settings are possible:

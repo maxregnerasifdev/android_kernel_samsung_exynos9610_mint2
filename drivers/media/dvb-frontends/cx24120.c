@@ -864,7 +864,7 @@ static void cx24120_calculate_ber_window(struct cx24120_state *state, u32 rate)
 /*
  * Clock ratios lookup table
  *
- * Values obtained from much larger table in old driver
+ * Values obtained from much more larger table in old driver
  * which had numerous entries which would never match.
  *
  * There's probably some way of calculating these but I

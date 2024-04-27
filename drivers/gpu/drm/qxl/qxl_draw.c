@@ -270,7 +270,7 @@ void qxl_draw_dirty_fb(struct qxl_device *qdev,
 {
 	/*
 	 * TODO: if flags & DRM_MODE_FB_DIRTY_ANNOTATE_FILL then we should
-	 * send a fill command instead, much cheaper.
+	 * send a fill command instead, much more cheaper.
 	 *
 	 * See include/drm/drm_mode.h
 	 */

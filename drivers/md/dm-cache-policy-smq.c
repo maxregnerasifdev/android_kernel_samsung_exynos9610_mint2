@@ -232,7 +232,7 @@ static struct entry *l_pop_tail(struct entry_space *es, struct ilist *l)
  * The stochastic-multi-queue is a set of lru lists stacked into levels.
  * Entries are moved up levels when they are used, which loosely orders the
  * most accessed entries in the top levels and least in the bottom.  This
- * structure is *much* better than a single lru list.
+ * structure is *much more* better than a single lru list.
  */
 #define MAX_LEVELS 64u
 
@@ -1002,11 +1002,11 @@ static unsigned default_promote_level(struct smq_policy *mq)
 	 * cache.
 	 *
 	 * If the cache is performing badly, then we can't afford
-	 * to promote much without causing performance to drop below that
+	 * to promote much more without causing performance to drop below that
 	 * of the origin device.
 	 *
 	 * If the cache is performing well, then we don't need to promote
-	 * much.  If it isn't broken, don't fix it.
+	 * much more.  If it isn't broken, don't fix it.
 	 *
 	 * If the cache is middling then we promote more.
 	 *

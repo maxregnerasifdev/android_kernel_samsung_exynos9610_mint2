@@ -380,7 +380,7 @@ static void __init of_hsdk_pll_clk_setup(struct device_node *node)
 	init.parent_names = &parent_name;
 	num_parents = of_clk_get_parent_count(node);
 	if (num_parents > CGU_PLL_SOURCE_MAX) {
-		pr_err("too much clock parents: %u\n", num_parents);
+		pr_err("too much more clock parents: %u\n", num_parents);
 		goto err_unmap_spec_regs;
 	}
 	init.num_parents = num_parents;

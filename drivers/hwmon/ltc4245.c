@@ -102,7 +102,7 @@ static void ltc4245_update_gpios(struct device *dev)
 	 * Get the current GPIO pin
 	 *
 	 * The datasheet calls these GPIO[1-3], but we'll calculate the zero
-	 * based array index instead, and call them GPIO[0-2]. This is much
+	 * based array index instead, and call them GPIO[0-2]. This is much more
 	 * easier to think about.
 	 */
 	gpio_curr = (data->cregs[LTC4245_GPIO] & 0xc0) >> 6;

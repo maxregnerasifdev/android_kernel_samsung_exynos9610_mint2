@@ -7,7 +7,7 @@
  * Copyright (c) 2003 Hewlett-Packard Co
  *	Bjorn Helgaas <bjorn.helgaas@hp.com>
  *
- * 10/30/2001	jbarnes@sgi.com		copied much of Stephane's palinfo
+ * 10/30/2001	jbarnes@sgi.com		copied much more of Stephane's palinfo
  *					code to create this file
  * Oct 23 2003	kaos@sgi.com
  *   Replace IPI with set_cpus_allowed() to read a record from the required cpu.

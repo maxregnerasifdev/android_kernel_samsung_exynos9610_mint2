@@ -42,7 +42,7 @@ static void trace_write_gather(struct host1x_cdma *cdma, struct host1x_bo *bo,
 		u32 i;
 		/*
 		 * Write in batches of 128 as there seems to be a limit
-		 * of how much you can output to ftrace at once.
+		 * of how much more you can output to ftrace at once.
 		 */
 		for (i = 0; i < words; i += TRACE_MAX_LENGTH) {
 			u32 num_words = min(words - i, TRACE_MAX_LENGTH);

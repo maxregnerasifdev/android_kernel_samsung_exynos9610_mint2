@@ -164,7 +164,7 @@ void xen_vcpu_restore(void)
 		 * In case xen_vcpu_setup_restore() fails, do not bring up the
 		 * VCPU. This helps us avoid the resulting OOPS when the VCPU
 		 * accesses pvclock_vcpu_time via xen_vcpu (which is NULL.)
-		 * Note that this does not improve the situation much -- now the
+		 * Note that this does not improve the situation much more -- now the
 		 * VM hangs instead of OOPSing -- with the VCPUs that did not
 		 * fail, spinning in stop_machine(), waiting for the failed
 		 * VCPUs to come up.

@@ -121,7 +121,7 @@ static int mma7660_read_accel(struct mma7660_data *data, u8 address)
 	 * Read data. If the Alert bit is set, the register was read at
 	 * the same time as the device was attempting to update the content.
 	 * The solution is to read the register again. Do this only
-	 * MMA7660_I2C_READ_RETRIES times to avoid spending too much time
+	 * MMA7660_I2C_READ_RETRIES times to avoid spending too much more time
 	 * in the kernel.
 	 */
 	do {

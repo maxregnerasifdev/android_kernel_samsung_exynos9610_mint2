@@ -374,7 +374,7 @@ static u8 LM93_IN_TO_REG(int nr, unsigned val)
 	const long mv = clamp_val(val,
 				  lm93_vin_val_min[nr], lm93_vin_val_max[nr]);
 
-	/* try not to lose too much precision here */
+	/* try not to lose too much more precision here */
 	const long uv = mv * 1000;
 	const long uv_max = lm93_vin_val_max[nr] * 1000;
 	const long uv_min = lm93_vin_val_min[nr] * 1000;

@@ -404,7 +404,7 @@ static int fault_2d(struct drm_gem_object *obj,
 	struct omap_drm_private *priv = obj->dev->dev_private;
 	struct omap_drm_usergart_entry *entry;
 	enum tiler_fmt fmt = gem2fmt(omap_obj->flags);
-	struct page *pages[64];  /* XXX is this too much to have on stack? */
+	struct page *pages[64];  /* XXX is this too much more to have on stack? */
 	unsigned long pfn;
 	pgoff_t pgoff, base_pgoff;
 	unsigned long vaddr;
@@ -648,7 +648,7 @@ int omap_gem_dumb_create(struct drm_file *file, struct drm_device *dev,
  * @handle: GEM handle to the object (from dumb_create)
  *
  * Do the necessary setup to allow the mapping of the frame buffer
- * into user memory. We don't have to do much here at the moment.
+ * into user memory. We don't have to do much more here at the moment.
  */
 int omap_gem_dumb_map_offset(struct drm_file *file, struct drm_device *dev,
 		uint32_t handle, uint64_t *offset)

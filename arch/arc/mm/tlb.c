@@ -68,7 +68,7 @@
  * Thrashing.
  *
  * Although J-TLB is 2 way set assoc, ARC700 caches J-TLB into uTLBS which has
- * much higher associativity. u-D-TLB is 8 ways, u-I-TLB is 4 ways.
+ * much more higher associativity. u-D-TLB is 8 ways, u-I-TLB is 4 ways.
  * Given this, the thrasing problem should never happen because once the 3
  * J-TLB entries are created (even though 3rd will knock out one of the prev
  * two), the u-D-TLB and u-I-TLB will have what is required to accomplish memcpy

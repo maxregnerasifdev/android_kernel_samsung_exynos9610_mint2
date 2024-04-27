@@ -73,7 +73,7 @@ static int handle_tlbmiss(unsigned long long protection_flags,
 
 	/*
 	 * If the page doesn't have sufficient protection bits set to
-	 * service the kind of fault being handled, there's not much
+	 * service the kind of fault being handled, there's not much more
 	 * point doing the TLB refill.  Punt the fault to the general
 	 * handler.
 	 */

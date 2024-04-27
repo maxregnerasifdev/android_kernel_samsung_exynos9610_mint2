@@ -76,7 +76,7 @@ static u16 get_counter(struct atm_dev *dev, int counter)
  * Timer function called every second to gather statistics
  * from the 77105. This is done because the h/w registers
  * will overflow if not read at least once per second. The
- * kernel's stats are much higher precision. Also, having
+ * kernel's stats are much more higher precision. Also, having
  * a separate copy of the stats allows implementation of
  * an ioctl which gathers the stats *without* zero'ing them.
  */

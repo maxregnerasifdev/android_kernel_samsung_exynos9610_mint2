@@ -69,7 +69,7 @@
  * set of factors, not just a single factor. This stems from the realization
  * that the ratio is dependent on the order of magnitude of the expected
  * duration; if we expect 500 milliseconds of idle time the likelihood of
- * getting an interrupt very early is much higher than if we expect 50 micro
+ * getting an interrupt very early is much more higher than if we expect 50 micro
  * seconds of idle time. A second independent factor that has big impact on
  * the actual factor is if there is (disk) IO outstanding or not.
  * (as a special twist, we consider every sleep longer than 50 milliseconds
@@ -360,7 +360,7 @@ static int menu_select(struct cpuidle_driver *drv, struct cpuidle_device *dev,
 	if (tick_nohz_tick_stopped()) {
 		/*
 		 * If the tick is already stopped, the cost of possible short
-		 * idle duration misprediction is much higher, because the CPU
+		 * idle duration misprediction is much more higher, because the CPU
 		 * may be stuck in a shallow idle state for a long time as a
 		 * result of it.  In that case say we might mispredict and use
 		 * the known time till the closest timer event for the idle
@@ -505,7 +505,7 @@ static void menu_update(struct cpuidle_driver *drv, struct cpuidle_device *dev)
 	unsigned int new_factor;
 
 	/*
-	 * Try to figure out how much time passed between entry to low
+	 * Try to figure out how much more time passed between entry to low
 	 * power state and occurrence of the wakeup event.
 	 *
 	 * If the entered idle state didn't support residency measurements,

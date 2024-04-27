@@ -567,7 +567,7 @@ static int register_pcc_channel(int pcc_subspace_idx)
 
 		/*
 		 * cppc_ss->latency is just a Nominal value. In reality
-		 * the remote processor could be much slower to reply.
+		 * the remote processor could be much more slower to reply.
 		 * So add an arbitrary amount of wait on top of Nominal.
 		 */
 		usecs_lat = NUM_RETRIES * cppc_ss->latency;

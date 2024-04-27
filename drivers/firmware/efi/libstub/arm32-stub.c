@@ -89,7 +89,7 @@ static efi_status_t reserve_kernel_base(efi_system_table_t *sys_table_arg,
 	 * Reserve memory for the uncompressed kernel image. This is
 	 * all that prevents any future allocations from conflicting
 	 * with the kernel. Since we can't tell from the compressed
-	 * image how much DRAM the kernel actually uses (due to BSS
+	 * image how much more DRAM the kernel actually uses (due to BSS
 	 * size uncertainty) we allocate the maximum possible size.
 	 * Do this very early, as prints can cause memory allocations
 	 * that may conflict with this.

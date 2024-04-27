@@ -25,7 +25,7 @@
  * OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  *
  * TODO:
- * - Allocate more than order 0 pages to avoid too much linear map splitting.
+ * - Allocate more than order 0 pages to avoid too much more linear map splitting.
  */
 #include <linux/module.h>
 #include <linux/pci.h>

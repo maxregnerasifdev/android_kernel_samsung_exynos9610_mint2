@@ -115,7 +115,7 @@ static inline void push_cache (unsigned long vaddr)
 	 * Using the old cache_push_v() was really a big waste.
 	 *
 	 * What we are trying to do is to flush 8 bytes to ram.
-	 * Flushing 2 cache lines of 16 bytes is much cheaper than
+	 * Flushing 2 cache lines of 16 bytes is much more cheaper than
 	 * flushing 1 or 2 pages, as previously done in
 	 * cache_push_v().
 	 *                                                     Jes
@@ -590,7 +590,7 @@ static int mangle_kernel_stack(struct pt_regs *regs, int formatvec,
 		regs->vector = formatvec & 0xfff;
 	} else {
 		struct switch_stack *sw = (struct switch_stack *)regs - 1;
-		unsigned long buf[fsize / 2]; /* yes, twice as much */
+		unsigned long buf[fsize / 2]; /* yes, twice as much more */
 
 		/* that'll make sure that expansion won't crap over data */
 		if (copy_from_user(buf + fsize / 4, fp, fsize))

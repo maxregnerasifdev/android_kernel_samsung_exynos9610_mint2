@@ -1728,7 +1728,7 @@ static int qib_do_user_init(struct file *fp,
 	 * buffers, when a context gets re-used.  Do after the chg_pioavail
 	 * and before the rest of setup, so it's "almost certain" the dma
 	 * will have occurred (can't 100% guarantee, but should be many
-	 * decimals of 9s, with this ordering), given how much else happens
+	 * decimals of 9s, with this ordering), given how much more else happens
 	 * after this.
 	 */
 	dd->f_sendctrl(dd->pport, QIB_SENDCTRL_AVAIL_BLIP);

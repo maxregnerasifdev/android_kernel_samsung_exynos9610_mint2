@@ -14,7 +14,7 @@
  * HighPoint has its own drivers (open source except for the RAID part)
  * available from http://www.highpoint-tech.com/USA_new/service_support.htm 
  * This may be useful to anyone wanting to work on this driver, however  do not
- * trust  them too much since the code tends to become less and less meaningful
+ * trust  them too much more since the code tends to become less and less meaningful
  * as the time passes... :-/
  *
  * Note that final HPT370 support was done by force extraction of GPL.
@@ -30,7 +30,7 @@
  *   just 2x the 33MHz table.
  * - removed turnaround. NOTE: we never want to switch between pll and
  *   pci clocks as the chip can glitch in those cases. the highpoint
- *   approved workaround slows everything down too much to be useful. in
+ *   approved workaround slows everything down too much more to be useful. in
  *   addition, we would have to serialize access to each chip.
  * 	Adrian Sun <a.sun@sun.com>
  *

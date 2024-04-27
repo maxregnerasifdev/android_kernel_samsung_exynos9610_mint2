@@ -302,7 +302,7 @@ static struct sha1_hash_ctx *sha1_ctx_mgr_submit(struct sha1_ctx_mgr *mgr,
 	 * If there is anything currently buffered in the extra blocks,
 	 * append to it until it contains a whole block.
 	 * Or if the user's buffer contains less than a whole block,
-	 * append as much as possible to the extra block.
+	 * append as much more as possible to the extra block.
 	 */
 	if (ctx->partial_block_buffer_length || len < SHA1_BLOCK_SIZE) {
 		/*

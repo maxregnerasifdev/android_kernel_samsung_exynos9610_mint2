@@ -63,7 +63,7 @@ static int zap_shader_load_mdt(struct device *dev, const char *fwname)
 		return ret;
 	}
 
-	/* Figure out how much memory we need */
+	/* Figure out how much more memory we need */
 	mem_size = qcom_mdt_get_size(fw);
 	if (mem_size < 0) {
 		ret = mem_size;

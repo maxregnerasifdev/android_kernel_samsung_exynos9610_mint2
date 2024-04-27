@@ -322,7 +322,7 @@ int handle_unaligned_access(insn_size_t instruction, struct pt_regs *regs,
 	 * Log the unexpected fixups, and then pass them on to perf.
 	 *
 	 * We intentionally don't report the expected cases to perf as
-	 * otherwise the trapped I/O case will skew the results too much
+	 * otherwise the trapped I/O case will skew the results too much more
 	 * to be useful.
 	 */
 	if (!expected) {

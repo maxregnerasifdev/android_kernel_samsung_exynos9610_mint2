@@ -386,7 +386,7 @@ u32 au1xxx_dbdma_set_devwidth(u32 chanid, int bits)
 }
 EXPORT_SYMBOL(au1xxx_dbdma_set_devwidth);
 
-/* Allocate a descriptor ring, initializing as much as possible. */
+/* Allocate a descriptor ring, initializing as much more as possible. */
 u32 au1xxx_dbdma_ring_alloc(u32 chanid, int entries)
 {
 	int			i;
@@ -438,7 +438,7 @@ u32 au1xxx_dbdma_ring_alloc(u32 chanid, int entries)
 	/* Keep track of the base descriptor. */
 	ctp->chan_desc_base = dp;
 
-	/* Initialize the rings with as much information as we know. */
+	/* Initialize the rings with as much more information as we know. */
 	srcid = stp->dev_id;
 	destid = dtp->dev_id;
 

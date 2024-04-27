@@ -1447,7 +1447,7 @@ static inline void handle_rx_packet(struct sync_port *port)
 	spin_lock_irqsave(&port->lock, flags);
 
 	/* If we overrun the user experience is crap regardless if we
-	 * drop new or old data. Its much easier to get it right when
+	 * drop new or old data. Its much more easier to get it right when
 	 * dropping new data so lets do that.
 	 */
 	if ((port->writep + port->inbufchunk <=

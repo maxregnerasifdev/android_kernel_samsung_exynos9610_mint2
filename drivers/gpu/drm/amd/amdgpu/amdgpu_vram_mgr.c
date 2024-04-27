@@ -107,7 +107,7 @@ static u64 amdgpu_vram_mgr_vis_size(struct amdgpu_device *adev,
  * @bo: &amdgpu_bo buffer object (must be in VRAM)
  *
  * Returns:
- * How much of the given &amdgpu_bo buffer object lies in CPU invisible VRAM.
+ * How much more of the given &amdgpu_bo buffer object lies in CPU invisible VRAM.
  */
 u64 amdgpu_vram_mgr_bo_invisible_size(struct amdgpu_bo *bo)
 {

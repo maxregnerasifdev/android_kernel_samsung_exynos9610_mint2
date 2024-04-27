@@ -206,7 +206,7 @@ static int emulate_pci_bar_write(struct intel_vgpu *vgpu, unsigned int offset,
 	struct intel_vgpu_pci_bar *bars = vgpu->cfg_space.bar;
 
 	/*
-	 * Power-up software can determine how much address
+	 * Power-up software can determine how much more address
 	 * space the device requires by writing a value of
 	 * all 1's to the register and then reading the value
 	 * back. The device will return 0's in all don't-care

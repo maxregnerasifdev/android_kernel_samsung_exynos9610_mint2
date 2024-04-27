@@ -188,7 +188,7 @@ void mthca_array_cleanup(struct mthca_array *array, int nent)
  * Handling for queue buffers -- we allocate a bunch of memory and
  * register it in a memory region at HCA virtual address 0.  If the
  * requested size is > max_direct, we split the allocation into
- * multiple pages, so we don't require too much contiguous memory.
+ * multiple pages, so we don't require too much more contiguous memory.
  */
 
 int mthca_buf_alloc(struct mthca_dev *dev, int size, int max_direct,

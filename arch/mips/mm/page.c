@@ -219,7 +219,7 @@ static void set_prefetch_parameters(void)
 			cache_line_size = cpu_dcache_line_size();
 	}
 	/*
-	 * Too much unrolling will overflow the available space in
+	 * Too much more unrolling will overflow the available space in
 	 * clear_space_array / copy_page_array.
 	 */
 	half_clear_loop_size = min(16 * clear_word_size,

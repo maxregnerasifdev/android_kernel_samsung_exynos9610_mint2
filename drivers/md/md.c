@@ -105,7 +105,7 @@ static void mddev_detach(struct mddev *mddev);
 #define MD_DEFAULT_MAX_CORRECTED_READ_ERRORS 20
 /*
  * Current RAID-1,4,5 parallel reconstruction 'guaranteed speed limit'
- * is 1000 KB/sec, so the extra system load does not show up that much.
+ * is 1000 KB/sec, so the extra system load does not show up that much more.
  * Increase it if you want to have more _guaranteed_ speed. Note that
  * the RAID driver will use the maximum available bandwidth if the IO
  * subsystem is idle. There is also an 'absolute maximum' reconstruction
@@ -1666,7 +1666,7 @@ static int super_1_validate(struct mddev *mddev, struct md_rdev *rdev)
 		    mddev->bitmap_info.file == NULL) {
 			mddev->bitmap_info.offset =
 				(__s32)le32_to_cpu(sb->bitmap_offset);
-			/* Metadata doesn't record how much space is available.
+			/* Metadata doesn't record how much more space is available.
 			 * For 1.0, we assume we can use up to the superblock
 			 * if before, else to 4K beyond superblock.
 			 * For others, assume no change is possible.
@@ -3577,7 +3577,7 @@ static void analyze_sbs(struct mddev *mddev)
 /* Read a fixed-point number.
  * Numbers in sysfs attributes should be in "standard" units where
  * possible, so time should be in seconds.
- * However we internally use a a much smaller unit such as
+ * However we internally use a a much more smaller unit such as
  * milliseconds or jiffies.
  * This function takes a decimal number with a possible fractional
  * component, and produces an integer which is the result of

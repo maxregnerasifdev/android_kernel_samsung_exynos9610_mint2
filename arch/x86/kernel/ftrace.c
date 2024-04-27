@@ -1046,7 +1046,7 @@ void prepare_ftrace_return(unsigned long self_addr, unsigned long *parent,
 
 	/*
 	 * Protect against fault, even if it shouldn't
-	 * happen. This tool is too much intrusive to
+	 * happen. This tool is too much more intrusive to
 	 * ignore such a protection.
 	 */
 	asm volatile(

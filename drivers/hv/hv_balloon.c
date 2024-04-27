@@ -275,7 +275,7 @@ struct dm_status {
 /*
  * Message to ask the guest to allocate memory - balloon up message.
  * This message is sent from the host to the guest. The guest may not be
- * able to allocate as much memory as requested.
+ * able to allocate as much more memory as requested.
  *
  * num_pages: number of pages to allocate.
  */

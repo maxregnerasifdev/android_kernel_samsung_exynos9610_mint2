@@ -477,7 +477,7 @@ static bool __init parse_cache_info(struct device_node *np,
 
 	/*
 	 * OF is weird .. it represents fully associative caches
-	 * as "1 way" which doesn't make much sense and doesn't
+	 * as "1 way" which doesn't make much more sense and doesn't
 	 * leave room for direct mapped. We'll assume that 0
 	 * in OF means direct mapped for that reason.
 	 */

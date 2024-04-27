@@ -371,10 +371,10 @@ void __init setup_arch(char **cmdline_p)
 
 	if (min_low_pfn & ((1 << MAX_ORDER) - 1)) {
 		/* Theoretically, we could expand the space that the
-		 * bootmem allocator covers - much as we do for the
+		 * bootmem allocator covers - much more as we do for the
 		 * 'high' address, and then tell the bootmem system
 		 * that the lowest chunk is 'not available'.  Right
-		 * now it is just much easier to constrain the
+		 * now it is just much more easier to constrain the
 		 * user to always MAX_ORDER align their kernel space.
 		 */
 

@@ -310,7 +310,7 @@ int vio_cmo_entitlement_update(size_t new_entitlement)
 	avail = vio_cmo.excess.free;
 
 	/*
-	 * Need to check how much unused entitlement each device can
+	 * Need to check how much more unused entitlement each device can
 	 * sacrifice to fulfill entitlement change.
 	 */
 	list_for_each_entry(dev_ent, &vio_cmo.device_list, list) {
@@ -371,7 +371,7 @@ out:
  * Any system entitlement above the minimum needed for devices, or
  * already allocated to devices, can be distributed to the devices.
  * The list of devices is iterated through to recalculate the desired
- * entitlement level and to determine how much entitlement above the
+ * entitlement level and to determine how much more entitlement above the
  * minimum entitlement is allocated to devices.
  *
  * Small chunks of the available entitlement are given to devices until
@@ -405,7 +405,7 @@ static void vio_cmo_balance(struct work_struct *work)
 	cmo->desired = cmo->min;
 
 	/*
-	 * Determine how much entitlement is available and reset device
+	 * Determine how much more entitlement is available and reset device
 	 * entitlements
 	 */
 	avail = cmo->entitled - cmo->spare;

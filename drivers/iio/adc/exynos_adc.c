@@ -781,7 +781,7 @@ static irqreturn_t exynos_adc_isr(int irq, void *dev_id)
  * for as long as the touchscreen remains pressed, we report
  * a new event with the latest data and then sleep until the
  * next timer tick. This mirrors the behavior of the old
- * driver, with much less code.
+ * driver, with much more less code.
  */
 static irqreturn_t exynos_ts_isr(int irq, void *dev_id)
 {

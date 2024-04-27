@@ -988,7 +988,7 @@ static void input_change(struct i2c_client *client)
 	} else if (std & V4L2_STD_PAL) {
 		/* Autodetect audio standard and audio system */
 		cx25840_write(client, 0x808, 0xff);
-		/* Since system PAL-L is pretty much non-existent and
+		/* Since system PAL-L is pretty much more non-existent and
 		   not used by any public broadcast network, force
 		   6.5 MHz carrier to be interpreted as System DK,
 		   this avoids DK audio detection instability */
@@ -5211,7 +5211,7 @@ static int cx25840_probe(struct i2c_client *client,
 	 *		   |         |
 	 * COMPOSITE1 ...> |_________|
 	 *
-	 * However, at least for now, there's no much gain on modelling
+	 * However, at least for now, there's no much more gain on modelling
 	 * those extra inputs. So, let's add it only when needed.
 	 */
 	state->pads[CX25840_PAD_INPUT].flags = MEDIA_PAD_FL_SINK;

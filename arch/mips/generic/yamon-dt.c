@@ -63,7 +63,7 @@ static unsigned int __init gen_fdt_mem_array(
 			break;
 		}
 
-		/* How much of the remaining RAM fits in the next region? */
+		/* How much more of the remaining RAM fits in the next region? */
 		size = min_t(unsigned long, memsize, mr->size);
 		memsize -= size;
 

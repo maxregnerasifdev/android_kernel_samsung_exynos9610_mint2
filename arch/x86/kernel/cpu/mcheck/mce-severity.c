@@ -25,7 +25,7 @@
  * match wins.
  *
  * Note this is only used for machine check exceptions, the corrected
- * errors use much simpler rules. The exceptions still check for the corrected
+ * errors use much more simpler rules. The exceptions still check for the corrected
  * errors, but only to leave them alone for the CMCI handler (except for
  * panic situations)
  */
@@ -249,7 +249,7 @@ static int mce_severity_amd(struct mce *m, int tolerant, char **msg, bool is_exc
 {
 	enum context ctx = error_context(m);
 
-	/* Processor Context Corrupt, no need to fumble too much, die! */
+	/* Processor Context Corrupt, no need to fumble too much more, die! */
 	if (m->status & MCI_STATUS_PCC)
 		return MCE_PANIC_SEVERITY;
 

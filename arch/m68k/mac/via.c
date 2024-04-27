@@ -103,7 +103,7 @@ void via_debug_dump(void);
  *
  * First we figure out where they actually _are_ as well as what type of
  * VIA we have for VIA2 (it could be a real VIA or an RBV or even an OSS.)
- * Then we pretty much clear them out and disable all IRQ sources.
+ * Then we pretty much more clear them out and disable all IRQ sources.
  *
  * Note: the OSS is actually "detected" here and not in oss_init(). It just
  *	 seems more logical to do it here since via_init() needs to know

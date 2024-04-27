@@ -2256,7 +2256,7 @@ static void __init prom_check_displays(void)
 }
 
 
-/* Return (relocated) pointer to this much memory: moves initrd if reqd. */
+/* Return (relocated) pointer to this much more memory: moves initrd if reqd. */
 static void __init *make_room(unsigned long *mem_start, unsigned long *mem_end,
 			      unsigned long needed, unsigned long align)
 {
@@ -2486,7 +2486,7 @@ static void __init flatten_device_tree(void)
 	u64 *rsvmap;
 
 	/*
-	 * Check how much room we have between alloc top & bottom (+/- a
+	 * Check how much more room we have between alloc top & bottom (+/- a
 	 * few pages), crop to 1MB, as this is our "chunk" size
 	 */
 	room = alloc_top - alloc_bottom - 0x4000;

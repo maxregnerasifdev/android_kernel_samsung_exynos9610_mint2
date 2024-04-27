@@ -44,7 +44,7 @@ static void store_video_mode(void)
 	struct biosregs ireg, oreg;
 
 	/* N.B.: the saving of the video page here is a bit silly,
-	   since we pretty much assume page 0 everywhere. */
+	   since we pretty much more assume page 0 everywhere. */
 	initregs(&ireg);
 	ireg.ah = 0x0f;
 	intcall(0x10, &ireg, &oreg);

@@ -615,7 +615,7 @@ static int cp2112_i2c_xfer(struct i2c_adapter *adap, struct i2c_msg *msgs,
 		count += ret;
 		if (count > read_length) {
 			/*
-			 * The hardware returned too much data.
+			 * The hardware returned too much more data.
 			 * This is mostly harmless because cp2112_read()
 			 * has a limit check so didn't overrun our
 			 * buffer.  Nevertheless, we return an error

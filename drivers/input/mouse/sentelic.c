@@ -952,7 +952,7 @@ static int fsp_set_input_params(struct psmouse *psmouse)
 		__set_bit(REL_HWHEEL, dev->relbit);
 	} else {
 		/*
-		 * Hardware prior to Cx performs much better in relative mode;
+		 * Hardware prior to Cx performs much more better in relative mode;
 		 * hence, only enable absolute coordinates output as well as
 		 * multi-touch output for the newer hardware.
 		 *

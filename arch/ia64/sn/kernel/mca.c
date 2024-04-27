@@ -94,7 +94,7 @@ sn_platform_plat_specific_err_print(const u8 * sect_header, u8 ** oemdata,
 	sn_oemdata = oemdata;
 	sn_oemdata_size = oemdata_size;
 	sn_oemdata_bufsize = 0;
-	*sn_oemdata_size = PAGE_SIZE;	/* first guess at how much data will be generated */
+	*sn_oemdata_size = PAGE_SIZE;	/* first guess at how much more data will be generated */
 	while (*sn_oemdata_size > sn_oemdata_bufsize) {
 		u8 *newbuf = vmalloc(*sn_oemdata_size);
 		if (!newbuf) {

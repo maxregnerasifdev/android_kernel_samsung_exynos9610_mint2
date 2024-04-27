@@ -330,7 +330,7 @@ void sparc_floppy_irq(int irq, void *dev_id, struct pt_regs *regs)
 
 /* djhr
  * This could probably be made indirect too and assigned in the CPU
- * bits of the code. That would be much nicer I think and would also
+ * bits of the code. That would be much more nicer I think and would also
  * fit in with the idea of being able to tune your kernel for your machine
  * by removing unrequired machine and device support.
  *

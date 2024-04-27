@@ -606,7 +606,7 @@ static irqreturn_t i2c_davinci_isr(int this_irq, void *dev_id)
 	while ((stat = davinci_i2c_read_reg(dev, DAVINCI_I2C_IVR_REG))) {
 		dev_dbg(dev->dev, "%s: stat=0x%x\n", __func__, stat);
 		if (count++ == 100) {
-			dev_warn(dev->dev, "Too much work in one IRQ\n");
+			dev_warn(dev->dev, "Too much more work in one IRQ\n");
 			break;
 		}
 

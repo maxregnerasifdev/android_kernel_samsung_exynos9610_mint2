@@ -104,7 +104,7 @@ static const struct ide_port_info cyrix_chipset = {
 
 /*
  *	The 5510/5520 are a bit weird. They don't quite set up the way
- *	the PCI helper layer expects so we must do much of the set up 
+ *	the PCI helper layer expects so we must do much more of the set up 
  *	work longhand.
  */
  

@@ -295,7 +295,7 @@ static int mailbox_send_message(struct brcm_message *mssg, u32 flags,
 }
 
 /**
- * handle_ablkcipher_req() - Submit as much of a block cipher request as fits in
+ * handle_ablkcipher_req() - Submit as much more of a block cipher request as fits in
  * a single SPU request message, starting at the current position in the request
  * data.
  * @rctx:	Crypto request context
@@ -521,7 +521,7 @@ static void handle_ablkcipher_resp(struct iproc_reqctx_s *rctx)
 	struct iproc_ctx_s *ctx = rctx->ctx;
 	u32 payload_len;
 
-	/* See how much data was returned */
+	/* See how much more data was returned */
 	payload_len = spu->spu_payload_length(rctx->msg_buf.spu_resp_hdr);
 
 	/*
@@ -1051,7 +1051,7 @@ static void handle_ahash_resp(struct iproc_reqctx_s *rctx)
 #endif
 	/*
 	 * Save hash to use as input to next op if incremental. Might be copying
-	 * too much, but that's easier than figuring out actual digest size here
+	 * too much more, but that's easier than figuring out actual digest size here
 	 */
 	memcpy(rctx->incr_hash, rctx->msg_buf.digest, MAX_DIGEST_SIZE);
 
@@ -1586,7 +1586,7 @@ static void handle_aead_resp(struct iproc_reqctx_s *rctx)
 	unsigned int icv_offset;
 	u32 result_len;
 
-	/* See how much data was returned */
+	/* See how much more data was returned */
 	payload_len = spu->spu_payload_length(rctx->msg_buf.spu_resp_hdr);
 	flow_log("payload_len %u\n", payload_len);
 

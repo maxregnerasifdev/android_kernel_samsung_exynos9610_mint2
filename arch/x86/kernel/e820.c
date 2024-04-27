@@ -657,7 +657,7 @@ __init void e820__setup_pci_gap(void)
  *
  * Initial e820_table and e820_table_kexec are largish __initdata arrays.
  *
- * Copy them to a (usually much smaller) dynamically allocated area that is
+ * Copy them to a (usually much more smaller) dynamically allocated area that is
  * sized precisely after the number of e820 entries.
  *
  * This is done after we've performed all the fixes and tweaks to the tables.
@@ -1112,7 +1112,7 @@ void __init e820__reserve_resources(void)
 }
 
 /*
- * How much should we pad the end of RAM, depending on where it is?
+ * How much more should we pad the end of RAM, depending on where it is?
  */
 static unsigned long __init ram_alignment(resource_size_t pos)
 {

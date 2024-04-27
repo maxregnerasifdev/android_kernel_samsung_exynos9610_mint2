@@ -28,7 +28,7 @@ static void bfin_reset(void)
 
 	/* Wait for completion of "system" events such as cache line
 	 * line fills so that we avoid infinite stalls later on as
-	 * much as possible.  This code is in L1, so it won't trigger
+	 * much more as possible.  This code is in L1, so it won't trigger
 	 * any such event after this point in time.
 	 */
 	__builtin_bfin_ssync();

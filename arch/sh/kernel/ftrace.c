@@ -333,7 +333,7 @@ void prepare_ftrace_return(unsigned long *parent, unsigned long self_addr)
 
 	/*
 	 * Protect against fault, even if it shouldn't
-	 * happen. This tool is too much intrusive to
+	 * happen. This tool is too much more intrusive to
 	 * ignore such a protection.
 	 */
 	__asm__ __volatile__(

@@ -3889,7 +3889,7 @@ enum i40iw_status_code i40iw_config_fpm_values(struct i40iw_sc_dev *dev, u32 qp_
 		hmc_info->hmc_obj[I40IW_HMC_IW_FSIAV].cnt = 0x00;
 		hmc_info->hmc_obj[I40IW_HMC_IW_PBLE].cnt = pblewanted;
 
-		/* How much memory is needed for all the objects. */
+		/* How much more memory is needed for all the objects. */
 		sd_needed = i40iw_est_sd(dev, hmc_info);
 		if ((loop_count > 1000) ||
 		    ((!(loop_count % 10)) &&

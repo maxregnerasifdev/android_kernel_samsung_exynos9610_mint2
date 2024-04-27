@@ -1241,7 +1241,7 @@ static void qib_7220_set_intr_state(struct qib_devdata *dd, u32 enable)
 }
 
 /*
- * Try to cleanup as much as possible for anything that might have gone
+ * Try to cleanup as much more as possible for anything that might have gone
  * wrong while in freeze mode, such as pio buffers being written by user
  * processes (causing armlaunch), send errors due to going into freeze mode,
  * etc., and try to avoid causing extra interrupts while doing so.

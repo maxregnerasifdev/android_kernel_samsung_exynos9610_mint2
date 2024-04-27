@@ -63,7 +63,7 @@ static int __kprobes insn_has_delayslot(union mips_instruction insn)
  * insn_has_ll_or_sc function checks whether instruction is ll or sc
  * one; putting breakpoint on top of atomic ll/sc pair is bad idea;
  * so we need to prevent it and refuse kprobes insertion for such
- * instructions; cannot do much about breakpoint in the middle of
+ * instructions; cannot do much more about breakpoint in the middle of
  * ll/sc pair; it is upto user to avoid those places
  */
 static int __kprobes insn_has_ll_or_sc(union mips_instruction insn)

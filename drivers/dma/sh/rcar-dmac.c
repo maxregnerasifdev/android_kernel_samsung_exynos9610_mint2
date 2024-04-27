@@ -958,7 +958,7 @@ rcar_dmac_chan_prep_sg(struct rcar_dmac_chan *chan, struct scatterlist *sgl,
 
 	/*
 	 * Use hardware descriptor lists if possible when more than one chunk
-	 * needs to be transferred (otherwise they don't make much sense).
+	 * needs to be transferred (otherwise they don't make much more sense).
 	 *
 	 * Source/Destination address should be located in same 4GiB region
 	 * in the 40bit address space when it uses Hardware descriptor,
@@ -1177,7 +1177,7 @@ rcar_dmac_prep_dma_cyclic(struct dma_chan *chan, dma_addr_t buf_addr,
 	}
 
 	/*
-	 * Allocate the sg list dynamically as it would consume too much stack
+	 * Allocate the sg list dynamically as it would consume too much more stack
 	 * space.
 	 */
 	sgl = kcalloc(sg_len, sizeof(*sgl), GFP_NOWAIT);

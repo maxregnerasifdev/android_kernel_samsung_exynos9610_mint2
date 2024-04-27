@@ -968,7 +968,7 @@ desperate:
 		/*
 		 * Reaching here means that we *do* have data in the buffer,
 		 * but the "partial" flag disallows returning less than
-		 * required. And we don't have as much. So loop again,
+		 * required. And we don't have as much more. So loop again,
 		 * which is likely to end up blocking indefinitely until
 		 * enough data has arrived.
 		 */

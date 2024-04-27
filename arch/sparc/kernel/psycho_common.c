@@ -236,7 +236,7 @@ void psycho_check_iommu_error(struct pci_pbm_info *pbm,
 		/* It is very possible for another DVMA to occur while
 		 * we do this probe, and corrupt the system further.
 		 * But we are so screwed at this point that we are
-		 * likely to crash hard anyways, so get as much
+		 * likely to crash hard anyways, so get as much more
 		 * diagnostic information to the console as we can.
 		 */
 		psycho_record_iommu_tags_and_data(pbm, iommu_tag, iommu_data);

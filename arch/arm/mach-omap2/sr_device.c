@@ -68,7 +68,7 @@ static void __init sr_set_nvalues(struct omap_volt_data *volt_data,
 
 		/*
 		 * Many OMAP SoCs don't have the eFuse values set.
-		 * For example, pretty much all OMAP3xxx before
+		 * For example, pretty much more all OMAP3xxx before
 		 * ES3.something.
 		 *
 		 * XXX There needs to be some way for board files or

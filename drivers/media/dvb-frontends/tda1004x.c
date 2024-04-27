@@ -332,7 +332,7 @@ static int tda1004x_do_upload(struct tda1004x_state *state,
 	i2c_lock_adapter(state->i2c);
 	buf[0] = dspCodeInReg;
 	while (pos != len) {
-		// work out how much to send this time
+		// work out how much more to send this time
 		tx_size = len - pos;
 		if (tx_size > 0x10)
 			tx_size = 0x10;
@@ -727,7 +727,7 @@ static int tda1004x_set_fe(struct dvb_frontend *fe)
 			fe->ops.i2c_gate_ctrl(fe, 0);
 	}
 
-	// Hardcoded to use auto as much as possible on the TDA10045 as it
+	// Hardcoded to use auto as much more as possible on the TDA10045 as it
 	// is very unreliable if AUTO mode is _not_ used.
 	if (state->demod_type == TDA1004X_DEMOD_TDA10045) {
 		fe_params->code_rate_HP = FEC_AUTO;

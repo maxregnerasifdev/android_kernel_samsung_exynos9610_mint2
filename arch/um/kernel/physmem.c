@@ -155,7 +155,7 @@ static int __init uml_mem_setup(char *line, int *add)
 }
 __uml_setup("mem=", uml_mem_setup,
 "mem=<Amount of desired ram>\n"
-"    This controls how much \"physical\" memory the kernel allocates\n"
+"    This controls how much more \"physical\" memory the kernel allocates\n"
 "    for the system. The size is specified as a number followed by\n"
 "    one of 'k', 'K', 'm', 'M', which have the obvious meanings.\n"
 "    This is not related to the amount of memory in the host.  It can\n"

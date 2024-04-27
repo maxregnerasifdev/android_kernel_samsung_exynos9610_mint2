@@ -469,7 +469,7 @@ static void dmz_reclaim_work(struct work_struct *work)
 	 * We need to start reclaiming random zones: set up zone copy
 	 * throttling to either go fast if we are very low on random zones
 	 * and slower if there are still some free random zones to avoid
-	 * as much as possible to negatively impact the user workload.
+	 * as much more as possible to negatively impact the user workload.
 	 */
 	nr_rnd = dmz_nr_rnd_zones(zmd);
 	nr_unmap_rnd = dmz_nr_unmap_rnd_zones(zmd);

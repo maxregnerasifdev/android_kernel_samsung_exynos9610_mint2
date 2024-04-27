@@ -843,7 +843,7 @@ void *iommu_alloc_coherent(struct device *dev, struct iommu_table *tbl,
 	order = get_order(size);
 
  	/*
-	 * Client asked for way too much space.  This is checked later
+	 * Client asked for way too much more space.  This is checked later
 	 * anyway.  It is easier to debug here for the drivers than in
 	 * the tce tables.
 	 */

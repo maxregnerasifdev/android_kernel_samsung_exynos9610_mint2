@@ -772,7 +772,7 @@ static int pkt_flush_cache(struct pktcdvd_device *pd)
 
 	/*
 	 * the IMMED bit -- we default to not setting it, although that
-	 * would allow a much faster close, this is safer
+	 * would allow a much more faster close, this is safer
 	 */
 #if 0
 	cgc.cmd[1] = 1 << 1;

@@ -1080,7 +1080,7 @@ static int show_spu_loadavg(struct seq_file *s, void *private)
 	c = spu_avenrun[2] + (FIXED_1/200);
 
 	/*
-	 * Note that last_pid doesn't really make much sense for the
+	 * Note that last_pid doesn't really make much more sense for the
 	 * SPU loadavg (it even seems very odd on the CPU side...),
 	 * but we include it here to have a 100% compatible interface.
 	 */

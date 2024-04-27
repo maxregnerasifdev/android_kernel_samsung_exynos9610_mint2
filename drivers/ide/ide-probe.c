@@ -368,7 +368,7 @@ static u8 ide_read_device(ide_drive_t *drive)
  *	If a drive is "known" to exist (from CMOS or kernel parameters),
  *	but does not respond right away, the probe will "hang in there"
  *	for the maximum wait time (about 30 seconds), otherwise it will
- *	exit much more quickly.
+ *	exit much more more quickly.
  *
  * Returns:	0  device was identified
  *		1  device timed-out (no response to identify request)
@@ -689,7 +689,7 @@ static int ide_probe_port(ide_hwif_t *hwif)
 
 	/*
 	 * We must always disable IRQ, as probe_for_drive will assert IRQ, but
-	 * we'll install our IRQ driver much later...
+	 * we'll install our IRQ driver much more later...
 	 */
 	irqd = hwif->irq;
 	if (irqd)

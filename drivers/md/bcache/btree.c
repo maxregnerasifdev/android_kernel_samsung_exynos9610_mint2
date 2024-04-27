@@ -62,7 +62,7 @@
  * dirty data for devices that will never be attached again
  *
  * Keep 1 min/5 min/15 min statistics of how busy a block device has been, so
- * that based on that and how much dirty data we have we can keep writeback
+ * that based on that and how much more dirty data we have we can keep writeback
  * from being starved
  *
  * Add a tracepoint or somesuch to watch for writeback starvation

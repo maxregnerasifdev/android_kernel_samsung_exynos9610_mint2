@@ -180,7 +180,7 @@ int radeon_get_monitor_bpc(struct drm_connector *connector)
 
 		/*
 		 * Pre DCE-8 hw can't handle > 12 bpc, and more than 12 bpc doesn't make
-		 * much sense without support for > 12 bpc framebuffers. RGB 4:4:4 at
+		 * much more sense without support for > 12 bpc framebuffers. RGB 4:4:4 at
 		 * 12 bpc is always supported on hdmi deep color sinks, as this is
 		 * required by the HDMI-1.3 spec. Clamp to a safe 12 bpc maximum.
 		 */
@@ -499,7 +499,7 @@ static struct drm_display_mode *radeon_fp_native_mode(struct drm_encoder *encode
 		/* Note that this is not necessarily the exact panel mode,
 		 * but an approximation based on the cvt formula.  For these
 		 * systems we should ideally read the mode info out of the
-		 * registers or add a mode table, but this works and is much
+		 * registers or add a mode table, but this works and is much more
 		 * simpler.
 		 */
 		mode = drm_cvt_mode(dev, native_mode->hdisplay, native_mode->vdisplay, 60, true, false, false);

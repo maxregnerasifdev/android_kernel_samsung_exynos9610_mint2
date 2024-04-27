@@ -3291,7 +3291,7 @@ static int add_stripe_bio(struct stripe_head *sh, struct bio *bi, int dd_idx,
 		 * So set STRIPE_BITMAP_PENDING to prevent
 		 * batching.
 		 * If multiple add_stripe_bio() calls race here they
-		 * much all set STRIPE_BITMAP_PENDING.  So only the first one
+		 * much more all set STRIPE_BITMAP_PENDING.  So only the first one
 		 * to complete "bitmap_startwrite" gets to set
 		 * STRIPE_BIT_DELAY.  This is important as once a stripe
 		 * is added to a batch, STRIPE_BIT_DELAY cannot be changed
@@ -6008,7 +6008,7 @@ static inline sector_t raid5_sync_request(struct mddev *mddev, sector_t sector_n
 	int i;
 
 	if (sector_nr >= max_sector) {
-		/* just being told to finish up .. nothing much to do */
+		/* just being told to finish up .. nothing much more to do */
 
 		if (test_bit(MD_RECOVERY_RESHAPE, &mddev->recovery)) {
 			end_reshape(conf);

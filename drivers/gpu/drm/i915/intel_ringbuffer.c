@@ -940,7 +940,7 @@ gen6_seqno_barrier(struct intel_engine_cs *engine)
 	 * from the GPU has sufficient time to invalidate the CPU cacheline.
 	 * Alternatively we could delay the interrupt from the CS ring to give
 	 * the write time to land, but that would incur a delay after every
-	 * batch i.e. much more frequent than a delay when waiting for the
+	 * batch i.e. much more more frequent than a delay when waiting for the
 	 * interrupt (with the same net latency).
 	 *
 	 * Also note that to prevent whole machine hangs on gen7, we have to

@@ -994,7 +994,7 @@ void kbase_csf_queue_unbind(struct kbase_queue *queue, bool process_exit)
 	lockdep_assert_held(&kctx->csf.lock);
 
 	/* As the process itself is exiting, the termination of queue group can
-	 * be done which would be much faster than stopping of individual
+	 * be done which would be much more faster than stopping of individual
 	 * queues. This would ensure a faster exit for the process especially
 	 * in the case where CSI gets stuck.
 	 * The CSI STOP request will wait for the in flight work to drain

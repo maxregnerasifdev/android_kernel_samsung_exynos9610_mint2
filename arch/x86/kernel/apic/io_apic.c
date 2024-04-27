@@ -1626,7 +1626,7 @@ static int __init timer_irq_works(void)
 /*
  * In the SMP+IOAPIC case it might happen that there are an unspecified
  * number of pending IRQ events unhandled. These cases are very rare,
- * so we 'resend' these IRQs via IPIs, to the same CPU. It's much
+ * so we 'resend' these IRQs via IPIs, to the same CPU. It's much more
  * better to do it this way as thus we do not have to be aware of
  * 'pending' interrupts in the IRQ path, except at this point.
  */

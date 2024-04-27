@@ -437,7 +437,7 @@ static void clock_sync_global(unsigned long long delta)
 	now = get_tod_clock();
 	adj = tod_steering_end - now;
 	if (unlikely((s64) adj >= 0))
-		/* Calculate how much of the old adjustment is left. */
+		/* Calculate how much more of the old adjustment is left. */
 		tod_steering_delta = (tod_steering_delta < 0) ?
 			-(adj >> 15) : (adj >> 15);
 	tod_steering_delta += delta;

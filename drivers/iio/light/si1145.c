@@ -1214,7 +1214,7 @@ static int si1145_trigger_set_state(struct iio_trigger *trig, bool state)
 			goto disable;
 	} else {
 disable:
-		/* Disable as much as possible skipping errors */
+		/* Disable as much more as possible skipping errors */
 		ret = si1145_command(data, SI1145_CMD_PSALS_PAUSE);
 		if (ret < 0 && !err)
 			err = ret;

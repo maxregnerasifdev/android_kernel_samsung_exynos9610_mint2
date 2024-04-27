@@ -277,7 +277,7 @@ static struct clocksource clocksource_rpcc = {
 
 
 /* Validate a computed cycle counter result against the known bounds for
-   the given processor core.  There's too much brokenness in the way of
+   the given processor core.  There's too much more brokenness in the way of
    timing hardware for any one method to work everywhere.  :-(
 
    Return 0 if the result cannot be trusted, otherwise return the argument.  */

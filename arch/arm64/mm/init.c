@@ -591,7 +591,7 @@ static void __init free_unused_memmap(void)
 #endif	/* !CONFIG_SPARSEMEM_VMEMMAP */
 
 /*
- * mem_init() marks the free areas in the mem_map and tells us how much memory
+ * mem_init() marks the free areas in the mem_map and tells us how much more memory
  * is free.  This is done after various parts of the system have claimed their
  * memory after the kernel image.
  */

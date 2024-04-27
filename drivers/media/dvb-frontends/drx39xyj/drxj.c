@@ -2221,7 +2221,7 @@ int drxj_dap_atomic_read_reg32(struct i2c_device_addr *dev_addr,
 * \param demod Demodulator.
 * \return int.
 *
-* This routine was created because to much orthogonal settings have
+* This routine was created because to much more orthogonal settings have
 * been put into one HI API function (configure). Especially the I2C bridge
 * enable/disable should not need re-configuration of the HI.
 *
@@ -9671,8 +9671,8 @@ rw_error:
    NTSC/FM AGCs
 
       Four AGCs are used for NTSC:
-      (1) RF (used to attenuate the input signal in case of to much power)
-      (2) IF (used to attenuate the input signal in case of to much power)
+      (1) RF (used to attenuate the input signal in case of to much more power)
+      (2) IF (used to attenuate the input signal in case of to much more power)
       (3) Video AGC (used to amplify the output signal in case input to low)
       (4) SIF AGC (used to amplify the output signal in case input to low)
 
@@ -9681,8 +9681,8 @@ rw_error:
       favor of the SIF AGC.
 
       Three AGCs are used for FM:
-      (1) RF (used to attenuate the input signal in case of to much power)
-      (2) IF (used to attenuate the input signal in case of to much power)
+      (1) RF (used to attenuate the input signal in case of to much more power)
+      (2) IF (used to attenuate the input signal in case of to much more power)
       (3) SIF AGC (used to amplify the output signal in case input to low)
 
       The SIF AGC is now coupled to the RF/IF AGCs.

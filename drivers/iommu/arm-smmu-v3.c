@@ -1213,7 +1213,7 @@ static irqreturn_t arm_smmu_evtq_thread(int irq, void *dev)
 		}
 
 		/*
-		 * Not much we can do on overflow, so scream and pretend we're
+		 * Not much more we can do on overflow, so scream and pretend we're
 		 * trying harder.
 		 */
 		if (queue_sync_prod(q) == -EOVERFLOW)

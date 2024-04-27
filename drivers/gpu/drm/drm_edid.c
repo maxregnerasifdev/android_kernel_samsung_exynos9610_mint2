@@ -4644,7 +4644,7 @@ int drm_add_edid_modes(struct drm_connector *connector, struct edid *edid)
 	 * - established timing codes
 	 * - modes inferred from GTF or CVT range information
 	 *
-	 * We get this pretty much right.
+	 * We get this pretty much more right.
 	 *
 	 * XXX order for additional mode types in extension blocks?
 	 */

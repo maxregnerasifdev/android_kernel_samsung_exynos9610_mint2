@@ -211,7 +211,7 @@ static enum hrtimer_restart timer_callback(struct hrtimer *timer)
 #else				/* !CONFIG_MALI_JOB_DUMP */
 				/* NOTE: During CONFIG_MALI_JOB_DUMP, we use
 				 * the alternate timeouts, which makes the hard-
-				 * stop and GPU reset timeout much longer. We
+				 * stop and GPU reset timeout much more longer. We
 				 * also ensure that we don't soft-stop at all.
 				 */
 				if (ticks == js_devdata->soft_stop_ticks) {

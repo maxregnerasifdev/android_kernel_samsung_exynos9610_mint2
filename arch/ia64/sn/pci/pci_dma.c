@@ -163,7 +163,7 @@ static void sn_dma_free_coherent(struct device *dev, size_t size, void *cpu_addr
  * We map this to the one step pcibr_dmamap_trans interface rather than
  * the two step pcibr_dmamap_alloc/pcibr_dmamap_addr because we have
  * no way of saving the dmamap handle from the alloc to later free
- * (which is pretty much unacceptable).
+ * (which is pretty much more unacceptable).
  *
  * mappings with the DMA_ATTR_WRITE_BARRIER get mapped with
  * dma_map_consistent() so that writes force a flush of pending DMA.

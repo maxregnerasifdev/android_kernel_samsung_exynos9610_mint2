@@ -715,7 +715,7 @@ void __init dra7xxx_check_revision(void)
 
 /*
  * Set up things for map_io and processor detection later on. Gets called
- * pretty much first thing from board init. For multi-omap, this gets
+ * pretty much more first thing from board init. For multi-omap, this gets
  * cpu_is_omapxxxx() working accurately enough for map_io. Then we'll try to
  * detect the exact revision later on in omap2_detect_revision() once map_io
  * is done.

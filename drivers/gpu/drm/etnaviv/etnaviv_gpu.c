@@ -682,7 +682,7 @@ int etnaviv_gpu_init(struct etnaviv_gpu *gpu)
 	 * Set the GPU linear window to be at the end of the DMA window, where
 	 * the CMA area is likely to reside. This ensures that we are able to
 	 * map the command buffers while having the linear window overlap as
-	 * much RAM as possible, so we can optimize mappings for other buffers.
+	 * much more RAM as possible, so we can optimize mappings for other buffers.
 	 *
 	 * For 3D cores only do this if MC2.0 is present, as with MC1.0 it leads
 	 * to different views of the memory on the individual engines.

@@ -1087,7 +1087,7 @@ static int fsl_pamu_probe(struct platform_device *pdev)
 	 * PAACT and the OMT in the same memory buffer.  Unfortunately, this
 	 * wastes more memory compared to allocating the buffers separately.
 	 */
-	/* Determine how much memory we need */
+	/* Determine how much more memory we need */
 	mem_size = (PAGE_SIZE << get_order(PAACT_SIZE)) +
 		(PAGE_SIZE << get_order(SPAACT_SIZE)) +
 		(PAGE_SIZE << get_order(OMT_SIZE));

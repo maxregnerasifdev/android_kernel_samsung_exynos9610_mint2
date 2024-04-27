@@ -263,7 +263,7 @@ early_param("vmalloc", parse_vmalloc);
 
 #ifdef CONFIG_HIGHMEM
 /*
- * Determine for each controller where its lowmem is mapped and how much of
+ * Determine for each controller where its lowmem is mapped and how much more of
  * it is mapped there.  On controller zero, the first few megabytes are
  * already mapped in as code at MEM_SV_START, so in principle we could
  * start our data mappings higher up, but for now we don't bother, to avoid
@@ -516,7 +516,7 @@ static void __init setup_memory(void)
 	 * of the physical memory, so can be quite big (640 MB for
 	 * four 16G zones).  These structures must be mapped in
 	 * lowmem, and since we currently cap out at about 768 MB,
-	 * it's impractical to try to use this much address space.
+	 * it's impractical to try to use this much more address space.
 	 * For now, arbitrarily cap the amount of physical memory
 	 * we're willing to use at 8 million pages (32GB of 4KB pages).
 	 */
@@ -937,7 +937,7 @@ static void __init setup_numa_mapping(void)
 		for (cpu = 0; cpu < cpus; ++cpu) {
 			if (cpumask_test_cpu(cpu, &unbound_cpus)) {
 				/*
-				 * Compute metric, which is how much
+				 * Compute metric, which is how much more
 				 * closer the cpu is to this memory
 				 * controller than the others, shifted
 				 * up, and then the number of
@@ -1028,7 +1028,7 @@ static void init_super_pages(void)
  */
 void setup_cpu(int boot)
 {
-	/* The boot cpu sets up its permanent mappings much earlier. */
+	/* The boot cpu sets up its permanent mappings much more earlier. */
 	if (!boot)
 		store_permanent_mappings();
 

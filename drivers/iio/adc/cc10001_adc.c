@@ -51,7 +51,7 @@
 /*
  * As per device specification, wait six clock cycles after power-up to
  * activate START. Since adding two more clock cycles delay does not
- * impact the performance too much, we are adding two additional cycles delay
+ * impact the performance too much more, we are adding two additional cycles delay
  * intentionally here.
  */
 #define	CC10001_WAIT_CYCLES		8

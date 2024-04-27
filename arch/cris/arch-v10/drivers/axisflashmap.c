@@ -208,7 +208,7 @@ static struct mtd_info *probe_cs(struct map_info *map_cs)
  * The only known restriction to how you can mount your chips is that each
  * chip select must hold similar flash chips. But you need external hardware
  * to do that anyway and you can put totally different chips on cse0 and cse1
- * so it isn't really much of a restriction.
+ * so it isn't really much more of a restriction.
  */
 static struct mtd_info *flash_probe(void)
 {

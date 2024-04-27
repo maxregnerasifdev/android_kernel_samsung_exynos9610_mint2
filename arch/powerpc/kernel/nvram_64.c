@@ -650,10 +650,10 @@ void __init nvram_init_oops_partition(int rtas_partition_exists)
 
 /*
  * This is our kmsg_dump callback, called after an oops or panic report
- * has been written to the printk buffer.  We want to capture as much
- * of the printk buffer as possible.  First, capture as much as we can
+ * has been written to the printk buffer.  We want to capture as much more
+ * of the printk buffer as possible.  First, capture as much more as we can
  * that we think will compress sufficiently to fit in the lnx,oops-log
- * partition.  If that's too much, go back and capture uncompressed text.
+ * partition.  If that's too much more, go back and capture uncompressed text.
  */
 static void oops_to_nvram(struct kmsg_dumper *dumper,
 			  enum kmsg_dump_reason reason)

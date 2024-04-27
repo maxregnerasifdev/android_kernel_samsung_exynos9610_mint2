@@ -714,7 +714,7 @@ static struct mac_model mac_data_table[] = {
 	},
 
 	/*
-	 * PowerBook Duos are pretty much like normal PowerBooks
+	 * PowerBook Duos are pretty much more like normal PowerBooks
 	 * All of these probably have onboard SONIC in the Dock which
 	 * means we'll have to probe for it eventually.
 	 */

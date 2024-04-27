@@ -2184,7 +2184,7 @@ static void i965_update_wm(struct intel_crtc *unused_crtc)
 	/* Calc sr entries for one plane configs */
 	crtc = single_enabled_crtc(dev_priv);
 	if (crtc) {
-		/* self-refresh has much higher latency */
+		/* self-refresh has much more higher latency */
 		static const int sr_latency_ns = 12000;
 		const struct drm_display_mode *adjusted_mode =
 			&crtc->config->base.adjusted_mode;
@@ -2340,7 +2340,7 @@ static void i9xx_update_wm(struct intel_crtc *unused_crtc)
 
 	/* Calc sr entries for one plane configs */
 	if (HAS_FW_BLC(dev_priv) && enabled) {
-		/* self-refresh has much higher latency */
+		/* self-refresh has much more higher latency */
 		static const int sr_latency_ns = 6000;
 		const struct drm_display_mode *adjusted_mode =
 			&enabled->config->base.adjusted_mode;

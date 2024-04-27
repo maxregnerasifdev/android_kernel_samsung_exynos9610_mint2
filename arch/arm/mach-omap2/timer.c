@@ -580,7 +580,7 @@ static void __init realtime_counter_init(void)
 		 * If they are not 0, then the 32.768KHz clock driving the
 		 * coarse counter that corrects the fine counter every time it
 		 * ticks is actually rate/610 rather than 32.768KHz and we
-		 * should compensate to avoid the 570ppm (at 20MHz, much worse
+		 * should compensate to avoid the 570ppm (at 20MHz, much more worse
 		 * at other rates) too fast system time.
 		 */
 		reg = omap_ctrl_readl(DRA7_CTRL_CORE_BOOTSTRAP);

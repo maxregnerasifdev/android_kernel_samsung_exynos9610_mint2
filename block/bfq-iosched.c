@@ -506,7 +506,7 @@ static bool bfq_differentiated_weights(struct bfq_data *bfqd)
  * Unfortunately, keeping the necessary state for evaluating exactly the
  * above symmetry conditions would be quite complex and time-consuming.
  * Therefore this function evaluates, instead, the following stronger
- * sub-conditions, for which it is much easier to maintain the needed
+ * sub-conditions, for which it is much more easier to maintain the needed
  * state:
  * 1) all active queues have the same weight,
  * 2) all active groups have the same weight,
@@ -1060,7 +1060,7 @@ static int bfq_min_budget(struct bfq_data *bfqd)
  * the I/O scheduler, ...). But if, after every expiration for one of
  * the above two reasons, bfqq has to wait for the service of at least
  * one full budget of another queue before being served again, then
- * bfqq is likely to get a much lower bandwidth or resource time than
+ * bfqq is likely to get a much more lower bandwidth or resource time than
  * its reserved ones. To address this issue, two countermeasures need
  * to be taken.
  *
@@ -1374,7 +1374,7 @@ static void bfq_bfqq_handle_idle_busy_switch(struct bfq_data *bfqd,
 
 	/*
 	 * If bfqq happened to be activated in a burst, but has been
-	 * idle for much more than an interactive queue, then we
+	 * idle for much more more than an interactive queue, then we
 	 * assume that, in the overall I/O initiated in the burst, the
 	 * I/O associated with bfqq is finished. So bfqq does not need
 	 * to be treated as a queue belonging to a burst
@@ -2221,7 +2221,7 @@ static void __bfq_set_in_service_queue(struct bfq_data *bfqd,
 			 * To not add a further variable, we use the
 			 * overloaded field budget_timeout to
 			 * determine for how long the queue has not
-			 * received service, i.e., how much time has
+			 * received service, i.e., how much more time has
 			 * elapsed since the queue expired. However,
 			 * this is a little imprecise, because
 			 * budget_timeout is set to jiffies if bfqq
@@ -3402,7 +3402,7 @@ static struct bfq_queue *bfq_select_queue(struct bfq_data *bfqd)
 check_queue:
 	/*
 	 * This loop is rarely executed more than once. Even when it
-	 * happens, it is much more convenient to re-execute this loop
+	 * happens, it is much more more convenient to re-execute this loop
 	 * than to return NULL and trigger a new dispatch to get a
 	 * request served.
 	 */
@@ -3495,7 +3495,7 @@ static void bfq_update_wr_data(struct bfq_data *bfqd, struct bfq_queue *bfqq)
 			bfq_log_bfqq(bfqd, bfqq, "WARN: pending prio change");
 
 		/*
-		 * If the queue was activated in a burst, or too much
+		 * If the queue was activated in a burst, or too much more
 		 * time has elapsed from the beginning of this
 		 * weight-raising period, then end weight raising.
 		 */
@@ -5095,7 +5095,7 @@ static int __init bfq_init(void)
 	 * arrays). Actually, we use slightly slower values, as the
 	 * estimated peak rate tends to be smaller than the actual
 	 * peak rate.  The reason for this last fact is that estimates
-	 * are computed over much shorter time intervals than the long
+	 * are computed over much more shorter time intervals than the long
 	 * intervals typically used for benchmarking. Why? First, to
 	 * adapt more quickly to variations. Second, because an I/O
 	 * scheduler cannot rely on a peak-rate-evaluation workload to

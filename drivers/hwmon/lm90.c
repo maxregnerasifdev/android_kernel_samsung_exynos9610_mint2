@@ -23,7 +23,7 @@
  * This driver also supports the ADM1032, a sensor chip made by Analog
  * Devices. That chip is similar to the LM90, with a few differences
  * that are not handled by this driver. Among others, it has a higher
- * accuracy than the LM90, much like the LM86 does.
+ * accuracy than the LM90, much more like the LM86 does.
  *
  * This driver also supports the MAX6657, MAX6658 and MAX6659 sensor
  * chips made by Maxim. These chips are similar to the LM86.

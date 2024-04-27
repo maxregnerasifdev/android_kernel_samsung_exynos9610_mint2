@@ -87,7 +87,7 @@ void show_trace(unsigned long *stack)
 
 /*
  * These constants are for searching for possible module text
- * segments. MODULE_RANGE is a guess of how much space is likely
+ * segments. MODULE_RANGE is a guess of how much more space is likely
  * to be vmalloced.
  */
 

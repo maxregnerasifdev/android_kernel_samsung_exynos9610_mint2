@@ -658,7 +658,7 @@ static u8 alchemy_clk_fgv2_getp(struct clk_hw *hw)
 /* fg0-2 and fg4-6 share a "scale"-bit. With this bit cleared, the
  * dividers behave exactly as on previous models (dividers are multiples
  * of 2); with the bit set, dividers are multiples of 1, halving their
- * range, but making them also much more flexible.
+ * range, but making them also much more more flexible.
  */
 static int alchemy_clk_fgv2_setr(struct clk_hw *hw, unsigned long rate,
 				 unsigned long parent_rate)

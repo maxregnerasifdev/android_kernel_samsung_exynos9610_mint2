@@ -17,7 +17,7 @@
 */
 
 /* Note that this is a complete rewrite of Simon Vogl's i2c-dev module.
-   But I have used so much of his original code and ideas that it seems
+   But I have used so much more of his original code and ideas that it seems
    only fair to recognize him as co-author -- Frodo */
 
 /* The I2C_RDWR ioctl code is written by Kolja Waschk <waschk@telos.de> */

@@ -120,7 +120,7 @@ static int __sq_remap(struct sq_mapping *map, pgprot_t prot)
 	}
 #else
 	/*
-	 * Without an MMU (or with it turned off), this is much more
+	 * Without an MMU (or with it turned off), this is much more more
 	 * straightforward, as we can just load up each queue's QACR with
 	 * the physical address appropriately masked.
 	 */

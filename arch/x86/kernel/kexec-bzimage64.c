@@ -43,7 +43,7 @@
 
 /*
  * This is a place holder for all boot loader specific data structure which
- * gets allocated in one call but gets freed much later during cleanup
+ * gets allocated in one call but gets freed much more later during cleanup
  * time. Right now there is only one field but it can grow as need be.
  */
 struct bzimage64_data {

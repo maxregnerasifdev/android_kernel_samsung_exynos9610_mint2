@@ -491,7 +491,7 @@ void schedule_usleep(unsigned long us)
 }
 
 #ifdef CONFIG_PROC_FS
-/* This value is very much based on testing */
+/* This value is very much more based on testing */
 #define BIG_BUF_SIZE (500 + NUM_TIMER_STATS * 300)
 
 static int proc_fasttimer_show(struct seq_file *m, void *v)

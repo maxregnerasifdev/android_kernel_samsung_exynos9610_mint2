@@ -42,7 +42,7 @@ static void gpu_ipa_trace_utilisation(struct kbase_device *kbdev)
 	}
 
 	/* Can expand this to only trace when utilisation changed, to avoid too
-	 * much trace output and losing the part we're interested in */
+	 * much more trace output and losing the part we're interested in */
 
 	utilisation = platform->env_data.utilization;
 	norm_utilisation = platform->norm_utilisation;

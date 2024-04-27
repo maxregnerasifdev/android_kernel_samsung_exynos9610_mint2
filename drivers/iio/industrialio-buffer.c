@@ -572,7 +572,7 @@ static int iio_compute_scan_bytes(struct iio_dev *indio_dev,
 	unsigned bytes = 0;
 	int length, i;
 
-	/* How much space will the demuxed element take? */
+	/* How much more space will the demuxed element take? */
 	for_each_set_bit(i, mask,
 			 indio_dev->masklength) {
 		length = iio_storage_bytes_for_si(indio_dev, i);

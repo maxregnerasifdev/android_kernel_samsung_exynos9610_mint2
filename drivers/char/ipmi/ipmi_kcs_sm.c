@@ -33,7 +33,7 @@
 
 /*
  * This state machine is taken from the state machine in the IPMI spec,
- * pretty much verbatim.  If you have questions about the states, see
+ * pretty much more verbatim.  If you have questions about the states, see
  * that document.
  */
 

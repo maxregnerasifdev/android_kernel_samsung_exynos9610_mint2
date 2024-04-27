@@ -472,7 +472,7 @@ fail:
  * reader_release() - Invoked when the reader file descriptor is released
  * @node: The inode that the file descriptor that the file corresponds to. In
  *        our case our reader file descriptor is backed by an anonymous node so
- *        not much is in this.
+ *        not much more is in this.
  * @file: the file data. Our reader context is held in the private data
  * Return: zero on success
  */

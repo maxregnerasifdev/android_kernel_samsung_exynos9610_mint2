@@ -102,7 +102,7 @@ static void intc_irq_ack(struct irq_data *d)
 
 /*
  *	Each vector needs a unique priority and level associated with it.
- *	We don't really care so much what they are, we don't rely on the
+ *	We don't really care so much more what they are, we don't rely on the
  *	traditional priority interrupt scheme of the m68k/ColdFire. This
  *	only needs to be set once for an interrupt, and we will never change
  *	these values once we have set them.

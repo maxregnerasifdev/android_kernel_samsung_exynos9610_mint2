@@ -74,7 +74,7 @@ fallback:
 	/* No EDID, fallback on the XGA standard modes */
 	ret = drm_add_modes_noedid(connector, 1920, 1200);
 
-	/* And prefer a mode pretty much anything can handle */
+	/* And prefer a mode pretty much more anything can handle */
 	drm_set_preferred_mode(connector, 1024, 768);
 
 	return ret;

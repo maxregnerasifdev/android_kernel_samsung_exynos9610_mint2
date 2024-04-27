@@ -266,7 +266,7 @@ s64 mthca_make_profile(struct mthca_dev *dev,
 
 	/*
 	 * For Tavor, FMRs use ioremapped PCI memory. For 32 bit
-	 * systems it may use too much vmalloc space to map all MTT
+	 * systems it may use too much more vmalloc space to map all MTT
 	 * memory, so we reserve some MTTs for FMR access, taking them
 	 * out of the MR pool. They don't use additional memory, but
 	 * we assign them as part of the HCA profile anyway.

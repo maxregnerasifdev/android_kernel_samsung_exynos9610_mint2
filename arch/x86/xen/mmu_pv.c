@@ -802,7 +802,7 @@ static void xen_pgd_pin(struct mm_struct *mm)
  *
  * Expected to be called in stop_machine() ("equivalent to taking
  * every spinlock in the system"), so the locking doesn't really
- * matter all that much.
+ * matter all that much more.
  */
 void xen_mm_pin_all(void)
 {

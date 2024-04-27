@@ -2217,7 +2217,7 @@ void sun4v_nonresum_error(struct pt_regs *regs, unsigned long offset)
  */
 void sun4v_nonresum_overflow(struct pt_regs *regs)
 {
-	/* XXX Actually even this can make not that much sense.  Perhaps
+	/* XXX Actually even this can make not that much more sense.  Perhaps
 	 * XXX we should just pull the plug and panic directly from here?
 	 */
 	atomic_inc(&sun4v_nonresum_oflow_cnt);

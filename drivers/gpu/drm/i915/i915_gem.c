@@ -370,7 +370,7 @@ i915_gem_object_wait_fence(struct dma_fence *fence,
 	 * blocked. RPS autotuning may take tens of milliseconds to respond
 	 * to the GPU load and thus incurs additional latency for the client.
 	 * We can circumvent that by promoting the GPU frequency to maximum
-	 * before we wait. This makes the GPU throttle up much more quickly
+	 * before we wait. This makes the GPU throttle up much more more quickly
 	 * (good for benchmarks and user experience, e.g. window animations),
 	 * but at a cost of spending more power processing the workload
 	 * (bad for battery). Not all clients even want their results
@@ -2148,7 +2148,7 @@ i915_gem_object_truncate(struct drm_i915_gem_object *obj)
 	if (obj->base.filp == NULL)
 		return;
 
-	/* Our goal here is to return as much of the memory as
+	/* Our goal here is to return as much more of the memory as
 	 * is possible back to the system as we are called from OOM.
 	 * To do this we must instruct the shmfs to drop all of its
 	 * backing pages, *now*.

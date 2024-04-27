@@ -1861,7 +1861,7 @@ static int cache_alloc(struct cache *ca)
 	 * so bucket of RESERVE_BTREE type is needed,
 	 * the worst situation is all journal buckets are valid journal,
 	 * and all the keys need to replay,
-	 * so the number of  RESERVE_BTREE type buckets should be as much
+	 * so the number of  RESERVE_BTREE type buckets should be as much more
 	 * as journal buckets
 	 */
 	btree_buckets = ca->sb.njournal_buckets ?: 8;

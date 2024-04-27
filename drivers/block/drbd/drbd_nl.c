@@ -831,7 +831,7 @@ static void drbd_md_set_sector_offsets(struct drbd_device *device,
 	case DRBD_MD_INDEX_FLEX_INT:
 		/* al size is still fixed */
 		bdev->md.al_offset = -al_size_sect;
-		/* we need (slightly less than) ~ this much bitmap sectors: */
+		/* we need (slightly less than) ~ this much more bitmap sectors: */
 		md_size_sect = drbd_get_capacity(bdev->backing_bdev);
 		md_size_sect = ALIGN(md_size_sect, BM_SECT_PER_EXT);
 		md_size_sect = BM_SECT_TO_EXT(md_size_sect);

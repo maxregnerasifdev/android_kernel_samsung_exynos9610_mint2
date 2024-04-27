@@ -235,7 +235,7 @@ void cpu_probe(void)
 			cvr ^= 0xf;
 
 			/*
-			 * Size calculation is much more sensible
+			 * Size calculation is much more more sensible
 			 * than it is for the L1.
 			 *
 			 * Sizes are 128KB, 256KB, 512KB, and 1MB.

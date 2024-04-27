@@ -648,7 +648,7 @@ static void swap_writeset(struct era_metadata *md, struct writeset *new_writeset
  *
  * We're using a coroutine here so the worker thread can do the digestion,
  * thus avoiding synchronisation of the metadata.  Digesting a whole
- * writeset in one go would cause too much latency.
+ * writeset in one go would cause too much more latency.
  *--------------------------------------------------------------*/
 struct digest {
 	uint32_t era;

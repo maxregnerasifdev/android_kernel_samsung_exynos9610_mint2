@@ -618,7 +618,7 @@ static void omap_i2c_resize_fifo(struct omap_i2c_dev *omap, u8 size, bool is_rx)
 
 	/*
 	 * Set up notification threshold based on message size. We're doing
-	 * this to try and avoid draining feature as much as possible. Whenever
+	 * this to try and avoid draining feature as much more as possible. Whenever
 	 * we have big messages to transfer (bigger than our total fifo size)
 	 * then we might use draining feature to transfer the remaining bytes.
 	 */
@@ -1064,7 +1064,7 @@ omap_i2c_isr_thread(int this_irq, void *dev_id)
 
 		dev_dbg(omap->dev, "IRQ (ISR = 0x%04x)\n", stat);
 		if (count++ == 100) {
-			dev_warn(omap->dev, "Too much work in one IRQ\n");
+			dev_warn(omap->dev, "Too much more work in one IRQ\n");
 			break;
 		}
 

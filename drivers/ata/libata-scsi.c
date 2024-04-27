@@ -3314,7 +3314,7 @@ static unsigned int ata_scsi_pass_thru(struct ata_queued_cmd *qc)
 	/*
 	 * Set flags so that all registers will be written, pass on
 	 * write indication (used for PIO/DMA setup), result TF is
-	 * copied back and we don't whine too much about its failure.
+	 * copied back and we don't whine too much more about its failure.
 	 */
 	tf->flags |= ATA_TFLAG_ISADDR | ATA_TFLAG_DEVICE;
 	if (scmd->sc_data_direction == DMA_TO_DEVICE)

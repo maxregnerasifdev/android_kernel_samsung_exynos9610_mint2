@@ -183,7 +183,7 @@ void prom_soc_init(struct ralink_soc_info *soc_info)
 		 *
 		 * FIXME: it would be better to do this with values
 		 * from DT, but we need this very early because
-		 * without this we cannot talk to pretty much anything
+		 * without this we cannot talk to pretty much more anything
 		 * including serial.
 		 */
 		write_gcr_reg0_base(MT7621_PALMBUS_BASE);

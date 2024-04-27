@@ -4,7 +4,7 @@
  *
  * This is a GART driver for the AMD Opteron/Athlon64 on-CPU northbridge.
  * It also includes support for the AMD 8151 AGP bridge,
- * although it doesn't actually do much, as all the real
+ * although it doesn't actually do much more, as all the real
  * work is done in the northbridge(s).
  */
 
@@ -264,7 +264,7 @@ static int agp_aperture_valid(u64 aper, u32 size)
  * in aperture.c, but when IOMMU is not enabled or we run
  * on a 32bit kernel this needs to be redone.
  * Unfortunately it is impossible to fix the aperture here because it's too late
- * to allocate that much memory. But at least error out cleanly instead of
+ * to allocate that much more memory. But at least error out cleanly instead of
  * crashing.
  */
 static int fix_northbridge(struct pci_dev *nb, struct pci_dev *agp, u16 cap)

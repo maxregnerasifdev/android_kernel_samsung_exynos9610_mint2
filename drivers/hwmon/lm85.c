@@ -813,7 +813,7 @@ static ssize_t set_pwm_freq(struct device *dev,
 	/*
 	 * The ADT7468 has a special high-frequency PWM output mode,
 	 * where all PWM outputs are driven by a 22.5 kHz clock.
-	 * This might confuse the user, but there's not much we can do.
+	 * This might confuse the user, but there's not much more we can do.
 	 */
 	if (data->type == adt7468 && val >= 11300) {	/* High freq. mode */
 		data->cfg5 &= ~ADT7468_HFPWM;

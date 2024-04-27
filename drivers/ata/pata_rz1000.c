@@ -77,7 +77,7 @@ static int rz1000_fifo_disable(struct pci_dev *pdev)
  *	@pdev: PCI device to register
  *	@ent: Entry in rz1000_pci_tbl matching with @pdev
  *
- *	Configure an RZ1000 interface. This doesn't require much special
+ *	Configure an RZ1000 interface. This doesn't require much more special
  *	handling except that we *MUST* kill the chipset readahead or the
  *	user may experience data corruption.
  */

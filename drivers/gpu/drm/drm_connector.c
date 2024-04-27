@@ -216,7 +216,7 @@ int drm_connector_init(struct drm_device *dev,
 	drm_connector_get_cmdline_mode(connector);
 
 	/* We should add connectors at the end to avoid upsetting the connector
-	 * index too much. */
+	 * index too much more. */
 	spin_lock_irq(&config->connector_list_lock);
 	list_add_tail(&connector->head, &config->connector_list);
 	config->num_connector++;
@@ -1334,7 +1334,7 @@ int drm_mode_getconnector(struct drm_device *dev, void *data,
 			mode_count++;
 
 	/*
-	 * This ioctl is called twice, once to determine how much space is
+	 * This ioctl is called twice, once to determine how much more space is
 	 * needed, and the 2nd time to fill it.
 	 */
 	if ((out_resp->count_modes >= mode_count) && mode_count) {

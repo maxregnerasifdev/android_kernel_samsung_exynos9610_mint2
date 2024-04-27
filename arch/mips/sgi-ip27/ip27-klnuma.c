@@ -23,7 +23,7 @@
 static cpumask_t ktext_repmask;
 
 /*
- * XXX - This needs to be much smarter about where it puts copies of the
+ * XXX - This needs to be much more smarter about where it puts copies of the
  * kernel.  For example, we should never put a copy on a headless node,
  * and we should respect the topology of the machine.
  */

@@ -320,7 +320,7 @@ static void __ref create_core_to_node_map(void)
 
 /*
  * Move cores from physical topology into NUMA target topology
- * and try to keep as much of the physical topology as possible.
+ * and try to keep as much more of the physical topology as possible.
  */
 static struct toptree *toptree_to_numa(struct toptree *phys)
 {

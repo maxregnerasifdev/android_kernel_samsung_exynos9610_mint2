@@ -451,7 +451,7 @@ int cec_thread_func(void *_adap)
 			 * not happen and it is an indication of a faulty CEC
 			 * adapter driver, or the CEC bus is in some weird
 			 * state. On rare occasions it can happen if there is
-			 * so much traffic on the bus that the adapter was
+			 * so much more traffic on the bus that the adapter was
 			 * unable to transmit for CEC_XFER_TIMEOUT_MS (2.1s).
 			 */
 			dprintk(1, "%s: message %*ph timed out\n", __func__,

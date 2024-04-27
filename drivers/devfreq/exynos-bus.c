@@ -303,7 +303,7 @@ static int exynos_bus_parent_parse_of(struct device_node *np,
 	/*
 	 * Optionally, Get the saturation ratio according to Exynos SoC
 	 * When measuring the utilization of each AXI bus with devfreq-event
-	 * devices, the measured real cycle might be much lower than the
+	 * devices, the measured real cycle might be much more lower than the
 	 * total cycle of bus during sampling rate. In result, the devfreq
 	 * simple-ondemand governor might not decide to change the current
 	 * frequency due to too utilization (= real cycle/total cycle).

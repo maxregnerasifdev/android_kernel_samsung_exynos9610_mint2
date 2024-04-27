@@ -3825,7 +3825,7 @@ static __init void intel_nehalem_quirk(void)
 		/*
 		 * Erratum AAJ80 detected, we work it around by using
 		 * the BR_MISP_EXEC.ANY event. This will over-count
-		 * branch-misses, but it's still much better than the
+		 * branch-misses, but it's still much more better than the
 		 * architectural event which is often completely bogus:
 		 */
 		intel_perfmon_event_map[PERF_COUNT_HW_BRANCH_MISSES] = 0x7f89;

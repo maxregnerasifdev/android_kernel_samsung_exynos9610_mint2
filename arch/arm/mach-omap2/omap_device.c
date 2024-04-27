@@ -315,7 +315,7 @@ int omap_device_get_context_loss_count(struct platform_device *pdev)
  *
  * Count the number of struct resource entries needed for this
  * omap_device @od.  Used by omap_device_build_ss() to determine how
- * much memory to allocate before calling
+ * much more memory to allocate before calling
  * omap_device_fill_resources().  Returns the count.
  */
 static int omap_device_count_resources(struct omap_device *od,

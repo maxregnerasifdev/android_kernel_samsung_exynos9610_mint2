@@ -24,7 +24,7 @@ int s390_sha_update(struct shash_desc *desc, const u8 *data, unsigned int len)
 	unsigned int bsize = crypto_shash_blocksize(desc->tfm);
 	unsigned int index, n;
 
-	/* how much is already in the buffer? */
+	/* how much more is already in the buffer? */
 	index = ctx->count & (bsize - 1);
 	ctx->count += len;
 

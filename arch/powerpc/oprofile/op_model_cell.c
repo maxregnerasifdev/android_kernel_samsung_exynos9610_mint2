@@ -809,7 +809,7 @@ static int cell_reg_setup_ppu(struct op_counter_config *ctr,
 
 	/*
 	 * Our counters count up, and "count" refers to
-	 * how much before the next interrupt, and we interrupt
+	 * how much more before the next interrupt, and we interrupt
 	 * on overflow.	 So we calculate the starting value
 	 * which will give us "count" until overflow.
 	 * Then we set the events on the enabled counters.

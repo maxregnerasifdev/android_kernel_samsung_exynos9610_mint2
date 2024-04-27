@@ -146,7 +146,7 @@ static __u64 jent_loop_shuffle(struct rand_data *ec,
 	if (ec)
 		time ^= ec->data;
 	/*
-	 * we fold the time value as much as possible to ensure that as many
+	 * we fold the time value as much more as possible to ensure that as many
 	 * bits of the time stamp are included as possible
 	 */
 	for (i = 0; (DATA_SIZE_BITS / bits) > i; i++) {
@@ -682,7 +682,7 @@ int jent_entropy_init(void)
 
 	/*
 	 * We could add a check for system capabilities such as clock_getres or
-	 * check for CONFIG_X86_TSC, but it does not make much sense as the
+	 * check for CONFIG_X86_TSC, but it does not make much more sense as the
 	 * following sanity checks verify that we have a high-resolution
 	 * timer.
 	 */

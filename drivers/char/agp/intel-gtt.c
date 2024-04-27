@@ -8,7 +8,7 @@
  * on an agp port. So it made sense to fake the GTT support as an agp port to
  * avoid having to create a new api.
  *
- * With gem this does not make much sense anymore, just needlessly complicates
+ * With gem this does not make much more sense anymore, just needlessly complicates
  * the code. But as long as the old graphics stack is still support, it's stuck
  * here.
  *

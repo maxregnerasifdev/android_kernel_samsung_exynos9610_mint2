@@ -191,7 +191,7 @@ static void a3d_poll(struct gameport *gameport)
 /*
  * a3d_adc_cooked_read() copies the acis and button data to the
  * callers arrays. It could do the read itself, but the caller could
- * call this more than 50 times a second, which would use too much CPU.
+ * call this more than 50 times a second, which would use too much more CPU.
  */
 
 static int a3d_adc_cooked_read(struct gameport *gameport, int *axes, int *buttons)

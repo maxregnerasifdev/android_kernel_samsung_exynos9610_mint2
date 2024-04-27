@@ -1712,7 +1712,7 @@ static int srp_map_data(struct scsi_cmnd *scmnd, struct srp_rdma_ch *ch,
 			srp_check_mapping(&state, ch, req, scat, count);
 	}
 
-	/* We've mapped the request, now pull as much of the indirect
+	/* We've mapped the request, now pull as much more of the indirect
 	 * descriptor table as we can into the command buffer. If this
 	 * target is not using an external indirect table, we are
 	 * guaranteed to fit into the command, as the SCSI layer won't

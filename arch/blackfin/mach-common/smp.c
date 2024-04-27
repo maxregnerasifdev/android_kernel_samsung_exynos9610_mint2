@@ -107,7 +107,7 @@ static void ipi_flush_icache(void *info)
 	 * needs to be after the data flush and before the icache
 	 * flush so that the SSYNC does the right thing in preventing
 	 * the instruction prefetcher from hitting things in cached
-	 * memory at the wrong time -- it runs much further ahead than
+	 * memory at the wrong time -- it runs much more further ahead than
 	 * the pipeline.
 	 */
 	SSYNC();

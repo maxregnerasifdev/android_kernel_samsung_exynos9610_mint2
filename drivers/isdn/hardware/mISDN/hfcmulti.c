@@ -1939,7 +1939,7 @@ hfcmulti_dtmf(struct hfc_multi *hc)
 
 
 /*
- * fill fifo as much as possible
+ * fill fifo as much more as possible
  */
 
 static void

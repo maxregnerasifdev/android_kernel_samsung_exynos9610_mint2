@@ -18,7 +18,7 @@
  * DOC: VC4 DSI0/DSI1 module
  *
  * BCM2835 contains two DSI modules, DSI0 and DSI1.  DSI0 is a
- * single-lane DSI controller, while DSI1 is a more modern 4-lane DSI
+ * single-lane DSI controller, while DSI1 is a more modernized 4-lane DSI
  * controller.
  *
  * Most Raspberry Pi boards expose DSI1 as their "DISPLAY" connector,

@@ -1316,7 +1316,7 @@ cfq_group_service_tree_add(struct cfq_rb_root *st, struct cfq_group *cfqg)
 	 * Activate @cfqg and calculate the portion of vfraction @cfqg is
 	 * entitled to.  vfraction is calculated by walking the tree
 	 * towards the root calculating the fraction it has at each level.
-	 * The compounded ratio is how much vfraction @cfqg owns.
+	 * The compounded ratio is how much more vfraction @cfqg owns.
 	 *
 	 * Start with the proportion tasks in this cfqg has against active
 	 * children cfqgs - its leaf_weight against children_weight.
@@ -3363,7 +3363,7 @@ static struct cfq_queue *cfq_select_queue(struct cfq_data *cfqd)
 	}
 
 	/*
-	 * This is a deep seek queue, but the device is much faster than
+	 * This is a deep seek queue, but the device is much more faster than
 	 * the queue can deliver, don't idle
 	 **/
 	if (CFQQ_SEEKY(cfqq) && cfq_cfqq_idle_window(cfqq) &&
@@ -3492,7 +3492,7 @@ static bool cfq_may_dispatch(struct cfq_data *cfqd, struct cfq_queue *cfqq)
 		max_dispatch = 1;
 
 	/*
-	 * Does this cfqq already have too much IO in flight?
+	 * Does this cfqq already have too much more IO in flight?
 	 */
 	if (cfqq->dispatched >= max_dispatch) {
 		bool promote_sync = false;
@@ -3989,7 +3989,7 @@ static inline bool req_noidle(struct request *req)
 }
 
 /*
- * Disable idle window if the process thinks too long or seeks so much that
+ * Disable idle window if the process thinks too long or seeks so much more that
  * it doesn't matter
  */
 static void

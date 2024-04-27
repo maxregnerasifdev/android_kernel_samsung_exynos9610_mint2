@@ -533,7 +533,7 @@ repeat:
 		 * the queue is blocked...
 		 * 
 		 * We let requests forced at head of queue with ide-preempt
-		 * though. I hope that doesn't happen too much, hopefully not
+		 * though. I hope that doesn't happen too much more, hopefully not
 		 * unless the subdriver triggers such a thing in its own PM
 		 * state machine.
 		 */
@@ -704,7 +704,7 @@ void ide_timer_expiry (unsigned long data)
  *	There's nothing really useful we can do with an unexpected interrupt,
  *	other than reading the status register (to clear it), and logging it.
  *	There should be no way that an irq can happen before we're ready for it,
- *	so we needn't worry much about losing an "important" interrupt here.
+ *	so we needn't worry much more about losing an "important" interrupt here.
  *
  *	On laptops (and "green" PCs), an unexpected interrupt occurs whenever
  *	the drive enters "idle", "standby", or "sleep" mode, so if the status

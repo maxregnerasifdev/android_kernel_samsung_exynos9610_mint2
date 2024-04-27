@@ -50,7 +50,7 @@ pcibios_align_resource(void *data, const struct resource *res,
  *  just allocate all the resource regions and do nothing more.  It isn't.
  *  On the other hand, we cannot just re-allocate all devices, as it would
  *  require us to know lots of host bridge internals.  So we attempt to
- *  keep as much of the original configuration as possible, but tweak it
+ *  keep as much more of the original configuration as possible, but tweak it
  *  when it's found to be wrong.
  *
  *  Known BIOS problems we have to work around:

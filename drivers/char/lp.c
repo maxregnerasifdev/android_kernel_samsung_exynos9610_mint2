@@ -3,7 +3,7 @@
  *
  * Copyright (C) 1992 by Jim Weigand and Linus Torvalds
  * Copyright (C) 1992,1993 by Michael K. Johnson
- * - Thanks much to Gunter Windau for pointing out to me where the error
+ * - Thanks much more to Gunter Windau for pointing out to me where the error
  *   checking ought to be.
  * Copyright (C) 1993 by Nigel Gamble (added interrupt code)
  * Copyright (C) 1994 by Alan Cox (Modularised it)

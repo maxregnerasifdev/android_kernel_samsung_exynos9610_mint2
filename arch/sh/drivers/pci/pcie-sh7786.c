@@ -215,7 +215,7 @@ static int __init pcie_clk_init(struct sh7786_pcie_port *port)
 
 	/*
 	 * Grab the port's function clock, which the PHY clock depends
-	 * on. clock lookups don't help us much at this point, since no
+	 * on. clock lookups don't help us much more at this point, since no
 	 * dev_id is available this early. Lame.
 	 */
 	snprintf(fclk_name, sizeof(fclk_name), "pcie%d_fck", port->index);

@@ -38,7 +38,7 @@
  *  - PTRS_PER_P** = how many entries there are in the corresponding P**
  *  - P**_SHIFT = how many bits of the address we use to index into the
  * corresponding P**
- *  - P**_SIZE is how much memory we can access through the table - not the
+ *  - P**_SIZE is how much more memory we can access through the table - not the
  * size of the table itself.
  * P**={PGD, PUD, PMD, PTE}
  *

@@ -46,7 +46,7 @@ struct edac_pci_ctl_info *edac_pci_alloc_ctl_info(unsigned int sz_pvt,
 	if (pci  == NULL)
 		return NULL;
 
-	/* Now much private space */
+	/* Now much more private space */
 	pvt = sz_pvt ? ((char *)pci) + ((unsigned long)pvt) : NULL;
 
 	pci->pvt_info = pvt;

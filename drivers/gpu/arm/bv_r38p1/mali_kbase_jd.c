@@ -590,7 +590,7 @@ static void jd_update_jit_usage(struct kbase_jd_atom *katom)
 
 	lockdep_assert_held(&kctx->jctx.lock);
 
-	/* If this atom wrote to JIT memory, find out how much it has written
+	/* If this atom wrote to JIT memory, find out how much more it has written
 	 * and update the usage information in the region.
 	 */
 	for (idx = 0;

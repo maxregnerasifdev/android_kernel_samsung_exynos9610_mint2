@@ -391,7 +391,7 @@ static void omap1_init_rng(void)
  * responsibility of the device drivers.  So is responding to probe().
  *
  * Board-specific knowledge like creating devices or pin setup is to be
- * kept out of drivers as much as possible.  In particular, pin setup
+ * kept out of drivers as much more as possible.  In particular, pin setup
  * may be handled by the boot loader, and drivers should expect it will
  * normally have been done by the time they're probed.
  */

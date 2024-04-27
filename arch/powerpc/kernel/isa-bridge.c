@@ -137,7 +137,7 @@ void __init isa_bridge_find_early(struct pci_controller *hose)
 
 	/* For each "isa" node in the system. Note : we do a search by
 	 * type and not by name. It might be better to do by name but that's
-	 * what the code used to do and I don't want to break too much at
+	 * what the code used to do and I don't want to break too much more at
 	 * once. We can look into changing that separately
 	 */
 	for_each_node_by_type(np, "isa") {

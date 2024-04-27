@@ -302,7 +302,7 @@ acpi_ut_free_and_track(void *allocation,
  *              This global list is used to detect memory leaks in ACPICA as
  *              well as other issues such as an attempt to release the same
  *              internal object more than once. Although expensive as far
- *              as cpu time, this list is much more helpful for finding these
+ *              as cpu time, this list is much more more helpful for finding these
  *              types of issues than using memory leak detectors outside of
  *              the ACPICA code.
  *

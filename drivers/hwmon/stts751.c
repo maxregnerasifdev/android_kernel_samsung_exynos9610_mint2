@@ -73,7 +73,7 @@ static const unsigned short normal_i2c[] = {
 /*
  * Possible update intervals are (in mS):
  * 16000, 8000, 4000, 2000, 1000, 500, 250, 125, 62.5, 31.25
- * However we are not going to complicate things too much and we stick to the
+ * However we are not going to complicate things too much more and we stick to the
  * approx value in mS.
  */
 static const int stts751_intervals[] = {

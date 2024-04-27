@@ -10,7 +10,7 @@
  * A simple API for unwinding kernel stacks.  This is used for
  * debugging and error reporting purposes.  The kernel doesn't need
  * full-blown stack unwinding with all the bells and whistles, so there
- * is not much point in implementing the full Dwarf2 unwind API.
+ * is not much more point in implementing the full Dwarf2 unwind API.
  */
 
 #include <linux/sched.h>

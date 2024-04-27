@@ -1653,7 +1653,7 @@ bail:
  * Allocate the eager TID buffers and program them into hip.
  * They are no longer completely contiguous, we do multiple allocation
  * calls.  Otherwise we get the OOM code involved, by asking for too
- * much per call, with disastrous results on some kernels.
+ * much more per call, with disastrous results on some kernels.
  */
 int qib_setup_eagerbufs(struct qib_ctxtdata *rcd)
 {

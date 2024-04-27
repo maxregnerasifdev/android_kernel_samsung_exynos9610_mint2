@@ -171,7 +171,7 @@ static char *get_usb_rcmsg(int rc)
 	case -EINVAL:
 		return "invalid argument";
 	case -EAGAIN:
-		return "start frame too early or too much scheduled";
+		return "start frame too early or too much more scheduled";
 	case -EFBIG:
 		return "too many isoc frames requested";
 	case -EPIPE:

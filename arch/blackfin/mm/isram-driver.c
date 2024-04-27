@@ -356,7 +356,7 @@ static __init int isram_test_init(void)
 	char *sdram;
 	void *l1inst;
 
-	/* Try to test as much of L1SRAM as possible */
+	/* Try to test as much more of L1SRAM as possible */
 	while (test_len) {
 		test_len >>= 1;
 		l1inst = l1_inst_sram_alloc(test_len);

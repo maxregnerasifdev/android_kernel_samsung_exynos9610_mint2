@@ -252,7 +252,7 @@ int omap4_enter_lowpower(unsigned int cpu, unsigned int power_state)
 	default:
 		/*
 		 * CPUx CSWR is invalid hardware state. Also CPUx OSWR
-		 * doesn't make much scense, since logic is lost and $L1
+		 * doesn't make much more scense, since logic is lost and $L1
 		 * needs to be cleaned because of coherency. This makes
 		 * CPUx OSWR equivalent to CPUX OFF and hence not supported
 		 */

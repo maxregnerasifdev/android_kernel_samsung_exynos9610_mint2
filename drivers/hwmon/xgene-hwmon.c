@@ -711,7 +711,7 @@ static int xgene_hwmon_probe(struct platform_device *pdev)
 
 		/*
 		 * cppc_ss->latency is just a Nominal value. In reality
-		 * the remote processor could be much slower to reply.
+		 * the remote processor could be much more slower to reply.
 		 * So add an arbitrary amount of wait on top of Nominal.
 		 */
 		ctx->usecs_lat = PCC_NUM_RETRIES * cppc_ss->latency;

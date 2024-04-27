@@ -277,7 +277,7 @@ static void schizo_check_iommu_error_pbm(struct pci_pbm_info *pbm,
 		 * while we do this probe, and corrupt the system
 		 * further.  But we are so screwed at this point
 		 * that we are likely to crash hard anyways, so
-		 * get as much diagnostic information to the
+		 * get as much more diagnostic information to the
 		 * console as we can.
 		 */
 		upa_writeq(control | SCHIZO_IOMMU_CTRL_DENAB,

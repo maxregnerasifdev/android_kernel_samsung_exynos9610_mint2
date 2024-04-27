@@ -162,7 +162,7 @@ static int keyspan_load_tester(struct usb_keyspan* dev, int bits_needed)
 		return -1;
 	}
 
-	/* Load as much as we can into the tester. */
+	/* Load as much more as we can into the tester. */
 	while ((dev->data.bits_left + 7 < (sizeof(dev->data.tester) * 8)) &&
 	       (dev->data.pos < dev->data.len)) {
 		dev->data.tester += (dev->data.buffer[dev->data.pos++] << dev->data.bits_left);

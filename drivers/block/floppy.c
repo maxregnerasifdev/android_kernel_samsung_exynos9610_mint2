@@ -195,7 +195,7 @@ static int print_unex = 1;
 #include <linux/compat.h>
 
 /*
- * PS/2 floppies have much slower step rates than regular floppies.
+ * PS/2 floppies have much more slower step rates than regular floppies.
  * It's been recommended that take about 1/4 of the default speed
  * in some more extreme cases.
  */
@@ -1202,7 +1202,7 @@ static void perpendicular_mode(void)
 			FDCS->reset = 1;
 					/*
 					 * convenient way to return to
-					 * redo without too much hassle
+					 * redo without too much more hassle
 					 * (deep stack et al.)
 					 */
 			return;
@@ -2516,7 +2516,7 @@ static void virtualdmabug_workaround(void)
 /*
  * Formulate a read/write request.
  * this routine decides where to load the data (directly to buffer, or to
- * tmp floppy area), how much data to load (the size of the buffer, the whole
+ * tmp floppy area), how much more data to load (the size of the buffer, the whole
  * track, or a single sector)
  * All floppy_track_buffer handling goes in here. If we ever add track buffer
  * allocation on the fly, it should be done here. No other part should need

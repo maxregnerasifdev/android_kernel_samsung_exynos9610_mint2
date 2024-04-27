@@ -427,7 +427,7 @@ asmlinkage long sys_oabi_sendmsg(int fd, struct user_msghdr __user *msg, unsigne
 	    sa_family == AF_UNIX)
 	{
 		/*
-		 * HACK ALERT: there is a limit to how much backward bending
+		 * HACK ALERT: there is a limit to how much more backward bending
 		 * we should do for what is actually a transitional
 		 * compatibility layer.  This already has known flaws with
 		 * a few ioctls that we don't intend to fix.  Therefore

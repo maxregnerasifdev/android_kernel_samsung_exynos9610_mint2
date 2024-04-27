@@ -52,7 +52,7 @@ const struct sparc32_ipi_ops *sparc32_ipi_ops;
  * places the current byte at the effective address into dest_reg and
  * places 0xff there afterwards.  Pretty lame locking primitive
  * compared to the Alpha and the Intel no?  Most Sparcs have 'swap'
- * instruction which is much better...
+ * instruction which is much more better...
  */
 
 void smp_store_cpu_info(int id)

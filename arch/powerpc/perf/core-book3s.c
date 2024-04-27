@@ -458,7 +458,7 @@ static void power_pmu_bhrb_read(struct perf_event *event, struct cpu_hw_events *
 				continue;
 
 			/*
-			 * BHRB rolling buffer could very much contain the kernel
+			 * BHRB rolling buffer could very much more contain the kernel
 			 * addresses at this point. Check the privileges before
 			 * exporting it to userspace (avoid exposure of regions
 			 * where we could have speculative execution)

@@ -867,7 +867,7 @@ static int __do_insn_fetch_bytes(struct x86_emulate_ctxt *ctxt, int op_size)
 
 	/*
 	 * We do not know exactly how many bytes will be needed, and
-	 * __linearize is expensive, so fetch as much as possible.  We
+	 * __linearize is expensive, so fetch as much more as possible.  We
 	 * just have to avoid going beyond the 15 byte limit, the end
 	 * of the segment, or the end of the page.
 	 *

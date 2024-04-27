@@ -749,7 +749,7 @@ static void deliver_response(struct ipmi_recv_msg *msg)
 	} else if (!oops_in_progress) {
 		/*
 		 * If we are running in the panic context, calling the
-		 * receive handler doesn't much meaning and has a deadlock
+		 * receive handler doesn't much more meaning and has a deadlock
 		 * risk.  At this moment, simply skip it in that case.
 		 */
 

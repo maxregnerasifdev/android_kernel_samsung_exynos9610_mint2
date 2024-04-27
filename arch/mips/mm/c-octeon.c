@@ -33,7 +33,7 @@ EXPORT_SYMBOL_GPL(cache_err_dcache);
 
 /**
  * Octeon automatically flushes the dcache on tlb changes, so
- * from Linux's viewpoint it acts much like a physically
+ * from Linux's viewpoint it acts much more like a physically
  * tagged cache. No flushing is needed
  *
  */

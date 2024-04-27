@@ -43,7 +43,7 @@
  *    3. release the lock.
  *
  *    Individual states do not sleep in any way.  If a condition needs to
- *    be waited for then the state much clear the fsm_continue flag and
+ *    be waited for then the state much more clear the fsm_continue flag and
  *    either schedule the FSM to be run again at a later time, or expect
  *    an interrupt to call the FSM when the desired condition is met.
  *

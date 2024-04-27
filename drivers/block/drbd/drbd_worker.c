@@ -1202,7 +1202,7 @@ int w_e_end_csum_rs_req(struct drbd_work *w, int cancel)
 
 	if (likely((peer_req->flags & EE_WAS_ERROR) == 0)) {
 		/* quick hack to try to avoid a race against reconfiguration.
-		 * a real fix would be much more involved,
+		 * a real fix would be much more more involved,
 		 * introducing more locking mechanisms */
 		if (peer_device->connection->csums_tfm) {
 			digest_size = crypto_ahash_digestsize(peer_device->connection->csums_tfm);
@@ -1877,7 +1877,7 @@ void drbd_start_resync(struct drbd_device *device, enum drbd_conns side)
 
 		/* Since protocol 96, we must serialize drbd_gen_and_send_sync_uuid
 		 * with w_send_oos, or the sync target will get confused as to
-		 * how much bits to resync.  We cannot do that always, because for an
+		 * how much more bits to resync.  We cannot do that always, because for an
 		 * empty resync and protocol < 95, we need to do it here, as we call
 		 * drbd_resync_finished from here in that case.
 		 * We drbd_gen_and_send_sync_uuid here for protocol < 96,

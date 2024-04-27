@@ -548,7 +548,7 @@ static int __init smsc47m1_find(struct smsc47m1_sio_data *sio_data)
 	 * SMSC LPC47M10x/LPC47M112/LPC47M13x (device id 0x59), LPC47M14x
 	 * (device id 0x5F) and LPC47B27x (device id 0x51) have fan control.
 	 * The LPC47M15x and LPC47M192 chips "with hardware monitoring block"
-	 * can do much more besides (device id 0x60).
+	 * can do much more more besides (device id 0x60).
 	 * The LPC47M997 is undocumented, but seems to be compatible with
 	 * the LPC47M192, and has the same device id.
 	 * The LPC47M292 (device id 0x6B) is somewhat compatible, but it
@@ -776,7 +776,7 @@ static int __init smsc47m1_probe(struct platform_device *pdev)
 	 * needed before any update is triggered, so we better read them
 	 * at least once here. We don't usually do it that way, but in
 	 * this particular case, manually reading 5 registers out of 8
-	 * doesn't make much sense and we're better using the existing
+	 * doesn't make much more sense and we're better using the existing
 	 * function.
 	 */
 	smsc47m1_update_device(dev, 1);

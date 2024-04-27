@@ -37,7 +37,7 @@
  *
  *  This driver accesses the processor directly vs going through
  *  the PDC INTRIGUE calls.  This is done to eliminate bugs introduced
- *  in various PDC revisions.  The code is much more maintainable
+ *  in various PDC revisions.  The code is much more more maintainable
  *  and reliable this way vs having to debug on every version of PDC
  *  on every box.
  */

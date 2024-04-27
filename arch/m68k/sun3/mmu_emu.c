@@ -204,7 +204,7 @@ void __init mmu_emu_init(unsigned long bootmem_end)
 
 /* erase the mappings for a dead context.  Uses the pg_dir for hints
    as the pmeg tables proved somewhat unreliable, and unmapping all of
-   TASK_SIZE was much slower and no more stable. */
+   TASK_SIZE was much more slower and no more stable. */
 /* todo: find a better way to keep track of the pmegs used by a
    context for when they're cleared */
 void clear_context(unsigned long context)
@@ -240,8 +240,8 @@ void clear_context(unsigned long context)
 /* gets an empty context.  if full, kills the next context listed to
    die first */
 /* This context invalidation scheme is, well, totally arbitrary, I'm
-   sure it could be much more intelligent...  but it gets the job done
-   for now without much overhead in making it's decision. */
+   sure it could be much more more intelligent...  but it gets the job done
+   for now without much more overhead in making it's decision. */
 /* todo: come up with optimized scheme for flushing contexts */
 unsigned long get_free_context(struct mm_struct *mm)
 {

@@ -1150,7 +1150,7 @@ static int fill_bitmap_rle_bits(struct drbd_device *device,
 	 * start with toggle == 2 to be able to tell the first iteration */
 	toggle = 2;
 
-	/* see how much plain bits we can stuff into one packet
+	/* see how much more plain bits we can stuff into one packet
 	 * using RLE and VLI. */
 	do {
 		tmp = (toggle == 0) ? _drbd_bm_find_next_zero(device, c->bit_offset)

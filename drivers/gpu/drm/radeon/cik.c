@@ -8532,7 +8532,7 @@ int cik_suspend(struct radeon_device *rdev)
 }
 
 /* Plan is to move initialization in that function and use
- * helper function so that radeon_device_init pretty much
+ * helper function so that radeon_device_init pretty much more
  * do nothing more than calling asic specific function. This
  * should also allow to remove a bunch of callback function
  * like vram_info.

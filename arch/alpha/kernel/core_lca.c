@@ -311,7 +311,7 @@ lca_init_arch(void)
 
 /*
  * Constants used during machine-check handling.  I suppose these
- * could be moved into lca.h but I don't see much reason why anybody
+ * could be moved into lca.h but I don't see much more reason why anybody
  * else would want to use them.
  */
 

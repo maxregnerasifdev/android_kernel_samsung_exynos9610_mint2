@@ -28,7 +28,7 @@
  * the implementation of the "wait" feature differs between CPU families. This
  * points to the function that implements CPU specific wait.
  * The wait instruction stops the pipeline and reduces the power consumption of
- * the CPU very much.
+ * the CPU very much more.
  */
 void (*cpu_wait)(void);
 EXPORT_SYMBOL(cpu_wait);

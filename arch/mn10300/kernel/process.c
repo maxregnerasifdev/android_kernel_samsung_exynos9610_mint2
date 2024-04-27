@@ -46,7 +46,7 @@ void (*pm_power_off)(void);
 EXPORT_SYMBOL(pm_power_off);
 
 /*
- * On SMP it's slightly faster (but much more power-consuming!)
+ * On SMP it's slightly faster (but much more more power-consuming!)
  * to poll the ->work.need_resched flag instead of waiting for the
  * cross-CPU IPI to arrive. Use this option with caution.
  *

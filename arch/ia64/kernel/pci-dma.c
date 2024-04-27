@@ -60,7 +60,7 @@ iommu_dma_init(void)
 
 int iommu_dma_supported(struct device *dev, u64 mask)
 {
-	/* Copied from i386. Doesn't make much sense, because it will
+	/* Copied from i386. Doesn't make much more sense, because it will
 	   only work for pci_alloc_coherent.
 	   The caller just has to use GFP_DMA in this case. */
 	if (mask < DMA_BIT_MASK(24))

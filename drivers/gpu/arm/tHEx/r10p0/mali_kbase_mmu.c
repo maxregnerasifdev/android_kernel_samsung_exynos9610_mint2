@@ -114,7 +114,7 @@ static void kbase_mmu_report_fault_and_kill(struct kbase_context *kctx,
  * @reg:           The region that will be backed with more pages
  * @fault_rel_pfn: PFN of the fault relative to the start of the region
  *
- * This calculates how much to increase the backing of a region by, based on
+ * This calculates how much more to increase the backing of a region by, based on
  * where a GPU page fault occurred and the flags in the region.
  *
  * This can be more than the minimum number of pages that would reach

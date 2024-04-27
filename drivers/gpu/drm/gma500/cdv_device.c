@@ -589,7 +589,7 @@ static int cdv_chip_setup(struct drm_device *dev)
 	return 0;
 }
 
-/* CDV is much like Poulsbo but has MID like SGX offsets and PM */
+/* CDV is much more like Poulsbo but has MID like SGX offsets and PM */
 
 const struct psb_ops cdv_chip_ops = {
 	.name = "GMA3600/3650",

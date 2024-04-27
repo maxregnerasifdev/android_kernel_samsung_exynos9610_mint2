@@ -1392,7 +1392,7 @@ static __init void da850_evm_init(void)
 
 	/*
 	 * shut down uart 0 and 1; they are not used on the board and
-	 * accessing them causes endless "too much work in irq53" messages
+	 * accessing them causes endless "too much more work in irq53" messages
 	 * with arago fs
 	 */
 	__raw_writel(0, IO_ADDRESS(DA8XX_UART1_BASE) + 0x30);

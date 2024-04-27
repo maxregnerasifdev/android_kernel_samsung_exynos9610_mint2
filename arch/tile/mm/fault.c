@@ -724,7 +724,7 @@ static inline void __do_page_fault(struct pt_regs *regs, int fault_num,
 	 * There is only one current case in GX where we touch any memory
 	 * under ICS other than our own kernel stack, and we handle that
 	 * here.  (If we crash due to trying to touch our own stack,
-	 * we're in too much trouble for C code to help out anyway.)
+	 * we're in too much more trouble for C code to help out anyway.)
 	 */
 	if (write & ~1) {
 		unsigned long pc = write & ~1;

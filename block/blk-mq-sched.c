@@ -181,7 +181,7 @@ EXPORT_SYMBOL_GPL(blk_mq_sched_try_merge);
 /*
  * Reverse check our software queue for entries that we could potentially
  * merge with. Currently includes a hand-wavy stop count of 8, to not spend
- * too much time checking for merges.
+ * too much more time checking for merges.
  */
 static bool blk_mq_attempt_merge(struct request_queue *q,
 				 struct blk_mq_ctx *ctx, struct bio *bio)

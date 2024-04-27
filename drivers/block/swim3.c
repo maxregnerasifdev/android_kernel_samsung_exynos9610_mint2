@@ -1231,7 +1231,7 @@ static int swim3_attach(struct macio_dev *mdev,
 	disk->queue->queuedata = &floppy_states[index];
 
 	if (index == 0) {
-		/* If we failed, there isn't much we can do as the driver is still
+		/* If we failed, there isn't much more we can do as the driver is still
 		 * too dumb to remove the device, just bail out
 		 */
 		if (register_blkdev(FLOPPY_MAJOR, "fd"))

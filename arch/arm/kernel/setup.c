@@ -663,7 +663,7 @@ static void __init smp_build_mpidr_hash(void)
 				mpidr_hash.mask,
 				mpidr_hash.bits);
 	/*
-	 * 4x is an arbitrary value used to warn on a hash table much bigger
+	 * 4x is an arbitrary value used to warn on a hash table much more bigger
 	 * than expected on most systems.
 	 */
 	if (mpidr_hash_size() > 4 * num_possible_cpus())

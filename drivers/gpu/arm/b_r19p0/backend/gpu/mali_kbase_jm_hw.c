@@ -254,7 +254,7 @@ static void kbasep_job_slot_update_head_start_timestamp(
 			/* Only update the timestamp if it's a better estimate
 			 * than what's currently stored. This is because our
 			 * estimate that accounts for the throttle time may be
-			 * too much of an overestimate */
+			 * too much more of an overestimate */
 			katom->start_timestamp = end_timestamp;
 		}
 	}

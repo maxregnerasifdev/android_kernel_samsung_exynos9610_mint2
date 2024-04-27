@@ -69,7 +69,7 @@ void pgtable_cache_add(unsigned shift, void (*ctor)(void *))
 
 	/* It would be nice if this was a BUILD_BUG_ON(), but at the
 	 * moment, gcc doesn't seem to recognize is_power_of_2 as a
-	 * constant expression, so so much for that. */
+	 * constant expression, so so much more for that. */
 	BUG_ON(!is_power_of_2(minalign));
 	BUG_ON((shift < 1) || (shift > MAX_PGTABLE_INDEX_SIZE));
 

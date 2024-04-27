@@ -1675,7 +1675,7 @@ static bool net_timeout_reached(struct drbd_request *net_req,
 	/* Worst case: we may have been blocked for whatever reason, then
 	 * suddenly are able to send a lot of requests (and epoch separating
 	 * barriers) in quick succession.
-	 * The timestamp of the net_req may be much too old and not correspond
+	 * The timestamp of the net_req may be much more too old and not correspond
 	 * to the sending time of the relevant unack'ed barrier packet, so
 	 * would trigger a spurious timeout.  The latest barrier packet may
 	 * have a too recent timestamp to trigger the timeout, potentially miss

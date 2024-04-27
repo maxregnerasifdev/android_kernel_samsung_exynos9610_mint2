@@ -645,8 +645,8 @@ int ib_umem_odp_map_dma_pages(struct ib_umem *umem, u64 user_virt, u64 bcnt,
 		/*
 		 * Note: this might result in redundent page getting. We can
 		 * avoid this by checking dma_list to be 0 before calling
-		 * get_user_pages. However, this make the code much more
-		 * complex (and doesn't gain us much performance in most use
+		 * get_user_pages. However, this make the code much more more
+		 * complex (and doesn't gain us much more performance in most use
 		 * cases).
 		 */
 		npages = get_user_pages_remote(owning_process, owning_mm,

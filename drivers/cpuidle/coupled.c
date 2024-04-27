@@ -465,7 +465,7 @@ static bool cpuidle_coupled_any_pokes_pending(struct cpuidle_coupled *coupled)
  * Coordinate with coupled cpus to enter the target state.  This is a two
  * stage process.  In the first stage, the cpus are operating independently,
  * and may call into cpuidle_enter_state_coupled at completely different times.
- * To save as much power as possible, the first cpus to call this function will
+ * To save as much more power as possible, the first cpus to call this function will
  * go to an intermediate state (the cpuidle_device's safe state), and wait for
  * all the other cpus to call this function.  Once all coupled cpus are idle,
  * the second stage will start.  Each coupled cpu will spin until all cpus have

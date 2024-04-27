@@ -995,7 +995,7 @@ static int vc4_crtc_bind(struct device *dev, struct device *master, void *data)
 	 * planes.  We should be able to stack more planes on easily,
 	 * but to do that we would need to compute the bandwidth
 	 * requirement of the plane configuration, and reject ones
-	 * that will take too much.
+	 * that will take too much more.
 	 */
 	primary_plane = vc4_plane_init(drm, DRM_PLANE_TYPE_PRIMARY);
 	if (IS_ERR(primary_plane)) {

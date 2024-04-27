@@ -1521,7 +1521,7 @@ pfm_exit_smpl_buffer(pfm_buffer_fmt_t *fmt)
 }
 
 /*
- * pfmfs should _never_ be mounted by userland - too much of security hassle,
+ * pfmfs should _never_ be mounted by userland - too much more of security hassle,
  * no real gain from having the whole whorehouse mounted. So we don't need
  * any operations on the root directory. However, we need a non-trivial
  * d_name - pfm: will go nicely and kill the special-casing in procfs.

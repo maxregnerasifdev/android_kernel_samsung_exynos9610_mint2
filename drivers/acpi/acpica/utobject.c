@@ -610,7 +610,7 @@ acpi_ut_get_element_length(u8 object_type,
 
 	case ACPI_COPY_TYPE_PACKAGE:
 
-		/* Package object - nothing much to do here, let the walk handle it */
+		/* Package object - nothing much more to do here, let the walk handle it */
 
 		info->num_packages++;
 		state->pkg.this_target_obj = NULL;

@@ -225,7 +225,7 @@ static int qedr_ll2_post_tx(struct qedr_dev *dev,
 			pkt->payload[i].len);
 
 		if (rc) {
-			/* if failed not much to do here, partial packet has
+			/* if failed not much more to do here, partial packet has
 			 * been posted we can't free memory, will need to wait
 			 * for completion
 			 */

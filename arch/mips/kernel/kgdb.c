@@ -282,7 +282,7 @@ void sleeping_thread_to_gdb_regs(unsigned long *gdb_regs, struct task_struct *p)
 	/*
 	 * BadVAddr, Cause
 	 * Ideally these would come from the last exception frame up the stack
-	 * but that requires unwinding, otherwise we can't know much for sure.
+	 * but that requires unwinding, otherwise we can't know much more for sure.
 	 */
 	*(ptr++) = 0;
 	*(ptr++) = 0;

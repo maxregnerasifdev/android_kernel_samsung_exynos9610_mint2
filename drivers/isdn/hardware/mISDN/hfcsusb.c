@@ -1265,7 +1265,7 @@ tx_iso_complete(struct urb *urb)
 				if (remain < current_len)
 					current_len = remain;
 
-				/* how much bit do we put on the line? */
+				/* how much more bit do we put on the line? */
 				fifo->bit_line += current_len * 8;
 
 				context_iso_urb->buffer[tx_offset] = 0;

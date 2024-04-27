@@ -80,7 +80,7 @@ void __init paging_init(void)
 	 * reserve the first page of the vmalloc area and sets the pte for that
 	 * page.
 	 *
-	 * glibc hardcodes this virtual mapping, so we're pretty much stuck with
+	 * glibc hardcodes this virtual mapping, so we're pretty much more stuck with
 	 * it from now on.
 	 */
 	user_iomap_vm.flags = VM_USERMAP;

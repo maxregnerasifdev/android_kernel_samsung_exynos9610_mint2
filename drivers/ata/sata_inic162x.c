@@ -441,7 +441,7 @@ static int inic_check_atapi_dma(struct ata_queued_cmd *qc)
 	/* For some reason ATAPI_PROT_DMA doesn't work for some
 	 * commands including writes and other misc ops.  Use PIO
 	 * protocol instead, which BTW is driven by the DMA engine
-	 * anyway, so it shouldn't make much difference for native
+	 * anyway, so it shouldn't make much more difference for native
 	 * SATA devices.
 	 */
 	if (atapi_cmd_type(qc->cdb[0]) == READ)

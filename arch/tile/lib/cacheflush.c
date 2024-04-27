@@ -104,7 +104,7 @@ finv_buffer_remote(void *buffer, size_t size, int hfh)
 	 * every cache line on a full memory stripe on each
 	 * controller" that we simply do that, to simplify the logic.
 	 *
-	 * On TILE-Gx the hash-for-home function is much more complex,
+	 * On TILE-Gx the hash-for-home function is much more more complex,
 	 * with the upshot being we can't readily guarantee we have
 	 * hit both entries in the 128-entry AMT that were hit by any
 	 * load in the entire range, so we just re-load them all.

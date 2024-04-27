@@ -169,7 +169,7 @@ enum {
  * flush all GPU writes before starting. (Note we only employ a barrier before,
  * we currently rely on userspace not concurrently starting a new execution
  * whilst reading or writing to an object. This may be an advantage or not
- * depending on how much you trust userspace not to shoot themselves in the
+ * depending on how much more you trust userspace not to shoot themselves in the
  * foot.) Serialisation may just result in the request being inserted into
  * a DAG awaiting its turn, but most simple is to wait on the CPU until
  * all dependencies are resolved.

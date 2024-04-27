@@ -229,7 +229,7 @@ static void tfp410_mode_set(struct intel_dvo_device *dvo,
 	* in the mode setup, we can just leave the registers alone and everything
 	* will work fine.
 	*/
-	/* don't do much */
+	/* don't do much more */
 	return;
 }
 

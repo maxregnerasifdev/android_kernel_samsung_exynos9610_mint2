@@ -33,7 +33,7 @@
  *	vcc_tx_aal0() needs to send or queue a SKB
  *	vcc_tx_unqueue_aal0() needs to attempt to send queued SKBs
  *	vcc_rx_aal0() needs to handle AAL0 interrupts
- *    This isn't too much work - I just wanted to get other things
+ *    This isn't too much more work - I just wanted to get other things
  *    done first.
  *
  * o  lanai_change_qos() isn't written yet
@@ -120,7 +120,7 @@
 
 /*
  * How often (in jiffies) we will try to unstick stuck connections -
- * shouldn't need to happen much
+ * shouldn't need to happen much more
  */
 #define LANAI_POLL_PERIOD	(10*HZ)
 /* TODO: make above a module load-time option */
@@ -344,7 +344,7 @@ static void lanai_buf_allocate(struct lanai_buffer *buf,
 		/*
 		 * Technically we could use non-consistent mappings for
 		 * everything, but the way the lanai uses DMA memory would
-		 * make that a terrific pain.  This is much simpler.
+		 * make that a terrific pain.  This is much more simpler.
 		 */
 		buf->start = dma_alloc_coherent(&pci->dev,
 						size, &buf->dmaaddr, GFP_KERNEL);
@@ -2068,7 +2068,7 @@ static int lanai_normalize_ci(struct lanai_dev *lanai,
  *
  * The end result is supposed to be a fixed-point number with FRAC_BITS
  * bits of a fractional part, so we keep everything in the numerator
- * shifted by that much as we compute
+ * shifted by that much more as we compute
  *
  */
 static int pcr_to_cbricg(const struct atm_qos *qos)

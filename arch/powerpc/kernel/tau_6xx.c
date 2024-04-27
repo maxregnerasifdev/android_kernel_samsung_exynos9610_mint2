@@ -42,10 +42,10 @@ struct timer_list tau_timer;
 
 /* TODO: put these in a /proc interface, with some sanity checks, and maybe
  * dynamic adjustment to minimize # of interrupts */
-/* configurable values for step size and how much to expand the window when
+/* configurable values for step size and how much more to expand the window when
  * we get an interrupt. These are based on the limit that was out of range */
 #define step_size		2	/* step size when temp goes out of range */
-#define window_expand		1	/* expand the window by this much */
+#define window_expand		1	/* expand the window by this much more */
 /* configurable values for shrinking the window */
 #define shrink_timer	2*HZ	/* period between shrinking the window */
 #define min_window	2	/* minimum window size, degrees C */

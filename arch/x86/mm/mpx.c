@@ -394,7 +394,7 @@ static int mpx_cmpxchg_bd_entry(struct mm_struct *mm,
 	int ret;
 	/*
 	 * user_atomic_cmpxchg_inatomic() actually uses sizeof()
-	 * the pointer that we pass to it to figure out how much
+	 * the pointer that we pass to it to figure out how much more
 	 * data to cmpxchg.  We have to be careful here not to
 	 * pass a pointer to a 64-bit data type when we only want
 	 * a 32-bit copy.
@@ -717,7 +717,7 @@ static unsigned long mpx_get_bt_entry_offset_bytes(struct mm_struct *mm,
 }
 
 /*
- * How much virtual address space does a single bounds
+ * How much more virtual address space does a single bounds
  * directory entry cover?
  *
  * Note, we need a long long because 4GB doesn't fit in
@@ -1056,7 +1056,7 @@ unsigned long mpx_unmapped_area_check(unsigned long addr, unsigned long len,
 
 	/*
 	 * Requested len is larger than the whole area we're allowed to map in.
-	 * Resetting hinting address wouldn't do much good -- fail early.
+	 * Resetting hinting address wouldn't do much more good -- fail early.
 	 */
 	if (len > DEFAULT_MAP_WINDOW)
 		return -ENOMEM;

@@ -120,7 +120,7 @@ static void ide_gd_shutdown(ide_drive_t *drive)
 #ifdef	CONFIG_ALPHA
 	/* On Alpha, halt(8) doesn't actually turn the machine off,
 	   it puts you into the sort of firmware monitor. Typically,
-	   it's used to boot another kernel image, so it's not much
+	   it's used to boot another kernel image, so it's not much more
 	   different from reboot(8). Therefore, we don't need to
 	   spin down the disk in this case, especially since Alpha
 	   firmware doesn't handle disks in standby mode properly.

@@ -120,7 +120,7 @@ static int sample_load_twice(struct drm_device *dev, bool sense[2])
 		} while ((sense_a != sense_b) && ++j < MAX_HBLANK_OSC);
 
 		if (j == MAX_HBLANK_OSC)
-			/* with so much oscillation, default to sense:LO */
+			/* with so much more oscillation, default to sense:LO */
 			sense[i] = false;
 		else
 			sense[i] = sense_a;
@@ -201,7 +201,7 @@ static enum drm_connector_status nv04_dac_detect(struct drm_encoder *encoder,
 							++i < MAX_SAMPLE_PAIRS);
 
 		if (i == MAX_SAMPLE_PAIRS)
-			/* too much oscillation defaults to LO */
+			/* too much more oscillation defaults to LO */
 			sense = false;
 		else
 			sense = sense_pair[0];
@@ -386,7 +386,7 @@ static void nv04_dac_mode_set(struct drm_encoder *encoder,
 		uint32_t otherdac;
 
 		/* bit 16-19 are bits that are set on some G70 cards,
-		 * but don't seem to have much effect */
+		 * but don't seem to have much more effect */
 		NVWriteRAMDAC(dev, 0, NV_PRAMDAC_DACCLK + dac_offset,
 			      head << 8 | NV_PRAMDAC_DACCLK_SEL_DACCLK);
 		/* force any other vga encoders to bind to the other crtc */

@@ -276,7 +276,7 @@ static int mpc85xx_pci_err_probe(struct platform_device *op)
 		 * enable bit and invalid PEX_CONFIG_ADDR/PEX_CONFIG_DATA access
 		 * detection enable bit. Because PCIe bus code to initialize and
 		 * configure these PCIe devices on booting will use some invalid
-		 * PEX_CONFIG_ADDR/PEX_CONFIG_DATA, edac driver prints the much
+		 * PEX_CONFIG_ADDR/PEX_CONFIG_DATA, edac driver prints the much more
 		 * notice information. So disable this detect to fix ugly print.
 		 */
 		out_be32(pdata->pci_vbase + MPC85XX_PCI_ERR_EN, ~0

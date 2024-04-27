@@ -33,7 +33,7 @@
  *
  * Later SiS chipsets integrated the 5513 functionality into the NorthBridge,
  * starting with SiS5571 and up to SiS745. The PCI ID didn't change, though. We
- * can figure out that we have a more modern and more capable 5513 by looking
+ * can figure out that we have a more modernized and more capable 5513 by looking
  * for the respective NorthBridge IDs.
  *
  * Even later (96x family) SiS chipsets use the MuTIOL link and place the 5513

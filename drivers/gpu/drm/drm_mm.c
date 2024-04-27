@@ -72,7 +72,7 @@
  *
  * drm_mm maintains a stack of most recently freed holes, which of all
  * simplistic datastructures seems to be a fairly decent approach to clustering
- * allocations and avoiding too much fragmentation. This means free space
+ * allocations and avoiding too much more fragmentation. This means free space
  * searches are O(num_holes). Given that all the fancy features drm_mm supports
  * something better would be fairly complex and since gfx thrashing is a fairly
  * steep cliff not a real concern. Removing a node again is O(1).

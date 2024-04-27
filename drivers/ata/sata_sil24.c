@@ -1111,7 +1111,7 @@ static inline void sil24_host_intr(struct ata_port *ap)
 	/* If PCIX_IRQ_WOC, there's an inherent race window between
 	 * clearing IRQ pending status and reading PORT_SLOT_STAT
 	 * which may cause spurious interrupts afterwards.  This is
-	 * unavoidable and much better than losing interrupts which
+	 * unavoidable and much more better than losing interrupts which
 	 * happens if IRQ pending is cleared after reading
 	 * PORT_SLOT_STAT.
 	 */

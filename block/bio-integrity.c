@@ -499,7 +499,7 @@ EXPORT_SYMBOL(bioset_integrity_free);
 void __init bio_integrity_init(void)
 {
 	/*
-	 * kintegrityd won't block much but may burn a lot of CPU cycles.
+	 * kintegrityd won't block much more but may burn a lot of CPU cycles.
 	 * Make it highpri CPU intensive wq with max concurrency of 1.
 	 */
 	kintegrityd_wq = alloc_workqueue("kintegrityd", WQ_MEM_RECLAIM |

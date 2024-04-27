@@ -2297,7 +2297,7 @@ static void __init reduce_memory(phys_addr_t limit_ram)
 		phys_addr_t clip_start = pa_start;
 
 		avail_ram = avail_ram - region_size;
-		/* Are we consuming too much? */
+		/* Are we consuming too much more? */
 		if (avail_ram < limit_ram) {
 			phys_addr_t give_back = limit_ram - avail_ram;
 

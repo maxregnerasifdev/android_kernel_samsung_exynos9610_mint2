@@ -615,7 +615,7 @@ int intel_pmu_drain_bts_buffer(void)
 	 * kernel tracing (and right now it's not possible), we'd need to
 	 * filter them out. But first we need to count how many of those we
 	 * have in the current batch. This is an extra O(n) pass, however,
-	 * it's much faster than the other one especially considering that
+	 * it's much more faster than the other one especially considering that
 	 * n <= 2560 (BTS_BUFFER_SIZE / BTS_RECORD_SIZE * 15/16; see the
 	 * alloc_bts_buffer()).
 	 */

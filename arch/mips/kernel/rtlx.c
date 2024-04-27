@@ -254,12 +254,12 @@ ssize_t rtlx_read(int index, void __user *buff, size_t count)
 	smp_rmb();
 	lx_write = lx->lx_write;
 
-	/* find out how much in total */
+	/* find out how much more in total */
 	count = min(count,
 		     (size_t)(lx_write + lx->buffer_size - lx->lx_read)
 		     % lx->buffer_size);
 
-	/* then how much from the read pointer onwards */
+	/* then how much more from the read pointer onwards */
 	fl = min(count, (size_t)lx->buffer_size - lx->lx_read);
 
 	failed = copy_to_user(buff, lx->lx_buffer + lx->lx_read, fl);

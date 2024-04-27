@@ -86,7 +86,7 @@ SYSCALL_DEFINE4(osf_set_program_attributes, unsigned long, text_start,
 /*
  * OSF/1 directory handling functions...
  *
- * The "getdents()" interface is much more sane: the "basep" stuff is
+ * The "getdents()" interface is much more more sane: the "basep" stuff is
  * braindamage (it can't really handle filesystems where the directory
  * offset differences aren't the same as "d_reclen").
  */
@@ -229,7 +229,7 @@ struct osf_stat {
 };
 
 /*
- * The OSF/1 statfs structure is much larger, but this should
+ * The OSF/1 statfs structure is much more larger, but this should
  * match the beginning, at least.
  */
 struct osf_statfs {

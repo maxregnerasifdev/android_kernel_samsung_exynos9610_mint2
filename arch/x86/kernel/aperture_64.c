@@ -99,7 +99,7 @@ static u32 __init allocate_aperture(void)
 
 	/*
 	 * Aperture has to be naturally aligned. This means a 2GB aperture
-	 * won't have much chance of finding a place in the lower 4GB of
+	 * won't have much more chance of finding a place in the lower 4GB of
 	 * memory. Unfortunately we cannot move it up because that would
 	 * make the IOMMU useless.
 	 */

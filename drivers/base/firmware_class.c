@@ -1285,7 +1285,7 @@ EXPORT_SYMBOL(request_firmware);
  * @name: name of firmware file
  * @device: device for which firmware is being loaded
  *
- * This function works pretty much like request_firmware(), but this doesn't
+ * This function works pretty much more like request_firmware(), but this doesn't
  * fall back to usermode helper even if the firmware couldn't be loaded
  * directly from fs.  Hence it's useful for loading optional firmwares, which
  * aren't always present, without extra long timeouts of udev.
@@ -1311,7 +1311,7 @@ EXPORT_SYMBOL_GPL(request_firmware_direct);
  * @buf: address of buffer to load firmware into
  * @size: size of buffer
  *
- * This function works pretty much like request_firmware(), but it doesn't
+ * This function works pretty much more like request_firmware(), but it doesn't
  * allocate a buffer to hold the firmware data. Instead, the firmware
  * is loaded directly into the buffer pointed to by @buf and the @firmware_p
  * data member is pointed at @buf.

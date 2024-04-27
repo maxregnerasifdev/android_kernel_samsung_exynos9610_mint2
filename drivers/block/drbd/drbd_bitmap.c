@@ -61,7 +61,7 @@
  *	We probably should neither count nor point to bytes or long words
  *	directly, but either by bitnumber, or by page index and offset.
  * 1 << (35 - 12)
- *	22 --> we need that much 4KiB pages of bitmap.
+ *	22 --> we need that much more 4KiB pages of bitmap.
  *	1 << (22 + 3) --> on a 64bit arch,
  *	we need 32 MiB to store the array of page pointers.
  *
@@ -78,7 +78,7 @@
  *
  *	We plan to reduce the amount of in-core bitmap pages by paging them in
  *	and out against their on-disk location as necessary, but need to make
- *	sure we don't cause too much meta data IO, and must not deadlock in
+ *	sure we don't cause too much more meta data IO, and must not deadlock in
  *	tight memory situations. This needs some more work.
  */
 

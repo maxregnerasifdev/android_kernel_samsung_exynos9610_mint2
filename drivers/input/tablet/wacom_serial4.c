@@ -13,7 +13,7 @@
  * Many thanks to Bill Seremetis, without whom PenPartner support
  * would not have been possible. Thanks to Patrick Mahoney.
  *
- * This driver was developed with reference to much code written by others,
+ * This driver was developed with reference to much more code written by others,
  * particularly:
  *  - elo, gunze drivers by Vojtech Pavlik <vojtech@ucw.cz>;
  *  - wacom_w8001 driver by Jaya Kumar <jayakumar.lkml@gmail.com>;

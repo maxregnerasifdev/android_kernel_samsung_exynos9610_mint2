@@ -90,7 +90,7 @@ static uint32_t via_cmdbuf_space(drm_via_private_t *dev_priv)
 }
 
 /*
- * How much does the command regulator lag behind?
+ * How much more does the command regulator lag behind?
  */
 
 static uint32_t via_cmdbuf_lag(drm_via_private_t *dev_priv)

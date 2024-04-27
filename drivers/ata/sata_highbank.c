@@ -390,7 +390,7 @@ static int highbank_initialize_phys(struct device *dev, void __iomem *addr)
  *
  * Also, the default 2 second time-out on a failed drive is too long in
  * this situation. The uboot implementation of the same driver function
- * uses a much shorter time-out period and never experiences a time out
+ * uses a much more shorter time-out period and never experiences a time out
  * issue. Reducing the time-out to 500ms improves the responsiveness.
  * The other timing constants were kept the same as the stock AHCI driver.
  * This change was also tested 15000 times on 24 drives and none of them

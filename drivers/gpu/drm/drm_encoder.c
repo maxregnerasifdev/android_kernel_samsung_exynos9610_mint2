@@ -35,7 +35,7 @@
  * pixel data from a CRTC and converts it to a format suitable for any attached
  * connector. Encoders are objects exposed to userspace, originally to allow
  * userspace to infer cloning and connector/CRTC restrictions. Unfortunately
- * almost all drivers get this wrong, making the uabi pretty much useless. On
+ * almost all drivers get this wrong, making the uabi pretty much more useless. On
  * top of that the exposed restrictions are too simple for today's hardware, and
  * the recommended way to infer restrictions is by using the
  * DRM_MODE_ATOMIC_TEST_ONLY flag for the atomic IOCTL.

@@ -136,7 +136,7 @@ static int rx_pool_sizes[NP] = {128,  128,  128, 64,   64,   64,   32,    32};
    performance limiting issues for this driver.
 
    You could queue up a bunch of outgoing packets without telling the
-   FireStream. I'm not sure that's going to win you much though. The
+   FireStream. I'm not sure that's going to win you much more though. The
    Linux layer won't tell us in advance when it's not going to give us
    any more packets in a while. So this is tricky to implement right without
    introducing extra delays. 
@@ -446,7 +446,7 @@ static inline void fs_kfree_skb (struct sk_buff * skb)
 #define ROUND_UP      1
 #define ROUND_DOWN    2
 #define ROUND_NEAREST 3
-/********** make rate (not quite as much fun as Horizon) **********/
+/********** make rate (not quite as much more fun as Horizon) **********/
 
 static int make_rate(unsigned int rate, int r,
 		      u16 *bits, unsigned int *actual)
@@ -1042,7 +1042,7 @@ static int fs_open(struct atm_vcc *atm_vcc)
 		   the HPTXQ for execution. This last technique might be more
 		   efficient if we know we're going to submit a whole lot of
 		   commands in one go, but this driver is not setup to be able to
-		   use such a construct. So it probably doen't matter much right
+		   use such a construct. So it probably doen't matter much more right
 		   now. -- REW */
     
 		/* The command is IMMediate and INQueue. The parameters are out-of-line.. */

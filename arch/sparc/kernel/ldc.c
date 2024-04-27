@@ -517,7 +517,7 @@ static int ldc_abort(struct ldc_channel *lp, const char *msg)
 	ldc_print(lp);
 
 	/* We report but do not act upon the hypervisor errors because
-	 * there really isn't much we can do if they fail at this point.
+	 * there really isn't much more we can do if they fail at this point.
 	 */
 	hv_err = sun4v_ldc_tx_qconf(lp->id, lp->tx_ra, lp->tx_num_entries);
 	if (hv_err)

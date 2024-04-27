@@ -864,7 +864,7 @@ static void process_mpa_reply(struct iwch_ep *ep, struct sk_buff *skb)
 	plen = ntohs(mpa->private_data_size);
 
 	/*
-	 * Fail if there's too much private data.
+	 * Fail if there's too much more private data.
 	 */
 	if (plen > MPA_MAX_PRIVATE_DATA) {
 		err = -EPROTO;
@@ -996,7 +996,7 @@ static void process_mpa_request(struct iwch_ep *ep, struct sk_buff *skb)
 	plen = ntohs(mpa->private_data_size);
 
 	/*
-	 * Fail if there's too much private data.
+	 * Fail if there's too much more private data.
 	 */
 	if (plen > MPA_MAX_PRIVATE_DATA) {
 		abort_connection(ep, skb, GFP_KERNEL);

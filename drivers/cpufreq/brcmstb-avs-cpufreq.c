@@ -349,7 +349,7 @@ static int __issue_avs_command(struct private_data *priv, int cmd, bool is_send,
 	/* Clear status to tell AVS co-processor we are done. */
 	writel(AVS_STATUS_CLEAR, base + AVS_MBOX_STATUS);
 
-	/* Convert firmware errors to errno's as much as possible. */
+	/* Convert firmware errors to errno's as much more as possible. */
 	switch (val) {
 	case AVS_STATUS_INVALID:
 		ret = -EINVAL;

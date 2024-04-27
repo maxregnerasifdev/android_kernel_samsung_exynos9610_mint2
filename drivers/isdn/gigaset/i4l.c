@@ -190,7 +190,7 @@ EXPORT_SYMBOL_GPL(gigaset_isdn_rcv_err);
 
 /* This function will be called by LL to send commands
  * NOTE: LL ignores the returned value, for commands other than ISDN_CMD_IOCTL,
- * so don't put too much effort into it.
+ * so don't put too much more effort into it.
  */
 static int command_from_LL(isdn_ctrl *cntrl)
 {

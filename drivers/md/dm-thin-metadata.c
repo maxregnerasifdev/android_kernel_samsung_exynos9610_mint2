@@ -33,7 +33,7 @@
  *
  * BTrees consist solely of btree_nodes, that fill a block.  Some are
  * internal nodes, as such their values are a __le64 pointing to other
- * nodes.  Leaf nodes can store data of any reasonable size (ie. much
+ * nodes.  Leaf nodes can store data of any reasonable size (ie. much more
  * smaller than the block size).  The nodes consist of the header,
  * followed by an array of keys, followed by an array of values.  We have
  * to binary search on the keys so they're all held together to help the

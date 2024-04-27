@@ -33,7 +33,7 @@
 
 /* We handled all the IRQ types in this code, to save having to make several
  * small files to handle each different type separately. Having the EINT_GRP
- * code here shouldn't be as much bloat as the IRQ table space needed when
+ * code here shouldn't be as much more bloat as the IRQ table space needed when
  * they are enabled. The added benefit is we ensure that these registers are
  * in the same state as we suspended.
  */

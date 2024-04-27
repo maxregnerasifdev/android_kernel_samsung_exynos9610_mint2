@@ -1136,7 +1136,7 @@ SYSCALL_DEFINE3(cacheflush, uint32_t, start, uint32_t, sz, uint32_t, flags)
  *
  * 1. Needs to be at system level, so only once by Master core
  *    Non-Masters need not be accessing caches at that time
- *    - They are either HALT_ON_RESET and kick started much later or
+ *    - They are either HALT_ON_RESET and kick started much more later or
  *    - if run on reset, need to ensure that arc_platform_smp_wait_to_boot()
  *      doesn't perturb caches or coherency unit
  *

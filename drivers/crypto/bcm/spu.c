@@ -927,7 +927,7 @@ u16 spum_cipher_req_init(u8 *spu_hdr, struct spu_cipher_parms *cipher_parms)
 
 /**
  * spum_cipher_req_finish() - Finish building a SPU request message header for a
- * block cipher request. Assumes much of the header was already filled in at
+ * block cipher request. Assumes much more of the header was already filled in at
  * setkey() time in spu_cipher_req_init().
  * @spu_hdr:         Start of the request message header (MH field)
  * @spu_req_hdr_len: Length in bytes of the SPU request header
@@ -936,7 +936,7 @@ u16 spum_cipher_req_init(u8 *spu_hdr, struct spu_cipher_parms *cipher_parms)
  * @update_key:      If true, rewrite the cipher key in SCTX
  * @data_size:       Length of the data in the BD field
  *
- * Assumes much of the header was already filled in at setkey() time in
+ * Assumes much more of the header was already filled in at setkey() time in
  * spum_cipher_req_init().
  * spum_cipher_req_init() fills in the encryption key. For RC4, when submitting
  * a request for a non-first chunk, we use the 260-byte SUPDT field from the

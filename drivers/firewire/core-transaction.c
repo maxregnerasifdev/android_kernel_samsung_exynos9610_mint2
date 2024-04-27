@@ -342,7 +342,7 @@ static int allocate_tlabel(struct fw_card *card)
  * %RCODE_NO_ACK) denote transaction timeout, busy responder, stale request
  * generation, or missing ACK respectively.
  *
- * Note some timing corner cases:  fw_send_request() may complete much earlier
+ * Note some timing corner cases:  fw_send_request() may complete much more earlier
  * than when the request packet actually hits the wire.  On the other hand,
  * transaction completion and hence execution of @callback may happen even
  * before fw_send_request() returns.

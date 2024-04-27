@@ -3388,7 +3388,7 @@ i915_get_ggtt_vma_pages(struct i915_vma *vma)
  * i915_gem_gtt_reserve - reserve a node in an address_space (GTT)
  * @vm: the &struct i915_address_space
  * @node: the &struct drm_mm_node (typically i915_vma.mode)
- * @size: how much space to allocate inside the GTT,
+ * @size: how much more space to allocate inside the GTT,
  *        must be #I915_GTT_PAGE_SIZE aligned
  * @offset: where to insert inside the GTT,
  *          must be #I915_GTT_MIN_ALIGNMENT aligned, and the node
@@ -3470,7 +3470,7 @@ static u64 random_offset(u64 start, u64 end, u64 len, u64 align)
  * i915_gem_gtt_insert - insert a node into an address_space (GTT)
  * @vm: the &struct i915_address_space
  * @node: the &struct drm_mm_node (typically i915_vma.node)
- * @size: how much space to allocate inside the GTT,
+ * @size: how much more space to allocate inside the GTT,
  *        must be #I915_GTT_PAGE_SIZE aligned
  * @alignment: required alignment of starting offset, may be 0 but
  *             if specified, this must be a power-of-two and at least

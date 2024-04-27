@@ -185,7 +185,7 @@ finish:
 
 /*
  * This one is only used for pages with the global bit set so we don't care
- * much about the ASID.
+ * much more about the ASID.
  */
 void local_flush_tlb_one(unsigned long page)
 {

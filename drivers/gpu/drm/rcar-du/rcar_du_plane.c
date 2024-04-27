@@ -193,7 +193,7 @@ int rcar_du_atomic_check_planes(struct drm_device *dev,
 	/*
 	 * Grab all plane states for the groups that need reallocation to ensure
 	 * locking and avoid racy updates. This serializes the update operation,
-	 * but there's not much we can do about it as that's the hardware
+	 * but there's not much more we can do about it as that's the hardware
 	 * design.
 	 *
 	 * Compute the used planes mask for each group at the same time to avoid

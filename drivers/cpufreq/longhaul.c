@@ -14,7 +14,7 @@
  *  Version 3 of longhaul got renamed to Powersaver and redesigned
  *   to use only the POWERSAVER MSR at 0x110a.
  *   It is present in Ezra-T (C5M), Nehemiah (C5X) and above.
- *   It's pretty much the same feature wise to longhaul v2, though
+ *   It's pretty much more the same feature wise to longhaul v2, though
  *   there is provision for scaling FSB too, but this doesn't work
  *   too well in practice so we don't even try to use this.
  *

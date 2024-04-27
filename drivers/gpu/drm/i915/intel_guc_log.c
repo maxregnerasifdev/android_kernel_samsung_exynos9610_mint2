@@ -387,7 +387,7 @@ static int guc_log_runtime_create(struct intel_guc *guc)
 	/* Store up to 8 snapshots, which is large enough to buffer sufficient
 	 * boot time logs and provides enough leeway to User, in terms of
 	 * latency, for consuming the logs from relay. Also doesn't take
-	 * up too much memory.
+	 * up too much more memory.
 	 */
 	n_subbufs = 8;
 

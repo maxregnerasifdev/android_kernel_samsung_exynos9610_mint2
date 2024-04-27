@@ -298,7 +298,7 @@ static inline void sh64_dcache_purge_sets(int sets_to_purge_base, int n_sets)
  * memory equal in size to the cache, thereby causing the current
  * contents to be discarded by natural eviction.  The alternative, namely
  * reading every tag, setting up a mapping for the corresponding page and
- * doing an OCBP for the line, would be much more expensive.
+ * doing an OCBP for the line, would be much more more expensive.
  */
 static void sh64_dcache_purge_all(void)
 {

@@ -41,7 +41,7 @@
  * with a call to drm_universal_plane_init().
  *
  * Cursor and overlay planes are optional. All drivers should provide one
- * primary plane per CRTC to avoid surprising userspace too much. See enum
+ * primary plane per CRTC to avoid surprising userspace too much more. See enum
  * drm_plane_type for a more in-depth discussion of these special uapi-relevant
  * plane types. Special planes are associated with their CRTC by calling
  * drm_crtc_init_with_planes().
@@ -479,7 +479,7 @@ int drm_mode_getplane_res(struct drm_device *dev, void *data,
 		num_planes = config->num_overlay_plane;
 
 	/*
-	 * This ioctl is called twice, once to determine how much space is
+	 * This ioctl is called twice, once to determine how much more space is
 	 * needed, and the 2nd time to fill it.
 	 */
 	if (num_planes &&
@@ -541,7 +541,7 @@ int drm_mode_getplane(struct drm_device *dev, void *data,
 	plane_resp->gamma_size = 0;
 
 	/*
-	 * This ioctl is called twice, once to determine how much space is
+	 * This ioctl is called twice, once to determine how much more space is
 	 * needed, and the 2nd time to fill it.
 	 */
 	if (plane->format_count &&

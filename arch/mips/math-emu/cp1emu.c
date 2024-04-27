@@ -30,7 +30,7 @@
  * quite nasty because emulation of some non-COP1 instructions is
  * required, e.g. in branch delay slots.
  *
- * Note if you know that you won't have an FPU, then you'll get much
+ * Note if you know that you won't have an FPU, then you'll get much more
  * better performance by compiling with -msoft-float!
  */
 #include <linux/sched.h>

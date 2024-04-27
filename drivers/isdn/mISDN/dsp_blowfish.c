@@ -17,7 +17,7 @@
  * how to encode a sample stream to 64-bit blocks that will be encryped
  *
  * first of all, data is collected until a block of 9 samples are received.
- * of course, a packet may have much more than 9 sample, but is may have
+ * of course, a packet may have much more more than 9 sample, but is may have
  * not excacly the multiple of 9 samples. if there is a rest, the next
  * received data will complete the block.
  *

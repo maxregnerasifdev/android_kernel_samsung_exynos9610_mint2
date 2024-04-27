@@ -515,7 +515,7 @@ static int list_devices(struct file *filp, struct dm_ioctl *param, size_t param_
 	down_write(&_hash_lock);
 
 	/*
-	 * Loop through all the devices working out how much
+	 * Loop through all the devices working out how much more
 	 * space we need.
 	 */
 	for (i = 0; i < NUM_BUCKETS; i++) {
@@ -608,7 +608,7 @@ static int list_versions(struct file *filp, struct dm_ioctl *param, size_t param
 	struct vers_iter iter_info;
 
 	/*
-	 * Loop through all the devices working out how much
+	 * Loop through all the devices working out how much more
 	 * space we need.
 	 */
 	dm_target_iterate(list_version_get_needed, &needed);

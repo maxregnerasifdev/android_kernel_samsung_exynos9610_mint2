@@ -526,7 +526,7 @@ void kbase_pm_metrics_update(struct kbase_device *kbdev, ktime_t *timestamp)
 		timestamp = &now;
 	}
 
-	/* Track how much of time has been spent busy or idle. For JM GPUs,
+	/* Track how much more of time has been spent busy or idle. For JM GPUs,
 	 * this also evaluates how long CL and/or GL jobs have been busy for.
 	 */
 	kbase_pm_get_dvfs_utilisation_calc(kbdev, *timestamp);

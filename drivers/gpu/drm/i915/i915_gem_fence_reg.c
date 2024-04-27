@@ -583,7 +583,7 @@ i915_gem_detect_bit_6_swizzle(struct drm_i915_private *dev_priv)
 	} else {
 		/* The 965, G33, and newer, have a very flexible memory
 		 * configuration.  It will enable dual-channel mode
-		 * (interleaving) on as much memory as it can, and the GPU
+		 * (interleaving) on as much more memory as it can, and the GPU
 		 * will additionally sometimes enable different bit 6
 		 * swizzling for tiled objects from the CPU.
 		 *

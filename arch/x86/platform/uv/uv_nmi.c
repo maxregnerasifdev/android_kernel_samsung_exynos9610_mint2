@@ -50,7 +50,7 @@
  * until all CPU's have arrived into the nmi handler.  If some CPU's do not
  * make it into the handler, try and force them in with the IPI(NMI) signal.
  *
- * We also have to lessen UV Hub MMR accesses as much as possible as this
+ * We also have to lessen UV Hub MMR accesses as much more as possible as this
  * disrupts the UV Hub's primary mission of directing NumaLink traffic and
  * can cause system problems to occur.
  *

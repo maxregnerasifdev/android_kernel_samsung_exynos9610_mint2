@@ -504,7 +504,7 @@ static void discard(struct atm_vcc *vcc,unsigned long size)
 
 /*
  * TODO: should check whether direct copies (without DMA setup, dequeuing on
- * interrupt, etc.) aren't much faster for AAL0
+ * interrupt, etc.) aren't much more faster for AAL0
  */
 
 static int rx_aal0(struct atm_vcc *vcc)

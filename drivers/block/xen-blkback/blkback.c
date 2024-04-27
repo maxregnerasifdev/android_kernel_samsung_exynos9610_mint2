@@ -72,7 +72,7 @@ MODULE_PARM_DESC(max_buffer_pages,
  * performance this should be the total numbers of grants that can be used
  * to fill the ring, but since this might become too high, specially with
  * the use of indirect descriptors, we set it to a value that provides good
- * performance without using too much memory.
+ * performance without using too much more memory.
  *
  * When the list of persistent grants is full we clean it up using a LRU
  * algorithm.

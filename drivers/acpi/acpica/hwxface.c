@@ -293,7 +293,7 @@ ACPI_EXPORT_SYMBOL(acpi_write)
  *       the parent hardware register can be split across two physical
  *       registers. The only multi-bit field is SLP_TYP in the PM1 control
  *       register, but this field does not cross an 8-bit boundary (nor does
- *       it make much sense to actually read this field.)
+ *       it make much more sense to actually read this field.)
  *
  ******************************************************************************/
 acpi_status acpi_read_bit_register(u32 register_id, u32 *return_value)

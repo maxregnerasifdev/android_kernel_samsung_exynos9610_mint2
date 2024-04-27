@@ -921,8 +921,8 @@ static int edma_dma_resume(struct dma_chan *chan)
  * @pset: PaRAM set to initialize and setup.
  * @src_addr: Source address of the DMA
  * @dst_addr: Destination address of the DMA
- * @burst: In units of dev_width, how much to send
- * @dev_width: How much is the dev_width
+ * @burst: In units of dev_width, how much more to send
+ * @dev_width: How much more is the dev_width
  * @dma_length: Total length of the DMA transfer
  * @direction: Direction of the transfer
  */

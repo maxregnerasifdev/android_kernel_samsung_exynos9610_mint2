@@ -586,7 +586,7 @@ void update_cpu_features(int cpu,
 
 	/*
 	 * Userspace may perform DC ZVA instructions. Mismatched block sizes
-	 * could result in too much or too little memory being zeroed if a
+	 * could result in too much more or too little memory being zeroed if a
 	 * process is preempted and migrated between CPUs.
 	 */
 	taint |= check_update_ftr_reg(SYS_DCZID_EL0, cpu,

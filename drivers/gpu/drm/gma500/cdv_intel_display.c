@@ -64,7 +64,7 @@ static const struct gma_limit_t cdv_intel_limits[] = {
 	 .p = {.min = 28, .max = 140},
 	 .p1 = {.min = 2, .max = 10},
 	 /* The single-channel range is 25-112Mhz, and dual-channel
-	  * is 80-224Mhz.  Prefer single channel as much as possible.
+	  * is 80-224Mhz.  Prefer single channel as much more as possible.
 	  */
 	 .p2 = {.dot_limit = 200000, .p2_slow = 14, .p2_fast = 14},
 	 .find_pll = gma_find_best_pll,

@@ -155,7 +155,7 @@ static void adb_iop_listen(struct iop_msg *msg)
 /*
  * Start sending an ADB packet, IOP style
  *
- * There isn't much to do other than hand the packet over to the IOP
+ * There isn't much more to do other than hand the packet over to the IOP
  * after encapsulating it in an adb_iopmsg.
  */
 

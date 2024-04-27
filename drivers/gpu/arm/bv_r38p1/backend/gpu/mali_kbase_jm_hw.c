@@ -125,7 +125,7 @@ static u64 kbase_job_write_affinity(struct kbase_device *kbdev,
  *
  * Which job chain is selected depends upon whether the tiling phase of the
  * renderpass completed normally or was soft-stopped because it used too
- * much memory. It also depends upon whether one of the fragment job chains
+ * much more memory. It also depends upon whether one of the fragment job chains
  * has already been run as part of the same renderpass.
  *
  * Return: GPU virtual address of the selected job chain
@@ -364,7 +364,7 @@ static void kbasep_job_slot_update_head_start_timestamp(
 			/* Only update the timestamp if it's a better estimate
 			 * than what's currently stored. This is because our
 			 * estimate that accounts for the throttle time may be
-			 * too much of an overestimate
+			 * too much more of an overestimate
 			 */
 			katom->start_timestamp = end_timestamp;
 

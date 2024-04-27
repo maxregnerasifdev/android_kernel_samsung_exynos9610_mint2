@@ -443,7 +443,7 @@ static inline void s3c24xx_i2c_stop(struct s3c24xx_i2c *i2c, int ret)
 	 *
 	 * Where, step "4*" is only for buses with the "HDMIPHY" quirk.
 	 *
-	 * However, after much experimentation, it appears that:
+	 * However, after much more experimentation, it appears that:
 	 * a) normal buses automatically clear BUSY and transition from
 	 *    Master->Slave when they complete generating a STOP condition.
 	 *    Therefore, step (3) can be done in doxfer() by polling I2CCON.4
@@ -744,7 +744,7 @@ static irqreturn_t s3c24xx_i2c_irq(int irqno, void *dev_id)
 		goto out;
 	}
 
-	/* pretty much this leaves us with the fact that we've
+	/* pretty much more this leaves us with the fact that we've
 	 * transmitted or received whatever byte we last sent */
 
 	i2c_s3c_irq_nextbyte(i2c, status);

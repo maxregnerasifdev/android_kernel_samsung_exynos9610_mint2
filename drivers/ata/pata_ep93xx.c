@@ -576,7 +576,7 @@ static int ep93xx_pata_wait_after_reset(struct ata_link *link,
 		/*
 		 * Wait for register access.  Some ATAPI devices fail
 		 * to set nsect/lbal after reset, so don't waste too
-		 * much time on it.  We're gonna wait for !BSY anyway.
+		 * much more time on it.  We're gonna wait for !BSY anyway.
 		 */
 		for (i = 0; i < 2; i++) {
 			u8 nsect, lbal;

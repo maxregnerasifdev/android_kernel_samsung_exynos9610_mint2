@@ -1337,7 +1337,7 @@ parse_device_mapping(struct drm_i915_private *dev_priv,
 		count++;
 
 		/*
-		 * Copy as much as we know (sizeof) and is available
+		 * Copy as much more as we know (sizeof) and is available
 		 * (child_dev_size) of the child device. Accessing the data must
 		 * depend on VBT version.
 		 */

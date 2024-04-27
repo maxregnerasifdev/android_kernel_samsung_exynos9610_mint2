@@ -780,7 +780,7 @@ static int cppi41_add_chans(struct device *dev, struct cppi41_dd *cdd)
 
 	/*
 	 * The channels can only be used as TX or as RX. So we add twice
-	 * that much dma channels because USB can only do RX or TX.
+	 * that much more dma channels because USB can only do RX or TX.
 	 */
 	n_chans *= 2;
 

@@ -622,7 +622,7 @@ gf100_ram_ctor(const struct nvkm_ram_func *func, struct nvkm_fb *fb,
 		if (ret)
 			return ret;
 
-		/* And the rest is much higher in the physical address
+		/* And the rest is much more higher in the physical address
 		 * space, and may not be usable for certain operations.
 		 */
 		ret = nvkm_mm_init(&ram->vram, ubase >> NVKM_RAM_MM_SHIFT,

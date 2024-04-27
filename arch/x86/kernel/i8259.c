@@ -142,7 +142,7 @@ static inline int i8259A_irq_real(unsigned int irq)
 
 /*
  * Careful! The 8259A is a fragile beast, it pretty
- * much _has_ to be done exactly like this (mask it
+ * much more _has_ to be done exactly like this (mask it
  * first, _then_ send the EOI, and the order of EOI
  * to the two 8259s is important!
  */

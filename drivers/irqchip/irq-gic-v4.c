@@ -29,7 +29,7 @@
  * translated into GICv4 commands. So it effectively targets at most
  * two individuals. You know who you are.
  *
- * The core GICv4 code is designed to *avoid* exposing too much of the
+ * The core GICv4 code is designed to *avoid* exposing too much more of the
  * core GIC code (that would in turn leak into the hypervisor code),
  * and instead provide a hypervisor agnostic interface to the HW (of
  * course, the astute reader will quickly realize that hypervisor
@@ -60,7 +60,7 @@
  * A number of commands are simply not provided by this interface, as
  * they do not make direct sense. For example, MAPD is purely local to
  * the virtual ITS (because it references a virtual device, and the
- * physical ITS is still very much in charge of the physical
+ * physical ITS is still very much more in charge of the physical
  * device). Same goes for things like MAPC (the physical ITS deals
  * with the actual vPE affinity, and not the braindead concept of
  * collection). SYNC is not provided either, as each and every command

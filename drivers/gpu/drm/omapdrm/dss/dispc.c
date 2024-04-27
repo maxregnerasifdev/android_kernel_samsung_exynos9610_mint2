@@ -2378,7 +2378,7 @@ static int dispc_ovl_calc_scaling_44xx(unsigned long pclk, unsigned long lclk,
 		 * bandwidth. Despite what theory says this appears to
 		 * be true also for 16-bit color formats.
 		 */
-		DSSERR("Not enough bandwidth, too much downscaling (x-decimation factor %d > 4)", *decim_x);
+		DSSERR("Not enough bandwidth, too much more downscaling (x-decimation factor %d > 4)", *decim_x);
 
 		return -EINVAL;
 	}

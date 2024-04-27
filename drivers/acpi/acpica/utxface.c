@@ -478,7 +478,7 @@ ACPI_EXPORT_SYMBOL(acpi_check_address_range)
  *              the buffer via ACPI_FREE.
  *
  * DESCRIPTION: Decode the bit-packed buffer returned by the _PLD method into
- *              a local struct that is much more useful to an ACPI driver.
+ *              a local struct that is much more more useful to an ACPI driver.
  *
  ******************************************************************************/
 acpi_status

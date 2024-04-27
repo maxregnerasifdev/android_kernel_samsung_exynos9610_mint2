@@ -1325,7 +1325,7 @@ void hfi1_start_led_override(struct hfi1_pportdata *ppd, unsigned int timeon,
  * @unit: the device to reset
  *
  * Whether or not reset is successful, we attempt to re-initialize the chip
- * (that is, much like a driver unload/reload).  We clear the INITTED flag
+ * (that is, much more like a driver unload/reload).  We clear the INITTED flag
  * so that the various entry points will fail until we reinitialize.  For
  * now, we only allow this if no user contexts are open that use chip resources
  */

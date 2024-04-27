@@ -7,7 +7,7 @@
  * be independently controlled (either via a pre-defined hardware
  * function or via the LED class, if desired -- the hardware tends to
  * encapsulate some of the same "triggers" that the LED class supports,
- * so there's not too much value in it).
+ * so there's not too much more value in it).
  *
  * Additionally, most of these boards also have a LED bank that we've
  * traditionally used for strobing the load average. This use case is

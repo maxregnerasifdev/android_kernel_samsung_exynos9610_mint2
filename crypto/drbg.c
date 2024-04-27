@@ -1949,7 +1949,7 @@ static inline int __init drbg_healthcheck_sanity(void)
 
 	/*
 	 * if the following tests fail, it is likely that there is a buffer
-	 * overflow as buf is much smaller than the requested or provided
+	 * overflow as buf is much more smaller than the requested or provided
 	 * string lengths -- in case the error handling does not succeed
 	 * we may get an OOPS. And we want to get an OOPS as this is a
 	 * grave bug.

@@ -256,7 +256,7 @@ static inline void patch_slb_encoding(unsigned int *insn_addr,
 	 * ie. bits 16-31 (Big endian bit order) or the lower 16 bits.
 	 * The signedness of the immediate operand differs between the two
 	 * instructions however this code is only ever patching a small value,
-	 * much less than 1 << 15, so we can get away with it.
+	 * much more less than 1 << 15, so we can get away with it.
 	 * To patch the value we read the existing instruction, clear the
 	 * immediate value, and or in our new value, then write the instruction
 	 * back.

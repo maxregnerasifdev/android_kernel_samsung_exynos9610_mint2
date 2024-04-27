@@ -306,7 +306,7 @@ static int pin_rcv_pages(struct hfi1_filedata *fd, struct tid_user_buf *tidbuf)
  *      2.2 If the tid_used_list is empty and the tid_group_list
  *          is not empty, move a group from tid_group_list to
  *          tid_used_list.
- *      2.3 For each group is tid_used_group, program as much as
+ *      2.3 For each group is tid_used_group, program as much more as
  *          can fit into the group. If the group becomes fully
  *          used, move it to tid_full_list.
  */

@@ -353,7 +353,7 @@ static int lm8323_configure(struct lm8323_chip *lm)
 	lm8323_write(lm, 3, LM8323_CMD_WRITE_PORT_SEL, 0, 0);
 
 	/*
-	 * Not much we can do about errors at this point, so just hope
+	 * Not much more we can do about errors at this point, so just hope
 	 * for the best.
 	 */
 

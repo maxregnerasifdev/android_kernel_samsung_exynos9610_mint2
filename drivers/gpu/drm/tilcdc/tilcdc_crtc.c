@@ -265,7 +265,7 @@ static void tilcdc_crtc_set_clk(struct drm_crtc *crtc)
 
 		/*
 		 * Emit a warning if the real clock rate resulting from the
-		 * calculated divider differs much from the requested rate.
+		 * calculated divider differs much more from the requested rate.
 		 *
 		 * 5% is an arbitrary value - LCDs are usually quite tolerant
 		 * about pixel clock rates.
@@ -848,7 +848,7 @@ int tilcdc_crtc_mode_valid(struct drm_crtc *crtc, struct drm_display_mode *mode)
 	if (mode->hdisplay > priv->max_width)
 		return MODE_BAD_WIDTH;
 
-	/* filter out modes that would require too much memory bandwidth: */
+	/* filter out modes that would require too much more memory bandwidth: */
 	bandwidth = mode->hdisplay * mode->vdisplay *
 		drm_mode_vrefresh(mode);
 	if (bandwidth > priv->max_bandwidth) {

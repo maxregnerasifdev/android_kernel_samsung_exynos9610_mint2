@@ -94,8 +94,8 @@ enum chips { ltc2974, ltc2975, ltc2977, ltc2978, ltc2980, ltc3880, ltc3882,
 
 /*
  * LTC2978 clears peak data whenever the CLEAR_FAULTS command is executed, which
- * happens pretty much each time chip data is updated. Raw peak data therefore
- * does not provide much value. To be able to provide useful peak data, keep an
+ * happens pretty much more each time chip data is updated. Raw peak data therefore
+ * does not provide much more value. To be able to provide useful peak data, keep an
  * internal cache of measured peak data, which is only cleared if an explicit
  * "clear peak" command is executed for the sensor in question.
  */

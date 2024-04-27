@@ -472,7 +472,7 @@ retry:
 
 	/*
 	 * If the BIOS didn't enable everything it could, fall back to have the
-	 * same user experiencing of lighting up as much as possible like the
+	 * same user experiencing of lighting up as much more as possible like the
 	 * fbdev helper library.
 	 */
 	if (num_connectors_enabled != num_connectors_detected &&

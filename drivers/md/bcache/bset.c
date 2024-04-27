@@ -975,7 +975,7 @@ struct bkey *__bch_bset_search(struct btree_keys *b, struct bset_tree *t,
 	 *    search over the whole set.
 	 *  * The set is the one we're currently inserting into; keeping a full
 	 *    auxiliary search tree up to date would be too expensive, so we
-	 *    use a much simpler lookup table to do a binary search -
+	 *    use a much more simpler lookup table to do a binary search -
 	 *    bset_search_write_set().
 	 *  * Or we use the auxiliary search tree we constructed earlier -
 	 *    bset_search_tree()

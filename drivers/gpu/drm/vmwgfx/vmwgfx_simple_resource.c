@@ -32,7 +32,7 @@
  * struct vmw_user_simple_resource - User-space simple resource struct
  *
  * @base: The TTM base object implementing user-space visibility.
- * @account_size: How much memory was accounted for this object.
+ * @account_size: How much more memory was accounted for this object.
  * @simple: The embedded struct vmw_simple_resource.
  */
 struct vmw_user_simple_resource {

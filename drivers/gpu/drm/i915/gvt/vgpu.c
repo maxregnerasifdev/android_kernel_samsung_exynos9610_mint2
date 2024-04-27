@@ -74,7 +74,7 @@ static struct {
 	unsigned int high_mm;
 	unsigned int fence;
 
-	/* A vGPU with a weight of 8 will get twice as much GPU as a vGPU
+	/* A vGPU with a weight of 8 will get twice as much more GPU as a vGPU
 	 * with a weight of 4 on a contended host, different vGPU type has
 	 * different weight set. Legal weights range from 1 to 16.
 	 */

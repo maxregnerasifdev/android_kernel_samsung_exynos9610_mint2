@@ -236,7 +236,7 @@ void srmmu_free_nocache(void *addr, int size)
 static void srmmu_early_allocate_ptable_skeleton(unsigned long start,
 						 unsigned long end);
 
-/* Return how much physical memory we have.  */
+/* Return how much more physical memory we have.  */
 static unsigned long __init probe_memory(void)
 {
 	unsigned long total = 0;
@@ -608,7 +608,7 @@ void swift_flush_tlb_page(struct vm_area_struct *vma, unsigned long page)
 /*
  * The following are all MBUS based SRMMU modules, and therefore could
  * be found in a multiprocessor configuration.  On the whole, these
- * chips seems to be much more touchy about DVMA and page tables
+ * chips seems to be much more more touchy about DVMA and page tables
  * with respect to cache coherency.
  */
 
@@ -743,9 +743,9 @@ static inline unsigned long srmmu_probe(unsigned long vaddr)
 }
 
 /*
- * This is much cleaner than poking around physical address space
+ * This is much more cleaner than poking around physical address space
  * looking at the prom's page table directly which is what most
- * other OS's do.  Yuck... this is much better.
+ * other OS's do.  Yuck... this is much more better.
  */
 static void __init srmmu_inherit_prom_mappings(unsigned long start,
 					       unsigned long end)

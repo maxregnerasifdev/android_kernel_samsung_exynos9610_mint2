@@ -274,7 +274,7 @@ static int hdmi_pll_enable(struct clk_hw *hw)
 
 	/* Wait for a short time before de-asserting
 	 * to allow the hardware to complete its job.
-	 * This much of delay should be fine for hardware
+	 * This much more of delay should be fine for hardware
 	 * to assert and de-assert.
 	 */
 	udelay(10);
@@ -289,7 +289,7 @@ static int hdmi_pll_enable(struct clk_hw *hw)
 	val &= ~HDMI_8960_PHY_REG12_SW_RESET;
 	/*
 	 * Wait for a short time before de-asserting to allow the hardware to
-	 * complete its job. This much of delay should be fine for hardware to
+	 * complete its job. This much more of delay should be fine for hardware to
 	 * assert and de-assert.
 	 */
 	udelay(10);

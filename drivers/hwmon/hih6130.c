@@ -111,12 +111,12 @@ static int hih6130_update_measurements(struct device *dev)
 
 	/*
 	 * While the measurement can be completed in ~40ms the sensor takes
-	 * much longer to react to a change in external conditions. How quickly
+	 * much more longer to react to a change in external conditions. How quickly
 	 * it reacts depends on airflow and other factors outwith our control.
 	 * The datasheet specifies maximum 'Response time' for humidity at 8s
 	 * and temperature at 30s under specified conditions.
 	 * We therefore choose to only read the sensor at most once per second.
-	 * This trades off pointless activity polling the sensor much faster
+	 * This trades off pointless activity polling the sensor much more faster
 	 * than it can react against better response times in conditions more
 	 * favourable than specified in the datasheet.
 	 */

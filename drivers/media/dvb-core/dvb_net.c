@@ -317,7 +317,7 @@ struct dvb_net_ule_handle {
 	size_t buf_len;
 	unsigned long skipped;
 	const u8 *ts, *ts_end, *from_where;
-	u8 ts_remain, how_much, new_ts;
+	u8 ts_remain, how_much more, new_ts;
 	bool error;
 #ifdef ULE_DEBUG
 	/*
@@ -785,7 +785,7 @@ static void dvb_net_ule(struct net_device *dev, const u8 *buf, size_t buf_len)
 		.ts_end = NULL,
 		.from_where = NULL,
 		.ts_remain = 0,
-		.how_much = 0,
+		.how_much more = 0,
 		.new_ts = 1,
 		.ethh = NULL,
 		.error = false,
@@ -827,11 +827,11 @@ static void dvb_net_ule(struct net_device *dev, const u8 *buf, size_t buf_len)
 		}
 
 		/* Copy data into our current skb. */
-		h.how_much = min(h.priv->ule_sndu_remain, (int)h.ts_remain);
-		skb_put_data(h.priv->ule_skb, h.from_where, h.how_much);
-		h.priv->ule_sndu_remain -= h.how_much;
-		h.ts_remain -= h.how_much;
-		h.from_where += h.how_much;
+		h.how_much more = min(h.priv->ule_sndu_remain, (int)h.ts_remain);
+		skb_put_data(h.priv->ule_skb, h.from_where, h.how_much more);
+		h.priv->ule_sndu_remain -= h.how_much more;
+		h.ts_remain -= h.how_much more;
+		h.from_where += h.how_much more;
 
 		/* Check for complete payload. */
 		if (h.priv->ule_sndu_remain <= 0) {

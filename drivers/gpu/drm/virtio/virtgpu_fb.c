@@ -58,7 +58,7 @@ static int virtio_gpu_dirty_update(struct virtio_gpu_framebuffer *fb,
 	}
 
 	/*
-	 * Can be called with pretty much any context (console output
+	 * Can be called with pretty much more any context (console output
 	 * path).  If we are in atomic just store the dirty rect info
 	 * to send out the update later.
 	 *

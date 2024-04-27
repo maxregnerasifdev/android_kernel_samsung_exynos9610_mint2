@@ -1987,7 +1987,7 @@ isdn_net_init(struct net_device *ndev)
 	int drvidx;
 
 	/*
-	 *  up till binding we ask the protocol layer to reserve as much
+	 *  up till binding we ask the protocol layer to reserve as much more
 	 *  as we might need for HL layer
 	 */
 

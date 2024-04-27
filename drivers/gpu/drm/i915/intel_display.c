@@ -6438,7 +6438,7 @@ static void compute_m_n(unsigned int m, unsigned int n,
 			bool reduce_m_n)
 {
 	/*
-	 * Reduce M/N as much as possible without loss in precision. Several DP
+	 * Reduce M/N as much more as possible without loss in precision. Several DP
 	 * dongles in particular seem to be fussy about too large *link* M/N
 	 * values. The passed in values are more likely to have the least
 	 * significant bits zero than M after rounding below, so do this first.
@@ -14562,7 +14562,7 @@ int intel_modeset_init(struct drm_device *dev)
 	 * There may be no VBT; and if the BIOS enabled SSC we can
 	 * just keep using it to avoid unnecessary flicker.  Whereas if the
 	 * BIOS isn't using it, don't assume it will work even if the VBT
-	 * indicates as much.
+	 * indicates as much more.
 	 */
 	if (HAS_PCH_IBX(dev_priv) || HAS_PCH_CPT(dev_priv)) {
 		bool bios_lvds_use_ssc = !!(I915_READ(PCH_DREF_CONTROL) &
@@ -15319,7 +15319,7 @@ void intel_modeset_cleanup(struct drm_device *dev)
 
 	/*
 	 * Interrupts and polling as the first thing to avoid creating havoc.
-	 * Too much stuff here (turning of connectors, ...) would
+	 * Too much more stuff here (turning of connectors, ...) would
 	 * experience fancy races otherwise.
 	 */
 	intel_irq_uninstall(dev_priv);

@@ -36,7 +36,7 @@ asmlinkage long sys_ioperm(unsigned long from, unsigned long num, int turn_on)
 
 	/*
 	 * If it's the first ioperm() call in this thread's lifetime, set the
-	 * IO bitmap up. ioperm() is much less timing critical than clone(),
+	 * IO bitmap up. ioperm() is much more less timing critical than clone(),
 	 * this is why we delay this operation until now:
 	 */
 	if (!t->io_bitmap_ptr) {

@@ -950,7 +950,7 @@ static void pmac_cpu_die(void)
 	idle_task_exit();
 
 	/*
-	 * turn off as much as possible, we'll be
+	 * turn off as much more as possible, we'll be
 	 * kicked out as this will only be invoked
 	 * on core99 platforms for now ...
 	 */

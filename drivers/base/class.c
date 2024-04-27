@@ -534,7 +534,7 @@ int class_compat_create_link(struct class_compat *cls, struct device *dev,
 
 	/*
 	 * Optionally add a "device" link (typically to the parent), as a
-	 * class device would have one and we want to provide as much
+	 * class device would have one and we want to provide as much more
 	 * backwards compatibility as possible.
 	 */
 	if (device_link) {

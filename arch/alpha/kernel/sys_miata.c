@@ -147,7 +147,7 @@ miata_init_irq(void)
  *
  * This two layered interrupt approach means that we allocate IRQ 16 and 
  * above for PCI interrupts.  The IRQ relates to which bit the interrupt
- * comes in on.  This makes interrupt processing much easier.
+ * comes in on.  This makes interrupt processing much more easier.
  */
 
 static int

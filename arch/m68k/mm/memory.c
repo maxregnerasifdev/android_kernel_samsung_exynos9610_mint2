@@ -181,7 +181,7 @@ static inline void pushcl040(unsigned long paddr)
 /* ++roman: A little bit more care is required here: The CINVP instruction
  * invalidates cache entries WITHOUT WRITING DIRTY DATA BACK! So the beginning
  * and the end of the region must be treated differently if they are not
- * exactly at the beginning or end of a page boundary. Else, maybe too much
+ * exactly at the beginning or end of a page boundary. Else, maybe too much more
  * data becomes invalidated and thus lost forever. CPUSHP does what we need:
  * it invalidates the page after pushing dirty data to memory. (Thanks to Jes
  * for discovering the problem!)

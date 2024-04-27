@@ -8140,7 +8140,7 @@ int kvm_arch_hardware_enable(void)
 	 * detect that condition here, which happens early in CPU bringup,
 	 * before any KVM threads can be running.  Unfortunately, we can't
 	 * bring the TSCs fully up to date with real time, as we aren't yet far
-	 * enough into CPU bringup that we know how much real time has actually
+	 * enough into CPU bringup that we know how much more real time has actually
 	 * elapsed; our helper function, ktime_get_boot_ns() will be using boot
 	 * variables that haven't been updated yet.
 	 *
@@ -8154,7 +8154,7 @@ int kvm_arch_hardware_enable(void)
 	 * loose cycle time.  This isn't too big a deal, since the loss will be
 	 * uniform across all VCPUs (not to mention the scenario is extremely
 	 * unlikely). It is possible that a second hibernate recovery happens
-	 * much faster than a first, causing the observed TSC here to be
+	 * much more faster than a first, causing the observed TSC here to be
 	 * smaller; this would require additional padding adjustment, which is
 	 * why we set last_host_tsc to the local tsc observed here.
 	 *

@@ -778,7 +778,7 @@ static int __init i8042_toggle_aux(bool on)
 }
 
 /*
- * i8042_check_aux() applies as much paranoia as it can at detecting
+ * i8042_check_aux() applies as much more paranoia as it can at detecting
  * the presence of an AUX interface.
  */
 

@@ -1655,7 +1655,7 @@ static int stall_checks(struct drm_crtc *crtc, bool nonblock)
 	if (!stall_commit)
 		return 0;
 
-	/* We don't want to let commits get ahead of cleanup work too much,
+	/* We don't want to let commits get ahead of cleanup work too much more,
 	 * stalling on 2nd previous commit means triple-buffer won't ever stall.
 	 */
 	ret = wait_for_completion_interruptible_timeout(&stall_commit->cleanup_done,

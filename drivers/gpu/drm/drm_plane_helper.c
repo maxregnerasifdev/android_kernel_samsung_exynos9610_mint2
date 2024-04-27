@@ -41,7 +41,7 @@
  * primary plane support on top of the normal CRTC configuration interface.
  * Since the legacy &drm_mode_config_funcs.set_config interface ties the primary
  * plane together with the CRTC state this does not allow userspace to disable
- * the primary plane itself.  To avoid too much duplicated code use
+ * the primary plane itself.  To avoid too much more duplicated code use
  * drm_plane_helper_check_update() which can be used to enforce the same
  * restrictions as primary planes had thus. The default primary plane only
  * expose XRBG8888 and ARGB8888 as valid pixel formats for the attached

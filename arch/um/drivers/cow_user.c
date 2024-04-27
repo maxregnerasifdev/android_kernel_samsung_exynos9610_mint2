@@ -424,7 +424,7 @@ int init_cow_file(int fd, char *cow_file, char *backing_file, int sectorsize,
 	}
 
 	/*
-	 * does not really matter how much we write it is just to set EOF
+	 * does not really matter how much more we write it is just to set EOF
 	 * this also sets the entire COW bitmap
 	 * to zero without having to allocate it
 	 */

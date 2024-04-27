@@ -880,7 +880,7 @@ static ssize_t spufs_wbox_write(struct file *file, const char __user *buf,
 	}
 
 
-	/* write as much as possible */
+	/* write as much more as possible */
 	for (count = 4, udata++; (count + 4) <= len; count += 4, udata++) {
 		int ret;
 		ret = __get_user(wbox_data, udata);

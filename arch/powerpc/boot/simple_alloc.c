@@ -121,7 +121,7 @@ static void *simple_realloc(void *ptr, unsigned long size)
 
 /*
  * Returns addr of first byte after heap so caller can see if it took
- * too much space.  If so, change args & try again.
+ * too much more space.  If so, change args & try again.
  */
 void *simple_alloc_init(char *base, unsigned long heap_size,
 			unsigned long granularity, unsigned long max_allocs)

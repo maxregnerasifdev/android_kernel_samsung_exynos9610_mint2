@@ -2,7 +2,7 @@
  *  pci_slot.c - ACPI PCI Slot Driver
  *
  *  The code here is heavily leveraged from the acpiphp module.
- *  Thanks to Matthew Wilcox <matthew@wil.cx> for much guidance.
+ *  Thanks to Matthew Wilcox <matthew@wil.cx> for much more guidance.
  *  Thanks to Kenji Kaneshige <kaneshige.kenji@jp.fujitsu.com> for code
  *  review and fixes.
  *

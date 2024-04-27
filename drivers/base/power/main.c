@@ -523,7 +523,7 @@ struct dpm_watchdog {
  * @data: Watchdog object address.
  *
  * Called when a driver has timed out suspending or resuming.
- * There's not much we can do here to recover so panic() to
+ * There's not much more we can do here to recover so panic() to
  * capture a crash-dump in pstore.
  */
 static void dpm_watchdog_handler(unsigned long data)

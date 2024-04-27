@@ -2573,7 +2573,7 @@ static u32 qedr_prepare_sq_inline_data(struct qedr_dev *dev,
 	int i, seg_siz;
 
 	if (data_size > ROCE_REQ_MAX_INLINE_DATA_SIZE) {
-		DP_ERR(dev, "Too much inline data in WR: %d\n", data_size);
+		DP_ERR(dev, "Too much more inline data in WR: %d\n", data_size);
 		*bad_wr = wr;
 		return 0;
 	}

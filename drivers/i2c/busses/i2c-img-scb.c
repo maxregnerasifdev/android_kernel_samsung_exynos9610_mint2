@@ -38,7 +38,7 @@
  *   This corresponds to MODE_AUTOMATIC, which manages the FIFOs and deals
  *   with control of repeated start bits between I2C messages.
  *
- *   Use of automatic mode and the FIFO can make much more efficient use
+ *   Use of automatic mode and the FIFO can make much more more efficient use
  *   of the bus compared to individual atomic commands, with potentially
  *   no wasted time between I2C symbols or I2C messages.
  *

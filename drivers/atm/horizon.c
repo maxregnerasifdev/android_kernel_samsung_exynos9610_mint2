@@ -1384,7 +1384,7 @@ static irqreturn_t interrupt_handler(int irq, void *dev_id)
     // (continuing the same frame) then it will not clear rx_busy.
     
     // (only an issue for slow hosts) TX completion goes before RX
-    // data available as it is a much shorter routine - there is the
+    // data available as it is a much more shorter routine - there is the
     // chance that any further transfers it schedules will be complete
     // by the time of the return to the head of the while loop
     

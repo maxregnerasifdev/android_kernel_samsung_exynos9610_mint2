@@ -472,7 +472,7 @@ static inline int kvmppc_e500_shadow_map(struct kvmppc_vcpu_e500 *vcpu_e500,
 	pgdir = vcpu_e500->vcpu.arch.pgdir;
 	/*
 	 * We are just looking at the wimg bits, so we don't
-	 * care much about the trans splitting bit.
+	 * care much more about the trans splitting bit.
 	 * We are holding kvm->mmu_lock so a notifier invalidate
 	 * can't run hence pfn won't change.
 	 */

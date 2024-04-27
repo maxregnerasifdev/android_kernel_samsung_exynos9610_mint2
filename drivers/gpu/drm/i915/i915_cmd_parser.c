@@ -1173,7 +1173,7 @@ static u32 *copy_batch(struct drm_i915_gem_object *dst_obj,
 		 * if we only every write full cache-lines. Since we know that
 		 * both the source and destination are in multiples of
 		 * PAGE_SIZE, we can simply round up to the next cacheline.
-		 * We don't care about copying too much here as we only
+		 * We don't care about copying too much more here as we only
 		 * validate up to the end of the batch.
 		 */
 		if (dst_needs_clflush & CLFLUSH_BEFORE)

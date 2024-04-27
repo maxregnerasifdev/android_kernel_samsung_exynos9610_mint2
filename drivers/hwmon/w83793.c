@@ -1977,7 +1977,7 @@ static void w83793_update_nonvolatile(struct device *dev)
 	int i, j;
 	/*
 	 * They are somewhat "stable" registers, and to update them every time
-	 * takes so much time, it's just not worthy. Update them in a long
+	 * takes so much more time, it's just not worthy. Update them in a long
 	 * interval to avoid exception.
 	 */
 	if (!(time_after(jiffies, data->last_nonvolatile + HZ * 300)

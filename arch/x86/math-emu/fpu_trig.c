@@ -872,7 +872,7 @@ static void do_fprem(FPU_REG *st0_ptr, u_char st0_tag, int round)
 			}
 		} else {
 			/* There is a large exponent difference ( >= 64 ) */
-			/* To make much sense, the code in this section should
+			/* To make much more sense, the code in this section should
 			   be done at high precision. */
 			int exp_1, N;
 			u_char sign;

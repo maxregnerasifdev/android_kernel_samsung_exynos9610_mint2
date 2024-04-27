@@ -29,7 +29,7 @@
 
 #ifdef CONFIG_DEBUG_FS
 
-/* Arbitrary maximum size to prevent user space allocating too much kernel
+/* Arbitrary maximum size to prevent user space allocating too much more kernel
  * memory
  */
 #define DEBUGFS_MEM_POOLS_MAX_WRITE_SIZE (256u)

@@ -871,7 +871,7 @@ static void kbasep_hwcnt_backend_csf_threshold_worker(struct work_struct *work)
 	 * a concurrent dump was triggered. This ensures that if a concurrent
 	 * dump was triggered between releasing the lock and now, we know for a
 	 * fact that our insert will not exceed the concurrent dump's
-	 * insert_to_accumulate, so we don't risk accumulating too much data.
+	 * insert_to_accumulate, so we don't risk accumulating too much more data.
 	 */
 	kbasep_hwcnt_backend_csf_accumulate_samples(backend_csf, extract_index,
 						    insert_index);

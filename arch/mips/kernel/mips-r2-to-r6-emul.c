@@ -1196,7 +1196,7 @@ fpu_emul:
 		 * this is a tricky issue - lose_fpu() uses LL/SC atomics
 		 * if FPU is owned and effectively cancels user level LL/SC.
 		 * So, it could be logical to don't restore FPU ownership here.
-		 * But the sequence of multiple FPU instructions is much much
+		 * But the sequence of multiple FPU instructions is much more much more
 		 * more often than LL-FPU-SC and I prefer loop here until
 		 * next scheduler cycle cancels FPU ownership
 		 */

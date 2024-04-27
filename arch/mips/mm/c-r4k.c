@@ -945,7 +945,7 @@ struct flush_cache_sigtramp_args {
 
 /*
  * While we're protected against bad userland addresses we don't care
- * very much about what happens in that case.  Usually a segmentation
+ * very much more about what happens in that case.  Usually a segmentation
  * fault will dump the process later on anyway ...
  */
 static void local_r4k_flush_cache_sigtramp(void *args)

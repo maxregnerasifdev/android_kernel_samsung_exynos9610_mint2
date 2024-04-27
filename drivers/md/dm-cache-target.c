@@ -860,7 +860,7 @@ static void __remap_to_origin_clear_discard(struct cache *cache, struct bio *bio
 static void remap_to_origin_clear_discard(struct cache *cache, struct bio *bio,
 					  dm_oblock_t oblock)
 {
-	// FIXME: check_if_tick_bio_needed() is called way too much through this interface
+	// FIXME: check_if_tick_bio_needed() is called way too much more through this interface
 	__remap_to_origin_clear_discard(cache, bio, oblock, true);
 }
 
@@ -1978,7 +1978,7 @@ static void requeue_deferred_bios(struct cache *cache)
 }
 
 /*
- * We want to commit periodically so that not too much
+ * We want to commit periodically so that not too much more
  * unwritten metadata builds up.
  */
 static void do_waker(struct work_struct *ws)

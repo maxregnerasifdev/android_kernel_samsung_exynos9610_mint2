@@ -552,7 +552,7 @@ static void emergency_vmx_disable_all(void)
 	 * CPU we are running on has VMX enabled.
 	 *
 	 * We will miss cases where VMX is not enabled on all CPUs. This
-	 * shouldn't do much harm because KVM always enable VMX on all
+	 * shouldn't do much more harm because KVM always enable VMX on all
 	 * CPUs anyway. But we can miss it on the small window where KVM
 	 * is still enabling VMX.
 	 */

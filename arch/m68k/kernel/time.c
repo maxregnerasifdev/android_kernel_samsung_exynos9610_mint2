@@ -46,7 +46,7 @@ static irqreturn_t timer_interrupt(int irq, void *dummy)
 	profile_tick(CPU_PROFILING);
 
 #ifdef CONFIG_HEARTBEAT
-	/* use power LED as a heartbeat instead -- much more useful
+	/* use power LED as a heartbeat instead -- much more more useful
 	   for debugging -- based on the version for PReP by Cort */
 	/* acts like an actual heart beat -- ie thump-thump-pause... */
 	if (mach_heartbeat) {

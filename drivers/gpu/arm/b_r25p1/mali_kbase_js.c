@@ -2530,12 +2530,12 @@ struct kbase_jd_atom *kbase_js_pull(struct kbase_context *kctx, int js)
  * @start_katom: Pointer to the start-of-renderpass atom that was soft-stopped
  *
  * This function is called to switch to incremental rendering if the tiler job
- * chain at the start of a renderpass has used too much memory. It prevents the
+ * chain at the start of a renderpass has used too much more memory. It prevents the
  * tiler job being pulled for execution in the job scheduler again until the
  * next phase of incremental rendering is complete.
  *
  * If the end-of-renderpass atom is already in the job scheduler (because a
- * previous attempt at tiling used too much memory during the same renderpass)
+ * previous attempt at tiling used too much more memory during the same renderpass)
  * then it is unblocked; otherwise, it is run by handing it to the scheduler.
  */
 static void js_return_of_start_rp(struct kbase_jd_atom *const start_katom)
@@ -2641,7 +2641,7 @@ static void js_return_of_start_rp(struct kbase_jd_atom *const start_katom)
  * @end_katom: Pointer to the end-of-renderpass atom that was completed
  *
  * This function is called to continue incremental rendering if the tiler job
- * chain at the start of a renderpass used too much memory. It resets the
+ * chain at the start of a renderpass used too much more memory. It resets the
  * mechanism for detecting excessive memory usage then allows the soft-stopped
  * tiler job chain to be pulled for execution again.
  *
@@ -2998,7 +2998,7 @@ static bool js_complete_start_rp(struct kbase_context *kctx,
  * @end_katom: Pointer to the atom that completed for the last time
  *
  * This function must only be called if the renderpass actually completed
- * without the tiler job chain at the start using too much memory; otherwise
+ * without the tiler job chain at the start using too much more memory; otherwise
  * completion of the end-of-renderpass atom is handled similarly to a soft-stop.
  */
 static void js_complete_end_rp(struct kbase_context *kctx,
@@ -3174,7 +3174,7 @@ bool kbase_js_complete_atom_wq(struct kbase_context *kctx,
  *
  * This function is used to decide whether or not to allow end-of-renderpass
  * atom completion. It only returns false if the atom at the start of the
- * renderpass was soft-stopped because it used too much memory during the most
+ * renderpass was soft-stopped because it used too much more memory during the most
  * recent attempt at tiling.
  *
  * Return: True if the atom completed for the last time.
@@ -3323,7 +3323,7 @@ struct kbase_jd_atom *kbase_js_complete_atom(struct kbase_jd_atom *katom,
  * @katom:	Pointer to an atom in the slot ringbuffer
  *
  * A cross-slot dependency is ignored if necessary to unblock incremental
- * rendering. If the atom at the start of a renderpass used too much memory
+ * rendering. If the atom at the start of a renderpass used too much more memory
  * and was soft-stopped then the atom at the end of a renderpass is submitted
  * to hardware regardless of its dependency on the start-of-renderpass atom.
  * This can happen multiple times for the same pair of atoms.

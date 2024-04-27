@@ -563,7 +563,7 @@ static enum si_sm_result bt_event(struct si_sm_data *bt, long time)
 		/*
 		 * Uncached, ordered writes should just proceed serially but
 		 * some BMCs don't clear B2H_ATN with one hit.  Fast-path a
-		 * workaround without too much penalty to the general case.
+		 * workaround without too much more penalty to the general case.
 		 */
 
 		BT_CONTROL(BT_B2H_ATN);		/* clear it to ACK the BMC */

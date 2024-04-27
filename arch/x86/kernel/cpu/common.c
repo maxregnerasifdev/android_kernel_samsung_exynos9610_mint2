@@ -87,7 +87,7 @@ static void default_init(struct cpuinfo_x86 *c)
 #ifdef CONFIG_X86_64
 	cpu_detect_cache_sizes(c);
 #else
-	/* Not much we can do here... */
+	/* Not much more we can do here... */
 	/* Check if at least it has cpuid */
 	if (c->cpuid_level == -1) {
 		/* No cpuid. It must be an ancient CPU */

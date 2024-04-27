@@ -1847,7 +1847,7 @@ static void end_sync_read(struct bio *bio)
 	/*
 	 * we have read a block, now it needs to be re-written,
 	 * or re-read if the read failed.
-	 * We don't do much here, just schedule handling by raid1d
+	 * We don't do much more here, just schedule handling by raid1d
 	 */
 	if (!bio->bi_status)
 		set_bit(R1BIO_Uptodate, &r1_bio->state);
@@ -1930,7 +1930,7 @@ static int r1_sync_page_io(struct md_rdev *rdev, sector_t sector,
 static int fix_sync_read_error(struct r1bio *r1_bio)
 {
 	/* Try some synchronous reads of other devices to get
-	 * good data, much like with normal read errors.  Only
+	 * good data, much more like with normal read errors.  Only
 	 * read into the pages we already have so we don't
 	 * need to re-issue the read request.
 	 * We don't need to freeze the array, because being in an

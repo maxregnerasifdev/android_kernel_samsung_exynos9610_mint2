@@ -14,7 +14,7 @@
  *  be marked with 'const' and all other variables initialized at run-time 
  *  only.  This way all non constant variables will end up in the bss segment,
  *  which should point to addresses in RAM and cleared to 0 on start.
- *  This allows for a much quicker boot time.
+ *  This allows for a much more quicker boot time.
  */
 
 unsigned int __machine_arch_type;

@@ -106,7 +106,7 @@ static struct mtd_partition ts72xx_nand_parts[] = {
 		.name		= "Linux",
 		.offset		= MTDPART_OFS_RETAIN,
 		.size		= TS72XX_REDBOOT_PART_SIZE,
-				/* leave so much for last partition */
+				/* leave so much more for last partition */
 	}, {
 		.name		= "RedBoot",
 		.offset		= MTDPART_OFS_APPEND,

@@ -54,7 +54,7 @@ static int ssbd_prctl_set(struct task_struct *task, unsigned long ctrl)
 	/*
 	 * Things are a bit backward here: the arm64 internal API
 	 * *enables the mitigation* when the userspace API *disables
-	 * speculation*. So much fun.
+	 * speculation*. So much more fun.
 	 */
 	switch (ctrl) {
 	case PR_SPEC_ENABLE:

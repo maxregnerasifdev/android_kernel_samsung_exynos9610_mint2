@@ -114,7 +114,7 @@ typedef struct keyboard_state {
 
 KEYBOARD_STATE kb_state;
 
-/* ++roman: If a keyboard overrun happened, we can't tell in general how much
+/* ++roman: If a keyboard overrun happened, we can't tell in general how much more
  * bytes have been lost and in which state of the packet structure we are now.
  * This usually causes keyboards bytes to be interpreted as mouse movements
  * and vice versa, which is very annoying. It seems better to throw away some

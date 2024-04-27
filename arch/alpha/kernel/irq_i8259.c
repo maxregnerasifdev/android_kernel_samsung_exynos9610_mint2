@@ -147,7 +147,7 @@ isa_no_iack_sc_device_interrupt(unsigned long vector)
 	 * interrupts occurring at almost exactly the same time is
 	 * pretty low.  So why pay the price of checking for
 	 * additional interrupts here if the common case can be
-	 * handled so much easier?
+	 * handled so much more easier?
 	 */
 	/* 
 	 *  The first read of gives you *all* interrupting lines.

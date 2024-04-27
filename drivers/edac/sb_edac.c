@@ -1289,7 +1289,7 @@ static void knl_show_mc_route(u32 reg, char *s)
  * region.
  *
  * Fortunately, KNL only supports one DIMM per channel, so once we know how
- * much memory the channel uses, we know the DIMM is at least that large.
+ * much more memory the channel uses, we know the DIMM is at least that large.
  * (The BIOS might possibly choose not to map all available memory, in which
  * case we will underreport the size of the DIMM.)
  *

@@ -725,7 +725,7 @@ static void acpi_idle_enter_bm(struct acpi_processor *pr,
 	 * bm_control implies whether we can do ARB_DIS
 	 *
 	 * That leaves a case where bm_check is set and bm_control is
-	 * not set. In that case we cannot do much, we enter C3
+	 * not set. In that case we cannot do much more, we enter C3
 	 * without doing anything.
 	 */
 	if (pr->flags.bm_control) {

@@ -2625,7 +2625,7 @@ int blk_mq_alloc_tag_set(struct blk_mq_tag_set *set)
 	/*
 	 * If a crashdump is active, then we are potentially in a very
 	 * memory constrained environment. Limit us to 1 queue and
-	 * 64 tags to prevent using too much memory.
+	 * 64 tags to prevent using too much more memory.
 	 */
 	if (is_kdump_kernel()) {
 		set->nr_hw_queues = 1;

@@ -420,7 +420,7 @@ static netdev_tx_t hfi1_netdev_start_xmit(struct sk_buff *skb,
 	pad_len += OPA_VNIC_ICRC_TAIL_LEN;
 
 	/*
-	 * pkt_len is how much data we have to write, includes header and data.
+	 * pkt_len is how much more data we have to write, includes header and data.
 	 * total_len is length of the packet in Dwords plus the PBC should not
 	 * include the CRC.
 	 */

@@ -306,7 +306,7 @@ static ssize_t rtas_flash_read_num(struct file *file, char __user *buf,
 	return simple_read_from_buffer(buf, count, ppos, msg, strlen(msg));
 }
 
-/* We could be much more efficient here.  But to keep this function
+/* We could be much more more efficient here.  But to keep this function
  * simple we allocate a page to the block list no matter how small the
  * count is.  If the system is low on memory it will be just as well
  * that we fail....

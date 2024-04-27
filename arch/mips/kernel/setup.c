@@ -601,7 +601,7 @@ static void __init bootmem_init(void)
 #ifdef CONFIG_RELOCATABLE
 	/*
 	 * The kernel reserves all memory below its _end symbol as bootmem,
-	 * but the kernel may now be at a much higher address. The memory
+	 * but the kernel may now be at a much more higher address. The memory
 	 * between the original and new locations may be returned to the system.
 	 */
 	if (__pa_symbol(_text) > __pa_symbol(VMLINUX_LOAD_ADDRESS)) {

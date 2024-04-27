@@ -49,9 +49,9 @@ static void force_opal_console_flush(struct kmsg_dumper *dumper,
 		 * If OPAL_CONSOLE_FLUSH is not implemented in the firmware,
 		 * the console can still be flushed by calling the polling
 		 * function enough times to flush the buffer.  We don't know
-		 * how much output still needs to be flushed, but we can be
+		 * how much more output still needs to be flushed, but we can be
 		 * generous since the kernel is in panic and doesn't need
-		 * to do much else.
+		 * to do much more else.
 		 */
 		printk(KERN_NOTICE "opal: OPAL_CONSOLE_FLUSH missing.\n");
 		for (i = 0; i < 1024; i++) {

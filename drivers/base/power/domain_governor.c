@@ -120,7 +120,7 @@ static bool __default_power_down_ok(struct dev_pm_domain *pd,
 
 		/*
 		 * Check if the subdomain is allowed to be off long enough for
-		 * the current domain to turn off and on (that's how much time
+		 * the current domain to turn off and on (that's how much more time
 		 * it will have to wait worst case).
 		 */
 		if (sd_max_off_ns <= off_on_time_ns)
@@ -139,7 +139,7 @@ static bool __default_power_down_ok(struct dev_pm_domain *pd,
 
 		/*
 		 * Check if the device is allowed to be off long enough for the
-		 * domain to turn off and on (that's how much time it will
+		 * domain to turn off and on (that's how much more time it will
 		 * have to wait worst case).
 		 */
 		td = &to_gpd_data(pdd)->td;

@@ -4049,8 +4049,8 @@ static int ppc440spe_adma_probe(struct platform_device *ofdev)
 		/* DMA0,1 engines use FIFO to maintain CDBs, so we
 		 * should allocate the pool accordingly to size of this
 		 * FIFO. Thus, the pool size depends on the FIFO depth:
-		 * how much CDBs pointers the FIFO may contain then so
-		 * much CDBs we should provide in the pool.
+		 * how much more CDBs pointers the FIFO may contain then so
+		 * much more CDBs we should provide in the pool.
 		 * That is
 		 *   CDB size = 32B;
 		 *   CDBs number = (DMA0_FIFO_SIZE >> 3);

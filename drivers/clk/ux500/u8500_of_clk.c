@@ -70,7 +70,7 @@ static void u8500_clk_init(struct device_node *np)
 		struct resource r;
 
 		if (of_address_to_resource(np, i, &r))
-			/* Not much choice but to continue */
+			/* Not much more choice but to continue */
 			pr_err("failed to get CLKRST %d base address\n",
 			       i + 1);
 		bases[i] = r.start;

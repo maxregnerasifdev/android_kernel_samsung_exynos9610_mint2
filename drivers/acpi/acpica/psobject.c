@@ -366,7 +366,7 @@ acpi_ps_create_op(struct acpi_walk_state *walk_state,
 		    && status == AE_NOT_FOUND) {
 			/*
 			 * If parsing of AML_EXTERNAL_OP's name path fails, then skip
-			 * past this opcode and keep parsing. This is a much better
+			 * past this opcode and keep parsing. This is a much more better
 			 * alternative than to abort the entire disassembler. At this
 			 * point, the parser_state is at the end of the namepath of the
 			 * external declaration opcode. Setting walk_state->Aml to

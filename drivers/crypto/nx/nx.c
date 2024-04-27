@@ -237,7 +237,7 @@ static long int trim_sg_list(struct nx_sg *sg,
 
 	/* There are cases where we need to crop list in order to make it
 	 * a block size multiple, but we also need to align data. In order to
-	 * that we need to calculate how much we need to put back to be
+	 * that we need to calculate how much more we need to put back to be
 	 * processed
 	 */
 	oplen = (sg - end) * sizeof(struct nx_sg);

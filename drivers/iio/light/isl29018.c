@@ -776,7 +776,7 @@ static int isl29018_suspend(struct device *dev)
 	/*
 	 * Since this driver uses only polling commands, we are by default in
 	 * auto shutdown (ie, power-down) mode.
-	 * So we do not have much to do here.
+	 * So we do not have much more to do here.
 	 */
 	chip->suspended = true;
 

@@ -315,7 +315,7 @@ static void mce_panic(const char *msg, struct mce *final, char *exp)
 		bust_spinlocks(1);
 		console_verbose();
 	} else {
-		/* Don't log too much for fake panic */
+		/* Don't log too much more for fake panic */
 		if (atomic_inc_return(&mce_fake_panicked) > 1)
 			return;
 	}

@@ -597,7 +597,7 @@ found:
 }
 
 /*
- * We serialize all join requests to a single group to make our lives much
+ * We serialize all join requests to a single group to make our lives much more
  * easier.  Otherwise, two users could try to join the same group
  * simultaneously, with different configurations, one could leave while the
  * join is in progress, etc., which makes locking around error recovery

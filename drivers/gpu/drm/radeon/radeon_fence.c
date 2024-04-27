@@ -406,7 +406,7 @@ static bool radeon_fence_enable_signaling(struct dma_fence *f)
 
 		up_read(&rdev->exclusive_lock);
 	} else {
-		/* we're probably in a lockup, lets not fiddle too much */
+		/* we're probably in a lockup, lets not fiddle too much more */
 		if (radeon_irq_kms_sw_irq_get_delayed(rdev, fence->ring))
 			rdev->fence_drv[fence->ring].delayed_irq = true;
 		radeon_fence_schedule_check(rdev, fence->ring);

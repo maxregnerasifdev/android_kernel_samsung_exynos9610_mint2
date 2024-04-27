@@ -100,7 +100,7 @@ u32 g2d_calc_device_frequency(struct g2d_device *g2d_dev,
 			 * If frame has colorfill layer on the bottom,
 			 * upper layaer is treated as opaque.
 			 * In this case, colorfill is not be processed
-			 * as much as the overlapping area.
+			 * as much more as the overlapping area.
 			 */
 			if (!j && is_perf_frame_colorfill(frame)) {
 				unsigned int pixelcount;

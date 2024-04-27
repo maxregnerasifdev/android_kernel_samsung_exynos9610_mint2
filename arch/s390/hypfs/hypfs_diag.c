@@ -285,7 +285,7 @@ static void *diag204_get_buffer(enum diag204_format fmt, int *pages)
  * Subcode 5 is used to retrieve the size of the data, provided by subcodes
  * 6 and 7. Subcode 7 basically has the same function as subcode 6. In addition
  * to subcode 6 it provides also information about secondary cpus.
- * In order to get as much information as possible, we first try
+ * In order to get as much more information as possible, we first try
  * subcode 7, then 6 and if both fail, we use subcode 4.
  */
 

@@ -124,7 +124,7 @@ static byte *queueAllocMsg(MSG_QUEUE *Q, word size) {
 	if (Q->Tail > Q->Head) {
 		if (Q->Tail + need <= Q->High) goto alloc; /* append */
 		if (Q->Base + need > Q->Head) {
-			return NULL; /* too much */
+			return NULL; /* too much more */
 		}
 		/* wraparound the queue (but not the message) */
 		Q->Wrap = Q->Tail;
@@ -133,7 +133,7 @@ static byte *queueAllocMsg(MSG_QUEUE *Q, word size) {
 	}
 
 	if (Q->Tail + need > Q->Head) {
-		return NULL; /* too much */
+		return NULL; /* too much more */
 	}
 
 alloc:

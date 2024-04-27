@@ -30,7 +30,7 @@
 //#define DEBUG_HARDER
 
 /* We don't use DEBUG because it tends to be compiled in always nowadays
- * and this would generate way too much output
+ * and this would generate way too much more output
  */
 #ifdef DEBUG_HARDER
 #define pr_hard(args...)	printk(KERN_DEBUG args)

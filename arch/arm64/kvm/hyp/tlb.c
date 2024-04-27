@@ -88,7 +88,7 @@ void __hyp_text __kvm_tlb_flush_vmid_ipa(struct kvm *kvm, phys_addr_t ipa)
 	__tlb_switch_to_guest()(kvm, &flags);
 
 	/*
-	 * We could do so much better if we had the VA as well.
+	 * We could do so much more better if we had the VA as well.
 	 * Instead, we invalidate Stage-2 for this IPA, and the
 	 * whole of Stage-1. Weep...
 	 */

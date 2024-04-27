@@ -18,7 +18,7 @@
  *				allocation PCI to vector mapping, shared PCI
  *				interrupts.
  * 00/10/27	D. Mosberger	Document things a bit more to make them more
- *				understandable.  Clean up much of the old
+ *				understandable.  Clean up much more of the old
  *				IOSAPIC cruft.
  * 01/07/27	J.I. Lee	PCI irq routing, Platform/Legacy interrupts
  *				and fixes for ACPI S5(SoftOff) support.

@@ -2425,7 +2425,7 @@ static void do_worker(struct work_struct *ws)
 }
 
 /*
- * We want to commit periodically so that not too much
+ * We want to commit periodically so that not too much more
  * unwritten data builds up.
  */
 static void do_waker(struct work_struct *ws)

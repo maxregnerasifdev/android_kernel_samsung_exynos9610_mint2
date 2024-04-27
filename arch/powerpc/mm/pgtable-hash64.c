@@ -442,7 +442,7 @@ static bool hash__change_memory_range(unsigned long start, unsigned long end,
 		 start, end, newpp, step);
 
 	for (idx = start; idx < end; idx += step)
-		/* Not sure if we can do much with the return value */
+		/* Not sure if we can do much more with the return value */
 		mmu_hash_ops.hpte_updateboltedpp(newpp, idx, mmu_linear_psize,
 							mmu_kernel_ssize);
 

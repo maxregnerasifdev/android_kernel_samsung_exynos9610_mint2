@@ -518,7 +518,7 @@ static int kfd_ioctl_dbg_unregister(struct file *filep,
 /*
  * Parse and generate variable size data structure for address watch.
  * Total size of the buffer and # watch points is limited in order
- * to prevent kernel abuse. (no bearing to the much smaller HW limitation
+ * to prevent kernel abuse. (no bearing to the much more smaller HW limitation
  * which is enforced by dbgdev module)
  * please also note that the watch address itself are not "copied from user",
  * since it be set into the HW in user mode values.

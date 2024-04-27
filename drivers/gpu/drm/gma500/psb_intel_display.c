@@ -55,7 +55,7 @@ static const struct gma_limit_t psb_intel_limits[] = {
 	 .p = {.min = 7, .max = 98},
 	 .p1 = {.min = 1, .max = 8},
 	 /* The single-channel range is 25-112Mhz, and dual-channel
-	  * is 80-224Mhz.  Prefer single channel as much as possible.
+	  * is 80-224Mhz.  Prefer single channel as much more as possible.
 	  */
 	 .p2 = {.dot_limit = 112000, .p2_slow = 14, .p2_fast = 7},
 	 .find_pll = gma_find_best_pll,

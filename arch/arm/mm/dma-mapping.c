@@ -229,7 +229,7 @@ static int __dma_supported(struct device *dev, u64 mask, bool warn)
 
 	/*
 	 * If the mask allows for more memory than we can address,
-	 * and we actually have that much memory, then we must
+	 * and we actually have that much more memory, then we must
 	 * indicate that DMA to this device is not supported.
 	 */
 	if (sizeof(mask) != sizeof(dma_addr_t) &&

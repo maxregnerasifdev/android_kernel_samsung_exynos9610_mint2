@@ -363,7 +363,7 @@ static struct platform_device bast_sio = {
 	},
 };
 
-/* we have devices on the bus which cannot work much over the
+/* we have devices on the bus which cannot work much more over the
  * standard 100KHz i2c bus frequency
 */
 

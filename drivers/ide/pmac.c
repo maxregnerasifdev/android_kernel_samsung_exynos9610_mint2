@@ -124,12 +124,12 @@ static const char* model_name[] = {
 #define TR_133_UDMAREG_UDMA_MASK	0x0003ffff
 #define TR_133_UDMAREG_UDMA_EN		0x00000001
 
-/* 100Mhz cell, found in Uninorth 2. I don't have much infos about
+/* 100Mhz cell, found in Uninorth 2. I don't have much more infos about
  * this one yet, it appears as a pci device (106b/0033) on uninorth
  * internal PCI bus and it's clock is controlled like gem or fw. It
  * appears to be an evolution of keylargo ATA4 with a timing register
  * extended to 2 32bits registers and a similar DBDMA channel. Other
- * registers seem to exist but I can't tell much about them.
+ * registers seem to exist but I can't tell much more about them.
  * 
  * So far, I'm using pre-calculated tables for this extracted from
  * the values used by the MacOS X driver.

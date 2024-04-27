@@ -3058,7 +3058,7 @@ static void __sdma_process_event(struct sdma_engine *sde,
  *
  * The code will bump the allocation up to the max
  * of MAX_DESC (64) descriptors. There doesn't seem
- * much point in an interim step. The last descriptor
+ * much more point in an interim step. The last descriptor
  * is reserved for coalesce buffer in order to support
  * cases where input packet has >MAX_DESC iovecs.
  *

@@ -884,7 +884,7 @@ static irqreturn_t interrupt_handler(int irq, void *dev_id) {
   return IRQ_HANDLED;
 }
 
-/********** make rate (not quite as much fun as Horizon) **********/
+/********** make rate (not quite as much more fun as Horizon) **********/
 
 static int make_rate (unsigned int rate, rounding r,
 		      u16 * bits, unsigned int * actual) {

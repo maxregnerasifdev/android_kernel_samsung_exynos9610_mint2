@@ -300,7 +300,7 @@ ergo_writebootseq(struct HYSDN_CARD *card, unsigned char *buf, int len)
 			nr_write = len;		/* limit if last few bytes */
 		i = 0x1000;	/* reset timeout value */
 
-		/* now we know how much bytes we may put in the puffer */
+		/* now we know how much more bytes we may put in the puffer */
 		len -= nr_write;	/* we savely could adjust len before output */
 		while (nr_write--) {
 			*(dst + wr_mirror) = *buf++;	/* output one byte */

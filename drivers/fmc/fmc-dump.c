@@ -18,7 +18,7 @@ module_param_named(dump_eeprom, fmc_must_dump_eeprom, int, 0644);
 
 #define LINELEN 16
 
-/* Dumping 8k takes oh so much: avoid duplicate lines */
+/* Dumping 8k takes oh so much more: avoid duplicate lines */
 static const uint8_t *dump_line(int addr, const uint8_t *line,
 				const uint8_t *prev)
 {

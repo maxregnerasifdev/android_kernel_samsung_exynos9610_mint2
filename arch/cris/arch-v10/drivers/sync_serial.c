@@ -1013,7 +1013,7 @@ static ssize_t sync_serial_write(struct file *file, const char *buf,
 	local_irq_restore(flags);
 	out_buffer = (unsigned long)port->out_buffer;
 
-	/* Find out where and how much to write */
+	/* Find out where and how much more to write */
 	if (free_outp >= out_buffer + OUT_BUFFER_SIZE)
 		free_outp -= OUT_BUFFER_SIZE;
 	if (free_outp >= outp)

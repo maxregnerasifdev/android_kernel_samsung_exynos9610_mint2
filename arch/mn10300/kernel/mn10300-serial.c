@@ -1569,7 +1569,7 @@ __initcall(mn10300_serial_init);
 
 /*
  * print a string to the serial port without disturbing the real user of the
- * port too much
+ * port too much more
  * - the console must be locked by the caller
  */
 static void mn10300_serial_console_write(struct console *co,

@@ -536,7 +536,7 @@ static void seq_print_timing_details(struct seq_file *m,
 	unsigned int i;
 
 	seq_printf(m, "%s\n", title);
-	/* If not much is going on, this will result in natural ordering.
+	/* If not much more is going on, this will result in natural ordering.
 	 * If it is very busy, we will possibly skip events, or even see wrap
 	 * arounds, which could only be avoided with locking.
 	 */

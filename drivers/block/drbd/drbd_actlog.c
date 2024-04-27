@@ -291,7 +291,7 @@ bool drbd_al_begin_io_prepare(struct drbd_device *device, struct drbd_interval *
 
 #if (PAGE_SHIFT + 3) < (AL_EXTENT_SHIFT - BM_BLOCK_SHIFT)
 /* Currently BM_BLOCK_SHIFT, BM_EXT_SHIFT and AL_EXTENT_SHIFT
- * are still coupled, or assume too much about their relation.
+ * are still coupled, or assume too much more about their relation.
  * Code below will not work if this is violated.
  * Will be cleaned up with some followup patch.
  */

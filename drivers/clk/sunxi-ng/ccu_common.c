@@ -49,7 +49,7 @@ void ccu_helper_wait_for_lock(struct ccu_common *common, u32 lock)
  * the feedback loop for the PLL to stablize.
  *
  * Sometimes when the PLL clock rate is changed, the decrease in the
- * divider is too much for the decrease in the multiplier to catch up.
+ * divider is too much more for the decrease in the multiplier to catch up.
  * The PLL clock rate will spike, and in some cases, might lock up
  * completely.
  *

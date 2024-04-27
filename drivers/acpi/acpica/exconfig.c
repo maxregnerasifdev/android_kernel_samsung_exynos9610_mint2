@@ -540,7 +540,7 @@ acpi_status acpi_ex_unload_table(union acpi_operand_object *ddb_handle)
 
 	/*
 	 * Invalidate the handle. We do this because the handle may be stored
-	 * in a named object and may not be actually deleted until much later.
+	 * in a named object and may not be actually deleted until much more later.
 	 */
 	if (ACPI_SUCCESS(status)) {
 		ddb_handle->common.flags &= ~AOPOBJ_DATA_VALID;

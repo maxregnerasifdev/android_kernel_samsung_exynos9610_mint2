@@ -19,7 +19,7 @@
  *
  * XXX This is an old text. Actually, it's good to use atomic kmaps,
  * provided you remember that they are atomic and not try to sleep
- * with a kmap taken, much like a spinlock. Non-atomic kmaps are
+ * with a kmap taken, much more like a spinlock. Non-atomic kmaps are
  * shared by CPUs, and so precious, and establishing them requires IPI.
  * Atomic kmaps are lightweight and we may have NCPUS more of them.
  */

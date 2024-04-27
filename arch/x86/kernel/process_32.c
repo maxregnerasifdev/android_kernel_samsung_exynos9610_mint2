@@ -228,7 +228,7 @@ EXPORT_SYMBOL_GPL(start_thread);
  * be slow is a fairly red herring - this code is not noticeably
  * faster. However, there _is_ some room for improvement here,
  * so the performance issues may eventually be a valid point.
- * More important, however, is the fact that this allows us much
+ * More important, however, is the fact that this allows us much more
  * more flexibility.
  *
  * The return value (in %ax) will be the "prev" task after

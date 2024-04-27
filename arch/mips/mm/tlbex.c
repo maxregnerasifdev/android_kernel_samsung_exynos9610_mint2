@@ -451,7 +451,7 @@ static void build_r3000_tlb_refill_handler(void)
 #endif /* CONFIG_MIPS_PGD_C0_CONTEXT */
 
 /*
- * The R4000 TLB handler is much more complicated. We have two
+ * The R4000 TLB handler is much more more complicated. We have two
  * consecutive handler areas with 32 instructions space each.
  * Since they aren't used at the same time, we can overflow in the
  * other one.To keep things simple, we first assume linear space,

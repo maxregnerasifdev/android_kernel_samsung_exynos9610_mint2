@@ -171,7 +171,7 @@ void *memcpy(void *dstpp, const void *srcpp, size_t len)
 		BYTE_COPY_FWD(dstp, srcp, (-dstp) % OPSIZ);
 
 		/* Copy whole pages from SRCP to DSTP by virtual address
-		   manipulation, as much as possible.  */
+		   manipulation, as much more as possible.  */
 
 		/* PAGE_COPY_FWD_MAYBE (dstp, srcp, len, len); */
 

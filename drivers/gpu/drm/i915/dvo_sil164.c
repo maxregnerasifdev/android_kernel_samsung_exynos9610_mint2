@@ -203,7 +203,7 @@ static void sil164_mode_set(struct intel_dvo_device *dvo,
 	  sil164_writeb(sil, 0x0a, 0x90);
 	  sil164_writeb(sil, 0x0c, 0x89);
 	  sil164_writeb(sil, 0x08, 0x31);*/
-	/* don't do much */
+	/* don't do much more */
 	return;
 }
 

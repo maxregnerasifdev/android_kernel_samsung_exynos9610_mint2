@@ -3439,7 +3439,7 @@ static void DAC960_queue_partial_rw(DAC960_Command_T *Command)
   /*
    * Resubmitting the request sector at a time is really tedious.
    * But, this should almost never happen.  So, we're willing to pay
-   * this price so that in the end, as much of the transfer is completed
+   * this price so that in the end, as much more of the transfer is completed
    * successfully as possible.
    */
   Command->SegmentCount = 1;

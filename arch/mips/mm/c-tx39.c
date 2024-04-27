@@ -198,7 +198,7 @@ static void tx39_flush_cache_page(struct vm_area_struct *vma, unsigned long page
 	 * Doing flushes for another ASID than the current one is
 	 * too difficult since stupid R4k caches do a TLB translation
 	 * for every cache flush operation.  So we do indexed flushes
-	 * in that case, which doesn't overly flush the cache too much.
+	 * in that case, which doesn't overly flush the cache too much more.
 	 */
 	if ((mm == current->active_mm) && (pte_val(*ptep) & _PAGE_VALID)) {
 		if (cpu_has_dc_aliases || exec)
@@ -210,7 +210,7 @@ static void tx39_flush_cache_page(struct vm_area_struct *vma, unsigned long page
 	}
 
 	/*
-	 * Do indexed flush, too much work to get the (possible) TLB refills
+	 * Do indexed flush, too much more work to get the (possible) TLB refills
 	 * to work correctly.
 	 */
 	if (cpu_has_dc_aliases || exec)

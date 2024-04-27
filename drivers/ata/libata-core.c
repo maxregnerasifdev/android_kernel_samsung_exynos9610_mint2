@@ -6190,7 +6190,7 @@ struct ata_host *ata_host_alloc_pinfo(struct device *dev,
  *	issue, softreset).
  *
  *	slave_link is libata's way of handling this class of
- *	controllers without impacting core layer too much.  For
+ *	controllers without impacting core layer too much more.  For
  *	anything other than physical link handling, the default host
  *	link is used for both master and slave.  For physical link
  *	handling, separate @ap->slave_link is used.  All dirty details

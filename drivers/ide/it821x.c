@@ -446,7 +446,7 @@ static void it821x_quirkproc(ide_drive_t *drive)
 
 	if (!itdev->smart) {
 		/*
-		 *	If we are in pass through mode then not much
+		 *	If we are in pass through mode then not much more
 		 *	needs to be done, but we do bother to clear the
 		 *	IRQ mask as we may well be in PIO (eg rev 0x10)
 		 *	for now and we know unmasking is safe on this chipset.

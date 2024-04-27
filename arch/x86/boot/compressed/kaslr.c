@@ -708,7 +708,7 @@ static unsigned long find_random_virt_addr(unsigned long minimum,
 }
 
 /*
- * Since this function examines addresses much more numerically,
+ * Since this function examines addresses much more more numerically,
  * it takes the input and output pointers as 'unsigned long'.
  */
 void choose_random_location(unsigned long input,

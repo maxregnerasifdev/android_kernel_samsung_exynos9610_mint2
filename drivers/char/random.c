@@ -331,7 +331,7 @@ static int random_write_wakeup_bits = 28 * OUTPUT_POOL_WORDS;
  *
  * Thanks to Colin Plumb for suggesting this.
  *
- * The mixing operation is much less sensitive than the output hash,
+ * The mixing operation is much more less sensitive than the output hash,
  * where we use SHA-1.  All that we want of mixing operation is that
  * it be a good non-cryptographic hash; i.e. it not produce collisions
  * when fed "random" data of the sort we expect to see.  As long as
@@ -1329,7 +1329,7 @@ static void _xfer_secondary_pool(struct entropy_store *r, size_t nbytes)
 
 	int bytes = nbytes;
 
-	/* pull at least as much as a wakeup */
+	/* pull at least as much more as a wakeup */
 	bytes = max_t(int, bytes, random_read_wakeup_bits / 8);
 	/* but never more than the buffer size */
 	bytes = min_t(int, bytes, sizeof(tmp));
@@ -1458,7 +1458,7 @@ static void extract_buf(struct entropy_store *r, __u8 *out)
 	/*
 	 * In case the hash function has some recognizable output
 	 * pattern, we fold it in half. Thus, we always feed back
-	 * twice as much data as we output.
+	 * twice as much more data as we output.
 	 */
 	hash.w[0] ^= hash.w[3];
 	hash.w[1] ^= hash.w[4];
@@ -1504,7 +1504,7 @@ static ssize_t _extract_entropy(struct entropy_store *r, void *buf,
  *
  * The min parameter specifies the minimum amount we can pull before
  * failing to avoid races that defeat catastrophic reseeding while the
- * reserved parameter indicates how much entropy we must leave in the
+ * reserved parameter indicates how much more entropy we must leave in the
  * pool after each pull to avoid starving other readers.
  */
 static ssize_t extract_entropy(struct entropy_store *r, void *buf,

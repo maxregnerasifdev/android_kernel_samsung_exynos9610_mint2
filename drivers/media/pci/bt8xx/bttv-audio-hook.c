@@ -57,7 +57,7 @@ void gvbctv3pci_audio(struct bttv *btv, struct v4l2_tuner *t, int set)
 	unsigned int con;
 
 	if (!set) {
-		/* Not much to do here */
+		/* Not much more to do here */
 		t->audmode = V4L2_TUNER_MODE_LANG1;
 		t->rxsubchans = V4L2_TUNER_SUB_MONO |
 				V4L2_TUNER_SUB_STEREO |
@@ -159,7 +159,7 @@ void avermedia_tvphone_audio(struct bttv *btv, struct v4l2_tuner *t, int set)
 	int val;
 
 	if (!set) {
-		/* Not much to do here */
+		/* Not much more to do here */
 		t->audmode = V4L2_TUNER_MODE_LANG1;
 		t->rxsubchans = V4L2_TUNER_SUB_MONO |
 				V4L2_TUNER_SUB_STEREO |
@@ -190,7 +190,7 @@ void avermedia_tv_stereo_audio(struct bttv *btv, struct v4l2_tuner *t, int set)
 	int val = 0;
 
 	if (!set) {
-		/* Not much to do here */
+		/* Not much more to do here */
 		t->audmode = V4L2_TUNER_MODE_LANG1;
 		t->rxsubchans = V4L2_TUNER_SUB_MONO |
 				V4L2_TUNER_SUB_STEREO |
@@ -228,7 +228,7 @@ void lt9415_audio(struct bttv *btv, struct v4l2_tuner *t, int set)
 	}
 
 	if (!set) {
-		/* Not much to do here */
+		/* Not much more to do here */
 		t->audmode = V4L2_TUNER_MODE_LANG1;
 		t->rxsubchans = V4L2_TUNER_SUB_MONO |
 				V4L2_TUNER_SUB_STEREO |
@@ -261,7 +261,7 @@ void terratv_audio(struct bttv *btv,  struct v4l2_tuner *t, int set)
 	unsigned int con = 0;
 
 	if (!set) {
-		/* Not much to do here */
+		/* Not much more to do here */
 		t->audmode = V4L2_TUNER_MODE_LANG1;
 		t->rxsubchans = V4L2_TUNER_SUB_MONO |
 				V4L2_TUNER_SUB_STEREO |
@@ -294,7 +294,7 @@ void winfast2000_audio(struct bttv *btv, struct v4l2_tuner *t, int set)
 	unsigned long val;
 
 	if (!set) {
-		/* Not much to do here */
+		/* Not much more to do here */
 		t->audmode = V4L2_TUNER_MODE_LANG1;
 		t->rxsubchans = V4L2_TUNER_SUB_MONO |
 				V4L2_TUNER_SUB_STEREO |
@@ -341,7 +341,7 @@ void pvbt878p9b_audio(struct bttv *btv, struct v4l2_tuner *t, int set)
 		return;
 
 	if (!set) {
-		/* Not much to do here */
+		/* Not much more to do here */
 		t->audmode = V4L2_TUNER_MODE_LANG1;
 		t->rxsubchans = V4L2_TUNER_SUB_MONO |
 				V4L2_TUNER_SUB_STEREO |
@@ -382,7 +382,7 @@ void fv2000s_audio(struct bttv *btv, struct v4l2_tuner *t, int set)
 		return;
 
 	if (!set) {
-		/* Not much to do here */
+		/* Not much more to do here */
 		t->audmode = V4L2_TUNER_MODE_LANG1;
 		t->rxsubchans = V4L2_TUNER_SUB_MONO |
 				V4L2_TUNER_SUB_STEREO |
@@ -418,7 +418,7 @@ void windvr_audio(struct bttv *btv, struct v4l2_tuner *t, int set)
 	unsigned long val;
 
 	if (!set) {
-		/* Not much to do here */
+		/* Not much more to do here */
 		t->audmode = V4L2_TUNER_MODE_LANG1;
 		t->rxsubchans = V4L2_TUNER_SUB_MONO |
 				V4L2_TUNER_SUB_STEREO |
@@ -455,7 +455,7 @@ void adtvk503_audio(struct bttv *btv, struct v4l2_tuner *t, int set)
 	/* btaor(0x1e0000, ~0x1e0000, BT848_GPIO_OUT_EN); */
 
 	if (!set) {
-		/* Not much to do here */
+		/* Not much more to do here */
 		t->audmode = V4L2_TUNER_MODE_LANG1;
 		t->rxsubchans = V4L2_TUNER_SUB_MONO |
 				V4L2_TUNER_SUB_STEREO |

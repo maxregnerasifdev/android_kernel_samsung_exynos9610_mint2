@@ -439,7 +439,7 @@ static int xive_target_interrupt(struct kvm *kvm,
 	rc = xive_select_target(kvm, &server, prio);
 
 	/*
-	 * We failed to find a target ? Not much we can do
+	 * We failed to find a target ? Not much more we can do
 	 * at least until we support the GIQ.
 	 */
 	if (rc)

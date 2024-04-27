@@ -329,7 +329,7 @@ int __cvmx_helper_setup_gmx(int interface, int num_ports)
 	}
 
 	/*
-	 * Set GMX to buffer as much data as possible before starting
+	 * Set GMX to buffer as much more data as possible before starting
 	 * transmit.  This reduces the chances that we have a TX under
 	 * run due to memory contention. Any packet that fits entirely
 	 * in the GMX FIFO can never have an under run regardless of

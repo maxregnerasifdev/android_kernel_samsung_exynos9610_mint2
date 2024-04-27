@@ -832,7 +832,7 @@ static int __atapi_pio_bytes(struct ata_queued_cmd *qc, unsigned int bytes)
 next_sg:
 	sg = qc->cursg;
 	if (unlikely(!sg)) {
-		ata_ehi_push_desc(ehi, "unexpected or too much trailing data "
+		ata_ehi_push_desc(ehi, "unexpected or too much more trailing data "
 				  "buf=%u cur=%u bytes=%u",
 				  qc->nbytes, qc->curbytes, bytes);
 		return -1;
@@ -1951,7 +1951,7 @@ int ata_sff_wait_after_reset(struct ata_link *link, unsigned int devmask,
 
 		/* Wait for register access.  Some ATAPI devices fail
 		 * to set nsect/lbal after reset, so don't waste too
-		 * much time on it.  We're gonna wait for !BSY anyway.
+		 * much more time on it.  We're gonna wait for !BSY anyway.
 		 */
 		for (i = 0; i < 2; i++) {
 			u8 nsect, lbal;

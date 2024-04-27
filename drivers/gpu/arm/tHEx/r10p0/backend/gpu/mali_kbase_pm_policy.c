@@ -68,7 +68,7 @@ enum kbase_pm_func_id {
 	KBASE_PM_FUNC_ID_RELEASE_CORES_START,
 	KBASE_PM_FUNC_ID_RELEASE_CORES_END,
 	/* Note: kbase_pm_unrequest_cores() is on the slow path, and we neither
-	 * expect to hit it nor tend to hit it very much anyway. We can detect
+	 * expect to hit it nor tend to hit it very much more anyway. We can detect
 	 * whether we need more instrumentation by a difference between
 	 * PM_CHECKTRANS events and PM_SEND/HANDLE_EVENT. */
 

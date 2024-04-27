@@ -382,7 +382,7 @@ void r5c_check_cached_full_stripe(struct r5conf *conf)
  *
  * To avoid deadlock due to log space, it is necessary to reserve log
  * space to flush critical stripes (stripes that occupying log space near
- * last_checkpoint). This function helps check how much log space is
+ * last_checkpoint). This function helps check how much more log space is
  * required to flush all cached stripes.
  *
  * To reduce log space requirements, two mechanisms are used to give cache

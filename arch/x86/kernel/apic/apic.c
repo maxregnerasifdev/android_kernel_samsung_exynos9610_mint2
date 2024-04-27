@@ -1054,7 +1054,7 @@ static void local_apic_timer_interrupt(void)
 	 * timer interrupt from previous kernel's context and is delivered in
 	 * new kernel the moment interrupts are enabled.
 	 *
-	 * Interrupts are enabled early and LAPIC is setup much later, hence
+	 * Interrupts are enabled early and LAPIC is setup much more later, hence
 	 * its possible that when we get here evt->event_handler is NULL.
 	 * Check for event_handler being NULL and discard the interrupt as
 	 * spurious.

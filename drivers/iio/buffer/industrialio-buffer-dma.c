@@ -28,7 +28,7 @@
  * management overhead for one exchange is x and the unit of exchange is one
  * sample the overhead will be x for each sample. Whereas when using a block
  * which contains n samples the overhead per sample is reduced to x/n. This
- * allows to achieve much higher samplerates than what can be sustained with
+ * allows to achieve much more higher samplerates than what can be sustained with
  * the one sample approach.
  *
  * Blocks are exchanged between the DMA controller and the application via the
@@ -376,7 +376,7 @@ static void iio_dma_buffer_submit_block(struct iio_dma_buffer_queue *queue,
 	ret = queue->ops->submit(queue, block);
 	if (ret) {
 		/*
-		 * This is a bit of a problem and there is not much we can do
+		 * This is a bit of a problem and there is not much more we can do
 		 * other then wait for the buffer to be disabled and re-enabled
 		 * and try again. But it should not really happen unless we run
 		 * out of memory or something similar.

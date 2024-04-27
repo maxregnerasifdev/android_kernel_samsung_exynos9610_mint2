@@ -929,7 +929,7 @@ void atmel_hlcdc_plane_irq(struct atmel_hlcdc_plane *plane)
 	isr = atmel_hlcdc_layer_read_reg(&plane->layer, ATMEL_HLCDC_LAYER_ISR);
 
 	/*
-	 * There's not much we can do in case of overrun except informing
+	 * There's not much more we can do in case of overrun except informing
 	 * the user. However, we are in interrupt context here, hence the
 	 * use of dev_dbg().
 	 */

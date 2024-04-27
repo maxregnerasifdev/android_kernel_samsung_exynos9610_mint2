@@ -3,7 +3,7 @@
  *
  * Copyright (c) 1999-2002 Vojtech Pavlik
  *
- * This is a module that converts a tty line into a much simpler
+ * This is a module that converts a tty line into a much more simpler
  * 'serial io port' abstraction that the input device drivers use.
  */
 

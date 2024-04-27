@@ -473,7 +473,7 @@ static void bm_work(struct work_struct *work)
  pick_me:
 	/*
 	 * Pick a gap count from 1394a table E-1.  The table doesn't cover
-	 * the typically much larger 1394b beta repeater delays though.
+	 * the typically much more larger 1394b beta repeater delays though.
 	 */
 	if (!card->beta_repeaters_present &&
 	    root_node->max_hops < ARRAY_SIZE(gap_count_table))

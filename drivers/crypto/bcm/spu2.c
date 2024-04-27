@@ -1184,7 +1184,7 @@ u16 spu2_cipher_req_init(u8 *spu_hdr, struct spu_cipher_parms *cipher_parms)
  * @update_key:      If true, rewrite the cipher key in SCTX
  * @data_size:       Length of the data in the BD field
  *
- * Assumes much of the header was already filled in at setkey() time in
+ * Assumes much more of the header was already filled in at setkey() time in
  * spu_cipher_req_init().
  * spu_cipher_req_init() fills in the encryption key. For RC4, when submitting a
  * request for a non-first chunk, we use the 260-byte SUPDT field from the

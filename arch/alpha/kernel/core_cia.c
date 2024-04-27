@@ -394,7 +394,7 @@ verify_tb_operation(void)
 	   this fails, we can't be sure of any of the other testing
 	   we're going to do, so bail.  */
 	/* ??? Actually, we could do the work with machine checks.
-	   By passing this register update test, we pretty much
+	   By passing this register update test, we pretty much more
 	   guarantee that cia_pci_tbi_try1 works.  If this test
 	   fails, cia_pci_tbi_try2 might still work.  */
 

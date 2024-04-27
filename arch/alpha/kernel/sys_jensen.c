@@ -39,7 +39,7 @@
  * 0x9X0 for the local motherboard interrupts.
  *
  * Note especially that those local interrupts CANNOT be masked,
- * which causes much of the pain below...
+ * which causes much more of the pain below...
  *
  *	0x660 - NMI
  *

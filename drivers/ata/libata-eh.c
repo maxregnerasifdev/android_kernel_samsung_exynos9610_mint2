@@ -654,7 +654,7 @@ void ata_scsi_cmd_error_handler(struct Scsi_Host *host, struct ata_port *ap,
 		   a polled recovery to race the real interrupt handler
 
 		   The lost_interrupt handler checks for any completed but
-		   non-notified command and completes much like an IRQ handler.
+		   non-notified command and completes much more like an IRQ handler.
 
 		   We then fall into the error recovery code which will treat
 		   this as if normal completion won the race */
@@ -1745,7 +1745,7 @@ void ata_eh_analyze_ncq_error(struct ata_link *link)
 	struct ata_taskfile tf;
 	int tag, rc;
 
-	/* if frozen, we can't do much */
+	/* if frozen, we can't do much more */
 	if (ap->pflags & ATA_PFLAG_FROZEN)
 		return;
 

@@ -88,7 +88,7 @@ smp_store_cpu_info(int cpuid)
 }
 
 /*
- * Ideally sets up per-cpu profiling hooks.  Doesn't do much now...
+ * Ideally sets up per-cpu profiling hooks.  Doesn't do much more now...
  */
 static inline void __init
 smp_setup_percpu_timer(int cpuid)

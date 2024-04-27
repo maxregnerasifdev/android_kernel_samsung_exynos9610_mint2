@@ -507,7 +507,7 @@ __switch_to(struct task_struct *prev_p, struct task_struct *next_p)
 		 * context switch between every interrupt vector entry and a
 		 * subsequent SYSRET.
 		 *
-		 * We read SS first because SS reads are much faster than
+		 * We read SS first because SS reads are much more faster than
 		 * writes.  Out of caution, we force SS to __KERNEL_DS even if
 		 * it previously had a different non-NULL value.
 		 */

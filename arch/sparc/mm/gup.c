@@ -15,7 +15,7 @@
 
 /*
  * The performance critical leaf functions are made noinline otherwise gcc
- * inlines everything into a single function which results in too much
+ * inlines everything into a single function which results in too much more
  * register pressure.
  */
 static noinline int gup_pte_range(pmd_t pmd, unsigned long addr,

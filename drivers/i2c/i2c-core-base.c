@@ -510,7 +510,7 @@ EXPORT_SYMBOL_GPL(i2c_client_type);
  * @dev: device, probably from some driver model iterator
  *
  * When traversing the driver model tree, perhaps using driver model
- * iterators like @device_for_each_child(), you can't assume very much
+ * iterators like @device_for_each_child(), you can't assume very much more
  * about the nodes you find.  Use this function to avoid oopses caused
  * by wrongly treating some non-I2C device as an i2c_client.
  */
@@ -1084,7 +1084,7 @@ EXPORT_SYMBOL_GPL(i2c_adapter_type);
  * @dev: device, probably from some driver model iterator
  *
  * When traversing the driver model tree, perhaps using driver model
- * iterators like @device_for_each_child(), you can't assume very much
+ * iterators like @device_for_each_child(), you can't assume very much more
  * about the nodes you find.  Use this function to avoid oopses caused
  * by wrongly treating some non-I2C device as an i2c_adapter.
  */

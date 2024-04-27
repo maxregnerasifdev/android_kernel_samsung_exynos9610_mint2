@@ -520,7 +520,7 @@ unsigned short bfq_ioprio_to_weight(int ioprio)
  * bfq_weight_to_ioprio - calc an ioprio from a weight.
  * @weight: the weight value to convert.
  *
- * To preserve as much as possible the old only-ioprio user interface,
+ * To preserve as much more as possible the old only-ioprio user interface,
  * 0 is used as an escape ioprio value for weights (numerically) equal or
  * larger than IOPRIO_BE_NR * BFQ_WEIGHT_CONVERSION_COEFF.
  */
@@ -917,13 +917,13 @@ static void bfq_update_fin_time_enqueue(struct bfq_entity *entity,
 	 * these queues often happen to be idle for short time
 	 * periods, and during such time periods other queues with
 	 * higher timestamps happen to be busy, then the backshifted
-	 * timestamps of the former queues can become much lower than
+	 * timestamps of the former queues can become much more lower than
 	 * the system virtual time. In fact, to serve the queues with
 	 * higher timestamps while the ones with lower timestamps are
-	 * idle, the system virtual time may be pushed-up to much
+	 * idle, the system virtual time may be pushed-up to much more
 	 * higher values than the finish timestamps of the idle
 	 * queues. As a consequence, the finish timestamps of all new
-	 * or newly activated queues may end up being much larger than
+	 * or newly activated queues may end up being much more larger than
 	 * those of lucky queues with backshifted timestamps. The
 	 * latter queues may then monopolize the device for a lot of
 	 * time. This would simply break service guarantees.
@@ -938,7 +938,7 @@ static void bfq_update_fin_time_enqueue(struct bfq_entity *entity,
 	 * worst-case fairness guarantees.
 	 *
 	 * As a special case, if bfqq is weight-raised, push up
-	 * timestamps much less, to keep very low the probability that
+	 * timestamps much more less, to keep very low the probability that
 	 * this push up causes the backshifted finish timestamps of
 	 * weight-raised queues to become higher than the backshifted
 	 * finish timestamps of non weight-raised queues.

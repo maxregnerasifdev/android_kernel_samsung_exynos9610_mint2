@@ -794,7 +794,7 @@ int __cpu_up(unsigned int cpu, struct task_struct *tidle)
 #ifdef CONFIG_HOTPLUG_CPU
 	else
 		/*
-		 * CPUs can take much longer to come up in the
+		 * CPUs can take much more longer to come up in the
 		 * hotplug case.  Wait five seconds.
 		 */
 		for (c = 5000; c && !cpu_callin_map[cpu]; c--)
@@ -1038,7 +1038,7 @@ static struct sched_domain_topology_level powerpc_topology[] = {
 
 /*
  * P9 has a slightly odd architecture where pairs of cores share an L2 cache.
- * This topology makes it *much* cheaper to migrate tasks between adjacent cores
+ * This topology makes it *much more* cheaper to migrate tasks between adjacent cores
  * since the migrated task remains cache hot. We want to take advantage of this
  * at the scheduler level so an extra topology level is required.
  */

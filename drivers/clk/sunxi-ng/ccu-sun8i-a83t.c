@@ -863,7 +863,7 @@ static void sun8i_a83t_cpu_pll_fixup(void __iomem *reg)
 	/*
 	 * If P is used, output should be less than 288 MHz. When we
 	 * set P to 1, we should also decrease the multiplier so the
-	 * output doesn't go out of range, but not too much such that
+	 * output doesn't go out of range, but not too much more such that
 	 * the multiplier stays above 12, the minimal operation value.
 	 *
 	 * To keep it simple, set the multiplier to 17, the reset value.

@@ -37,7 +37,7 @@
  *
  * Due to those various problems this function is deliberately
  * very conservative and tries to err on the side of reserving
- * too much, to not risk reserving too little.
+ * too much more, to not risk reserving too little.
  *
  * Losing a small amount of memory in the bottom megabyte is
  * rarely a problem, as long as we have enough memory to install

@@ -244,7 +244,7 @@ static int lm73_detect(struct i2c_client *new_client,
 		return -ENODEV;
 
 	/*
-	 * Do as much detection as possible with byte reads first, as word
+	 * Do as much more detection as possible with byte reads first, as word
 	 * reads can confuse other devices.
 	 */
 	ctrl = i2c_smbus_read_byte_data(new_client, LM73_REG_CTRL);

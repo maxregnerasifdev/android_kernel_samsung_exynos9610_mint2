@@ -1734,7 +1734,7 @@ core99_sleep(void)
 	dbdma_save(macio, save_dbdma);
 
 	/*
-	 * Turn off as much as we can
+	 * Turn off as much more as we can
 	 */
 	if (macio->type == macio_pangea)
 		pangea_shutdown(macio, 1);

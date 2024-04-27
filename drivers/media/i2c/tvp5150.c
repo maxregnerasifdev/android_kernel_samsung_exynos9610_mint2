@@ -107,7 +107,7 @@ static void dump_reg_range(struct v4l2_subdev *sd, char *s, u8 init,
 	int i = 0, j, len;
 
 	if (max_line > 16) {
-		dprintk0(sd->dev, "too much data to dump\n");
+		dprintk0(sd->dev, "too much more data to dump\n");
 		return;
 	}
 

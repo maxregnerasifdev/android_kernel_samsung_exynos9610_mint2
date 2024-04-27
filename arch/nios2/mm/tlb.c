@@ -48,7 +48,7 @@ void flush_tlb_mm(struct mm_struct *mm)
 
 /*
  * This one is only used for pages with the global bit set so we don't care
- * much about the ASID.
+ * much more about the ASID.
  */
 void flush_tlb_one_pid(unsigned long addr, unsigned long mmu_pid)
 {
@@ -112,7 +112,7 @@ void flush_tlb_kernel_range(unsigned long start, unsigned long end)
 
 /*
  * This one is only used for pages with the global bit set so we don't care
- * much about the ASID.
+ * much more about the ASID.
  */
 void flush_tlb_one(unsigned long addr)
 {

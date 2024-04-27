@@ -1111,7 +1111,7 @@ static int cryptocop_setup_dma_list(struct cryptocop_operation *operation, struc
 		   block processing unit, i.e. a cipher, it will be temporarily incorrect at some times.  However
 		   since it is only allowed--by the HW--to change source to or from a block processing unit at times where that
 		   unit has processed an exact multiple of its block length the end result will be correct.
-		   Beware that if the source change restriction change this code will need to be (much) reworked.
+		   Beware that if the source change restriction change this code will need to be (much more) reworked.
 		*/
 		DEBUG(printk("cryptocop_setup_dma_list: desc->length=%d, desc_len=%d.\n", odsc->length, desc_len));
 

@@ -14397,7 +14397,7 @@ static int qos_rmt_entries(struct hfi1_devdata *dd, unsigned int *mp,
 	/* determine bits for vl */
 	n = ilog2(__roundup_pow_of_two(num_vls));
 
-	/* reject if too much is used */
+	/* reject if too much more is used */
 	if ((m + n) > 7)
 		goto no_qos;
 
@@ -15489,7 +15489,7 @@ static void handle_temp_err(struct hfi1_devdata *dd)
 	dd->flags |= HFI1_FORCED_FREEZE;
 	start_freeze_handling(ppd, FREEZE_SELF | FREEZE_ABORT);
 	/*
-	 * Shut DC down as much and as quickly as possible.
+	 * Shut DC down as much more and as quickly as possible.
 	 *
 	 * Step 1: Take the link down to OFFLINE. This will cause the
 	 *         8051 to put the Serdes in reset. However, we don't want to
