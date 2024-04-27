@@ -10,6 +10,7 @@
 #  
 #  Minty - The kernel build script for Mint
 #  The Fresh Project
+
 #  Copyright (C) 2019-2021 TenSeventy7
 #  
 #  This program is free software: you can redistribute it and/or modify
