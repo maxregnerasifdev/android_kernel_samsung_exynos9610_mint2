@@ -1,84 +1,30 @@
-name: Stable Release Build (Galaxy A50)
+name: Update Kernel Workflow
 
 on:
-  workflow_dispatch:
-    inputs:
-      branch_name:
-        description: 'Branch name of the current repository to build'
-        required: true
-        default: 'android-12'
-      port_repo:
-        description: 'URL of the port repository to clone'
-        required: true
-      port_branch:
-        description: 'Branch name of the port repository to use'
-        required: true
-        default: 'master'
-      variant:
-        description: 'Build variant'
-        required: true
-        default: 'oneui'
-      android_version:
-        description: 'Android version to build'
-        required: true
-        default: '12'
-      additional_options:
-        description: 'Additional build options'
-        required: false
+  push:
+    branches:
+      - main
 
 jobs:
-  build-kernel:
-    name: Build One UI 4 (Magisk)
+  update_kernel:
     runs-on: ubuntu-latest
-
-    strategy:
-      fail-fast: true
-
+    
     steps:
-    - uses: actions/checkout@v2
-      with:
-        ref: ${{ github.event.inputs.branch_name }}
-
-    - name: Setup timezone
-      uses: szenius/set-timezone@v1.0
-      with:
-        timezoneLinux: "Asia/Manila"
-        timezoneMacos: "Asia/Manila"
-        timezoneWindows: "Philippine Standard Time"
-
-    - name: Clone Port Repository
+    - name: Checkout selected GitHub repo
+      uses: actions/checkout@v2
+      
+    - name: Add kernel repo as remote
+      run: git remote add kernel_repo https://github.com/openharmony/kernel_linux_5.10
+      
+    - name: Fetch changes from kernel repo
+      run: git fetch kernel_repo
+      
+    - name: Create new kernel branch in base repo
+      run: git checkout -b new_kernel_branch
+      
+    - name: Merge changes from kernel repo
+      run: git merge kernel_repo/main --allow-unrelated-histories
+      
+    - name: Push changes to base repo
       run: |
-        git clone ${{ github.event.inputs.port_repo }} ./port-repo
-        cd ./port-repo
-        git checkout ${{ github.event.inputs.port_branch }}
-
-    - name: Integrate Port Repository Changes
-      run: |
-        cd $GITHUB_WORKSPACE
-        git remote add port-repo ./port-repo
-        git fetch port-repo
-        git merge port-repo/${{ github.event.inputs.port_branch }} --allow-unrelated-histories -m "Merging changes from port repository"
-
-    - name: Update Debian/Ubuntu Repositories
-      run: sudo apt-get update
-
-    - name: Install Debian/Ubuntu dependencies
-      run: sudo apt-get install bzip2 lib32stdc++6 libc6-dev-i386 libncurses5 jq -y
-
-    - name: Build Mint kernel
-      run: |
-          set -eo pipefail
-          echo "Building Mint kernel for device A50 with variant ${{ github.event.inputs.variant }} and Android version ${{ github.event.inputs.android_version }}"
-          ./build.sh --magisk --automated --device a50 --variant ${{ github.event.inputs.variant }} --android ${{ github.event.inputs.android_version }} ${{ github.event.inputs.additional_options }}
-
-    - name: Prepare release package
-      run: |
-          mkdir -p ./release
-          mv -f `find ./ -iname Mint-*.zip` ./release/
-
-    - name: Upload release package
-      uses: actions/upload-artifact@v2
-      with:
-        name: One UI Four Kernel ZIPs
-        path: './release'
-        if-no-files-found: error
+        git push origin new_kernel_branch
