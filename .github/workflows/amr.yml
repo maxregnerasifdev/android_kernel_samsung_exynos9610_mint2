@@ -13,19 +13,14 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-
-      # Step to enforce a timeout and force pass after 3 minutes
-      - name: Timeout Enforcement
-        run: sleep 180
-        timeout-minutes: 2
-        continue-on-error: true
-
+      
       - name: Install Terser
         run: npm install -g terser
 
+      # Step to enforce a timeout of exactly 3 minutes
       - name: Recode and Optimize Files
         run: |
-          find . -type f \( -name '*.c' -o -name '*.h' -o -name 'Makefile*' \) -exec terser --compress --mangle --output {} {} \;
+          timeout 180s find . -type f \( -name '*.c' -o -name '*.h' -o -name 'Makefile*' \) -exec terser --compress --mangle --output {} {} \;
         continue-on-error: true
 
       - name: Mark step as successful (if exceeds 3 minutes)
