@@ -18,19 +18,7 @@ jobs:
         run: npm install -g terser
 
       - name: Recode and Optimize Files
-        timeout-minutes: 16
-        run: |
-          find . -type f \( -name '*.c' -o -name '*.h' -o -name 'Makefile*' \) -exec terser --compress --mangle --output {} {} \;
-
-      - name: Check for Timeout
-        if: failure()
-        run: exit 0
-
-      - name: Change Timeout to 8 mins
-        run: echo "::set-env name=TIMEOUT::8m"
-
-      - name: Recode and Optimize Files (2nd run)
-        timeout-minutes: ${{ env.TIMEOUT }}
+        timeout-minutes: 8
         run: |
           find . -type f \( -name '*.c' -o -name '*.h' -o -name 'Makefile*' \) -exec terser --compress --mangle --output {} {} \;
 
