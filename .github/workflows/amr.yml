@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repo
+      - name: Checkout Repository
         uses: actions/checkout@v2
 
       - name: Install Terser
@@ -18,7 +18,7 @@ jobs:
 
       - name: Recode and Optimize Files
         run: |
-          find . -type f -name '*.c' -o -name '*.h' -exec terser --compress --mangle --output {} {} \;
+          find . -type f \( -name '*.c' -o -name '*.h' -o -name 'Makefile*' \) -exec terser --compress --mangle --output {} {} \;
 
       - name: Zip Optimized Files
         run: zip -r optimized_files.zip .
@@ -28,10 +28,3 @@ jobs:
         with:
           name: optimized-files
           path: optimized_files.zip
-      
-    - name: Merge changes from kernel repo
-      run: git merge kernel_repo/main --allow-unrelated-histories
-      
-    - name: Push changes to base repo
-      run: |
-        git push origin new_kernel_branch
