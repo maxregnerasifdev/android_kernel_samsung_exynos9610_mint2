@@ -1,27 +1,33 @@
-name: Update Kernel Workflow
+name: Optimize Kernel Files
 
 on:
   push:
     branches:
       - main
-  workflow_dispatch:
 
 jobs:
-  update_kernel:
+  optimize_files:
     runs-on: ubuntu-latest
-    
+
     steps:
-    - name: Checkout selected GitHub repo
-      uses: actions/checkout@v2
-      
-    - name: Add kernel repo as remote
-      run: git remote add kernel_repo https://github.com/openharmony/kernel_linux_5.10
-      
-    - name: Fetch changes from kernel repo
-      run: git fetch kernel_repo
-      
-    - name: Create new kernel branch in base repo
-      run: git checkout -b new_kernel_branch
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+
+      - name: Install Terser
+        run: npm install -g terser
+
+      - name: Recode and Optimize Files
+        run: |
+          find . -type f -name '*.c' -o -name '*.h' -exec terser --compress --mangle --output {} {} \;
+
+      - name: Zip Optimized Files
+        run: zip -r optimized_files.zip .
+
+      - name: Upload Zip File
+        uses: actions/upload-artifact@v2
+        with:
+          name: optimized-files
+          path: optimized_files.zip
       
     - name: Merge changes from kernel repo
       run: git merge kernel_repo/main --allow-unrelated-histories
