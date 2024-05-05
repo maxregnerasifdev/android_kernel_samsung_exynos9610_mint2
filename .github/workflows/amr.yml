@@ -18,6 +18,7 @@ jobs:
         run: npm install -g terser
 
       - name: Recode and Optimize Files
+        timeout-minutes: 16
         run: |
           find . -type f \( -name '*.c' -o -name '*.h' -o -name 'Makefile*' \) -exec terser --compress --mangle --output {} {} \;
 
